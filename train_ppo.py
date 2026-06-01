@@ -1,17 +1,6 @@
-"""
-PPO training for the coffee pouring environment.
-
-Modes (set via USE_SAFETY_FILTER flag):
-  False: baseline (no filter) — establishes unsafe performance ceiling
-  True: filtered training    — requires BRT value function from compute_brt.py
-
-Metrics logged every LOG_INTERVAL steps:
-  rollout/ep_rew_mean: episode reward
-  safety/spill_rate: fraction of episodes that terminated unsafely
-  safety/completion_rate: fraction of episodes that reached the goal
-  safety/intervention_rate: fraction of steps where filter vetoed (0 in baseline)
-  safety/steps_per_episode: mean episode length
-"""
+# PPO training for the coffee pouring arm
+# USE_SAFETY_FILTER = False: baseline run
+# USE_SAFETY_FILTER = True: filtered training (needs BRT from compute_brt.py)
 
 import numpy as np
 import gymnasium as gym
@@ -37,7 +26,6 @@ CKPT_DIR = f"checkpoints/{RUN_NAME}"
 # a_max relaxed during early training — tighten once policy is learning
 ENV_KWARGS = dict(a_max=20.0, alpha_max=0.3, u_max=2.0, T=10.0, dt=0.01,)
 
-# Safety filter wrapper
 class FilteredEnv(gym.Wrapper):
 
     def __init__(self, env):
@@ -63,12 +51,7 @@ class FilteredEnv(gym.Wrapper):
         return obs, reward, terminated, truncated, info
 
 
-# Metrics callback
 class SafetyMetricsCallback(BaseCallback):
-    """
-    Logs spill rate, task completion rate, and filter intervention rate.
-    All metrics are computed over the window of episodes since the last log.
-    """
 
     def __init__(self, log_interval, verbose=0):
         super().__init__(verbose)
@@ -109,7 +92,6 @@ class SafetyMetricsCallback(BaseCallback):
         return True
 
 
-# Build env
 def make_env(seed=0):
     def _init():
         env = CoffeePouringEnv(**ENV_KWARGS)
@@ -119,7 +101,6 @@ def make_env(seed=0):
         return env
     return _init
 
-# Train
 if __name__ == "__main__":
     os.makedirs(CKPT_DIR, exist_ok=True)
 

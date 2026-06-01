@@ -1,17 +1,7 @@
-"""
-CoffeePouringEnv: Gymnasium environment for safe RL coffee pouring.
-
-State space (8D):
-    phi    [0:6] = [theta1, theta2, theta3, dtheta1, dtheta2, dtheta3]
-    slosh  [6:8] = [alpha, dalpha]   <-- stubbed
-
-Action space (3D):
-    u = [u1, u2, u3]  joint torque commands, bounded by u_max
-
-Plug-in interface:
-    Replace slosh_dynamics() with the real damped pendulum model when ready.
-    Everything else (Gym env, PPO training, safety filter) stays unchanged.
-"""
+# Gym environment for safe RL coffee pouring
+# State (8D): [theta1, theta2, theta3, dtheta1, dtheta2, dtheta3, alpha, dalpha]
+# Action (3D): joint torques [u1, u2, u3]
+# sloshing is stubbed -- replace slosh_dynamics() when the model is ready
 
 import numpy as np
 import gymnasium as gym
@@ -69,7 +59,7 @@ def B_matrix(K):
 
 def arm_dynamics(phi_flat, u_flat, K, dt):
     phi = phi_flat.reshape(6, 1)
-    u   = u_flat.reshape(3, 1)
+    u = u_flat.reshape(3, 1)
     A = A_matrix()
     B = B_matrix(K)
     phi_dot = A @ phi + B @ u
@@ -99,44 +89,24 @@ def get_cup_acceleration(phi_flat, u_flat, K, L):
     return a.flatten()
 
 
-# ─── Sloshing dynamics stub ───────────────────────────────────────────────────
-# TODO: Replace this function with the real damped pendulum model.
-#
-# Expected signature:
-#   slosh_state_next = slosh_dynamics(slosh_state, arm_state, u, dt)
-#
-# Where:
-#   slosh_state : (2,) array  [alpha, dalpha]
-#                 alpha = liquid CoM angle from vertical (rad)
-#                 dalpha = angular velocity of liquid CoM (rad/s)
-#   arm_state : (6,) array current arm state (for coupling term)
-#   u : (3,) array current control input
-#   dt : float timestep
-#
-
+# TODO: replace with real damped pendulum model
+# slosh_state = [alpha, dalpha], arm_state = (6,), u = (3,)
 def slosh_dynamics(slosh_state, arm_state, u, dt):
-    """STUB: returns unchanged sloshing state.
-    """
     return slosh_state.copy()
 
 
-# Coupled dynamics
 def coupled_dynamics(state, u_flat, K, L, dt):
-    arm_state   = state[:6]
+    arm_state = state[:6]
     slosh_state = state[6:]
 
-    next_arm   = arm_dynamics(arm_state, u_flat, K, dt)
+    next_arm = arm_dynamics(arm_state, u_flat, K, dt)
     next_slosh = slosh_dynamics(slosh_state, arm_state, u_flat, dt)
 
     return np.concatenate([next_arm, next_slosh])
 
 
-# Gymnasium Environment
 class CoffeePouringEnv(gym.Env):
-    """
-    Observation: (8,)  [theta1..3, dtheta1..3, alpha, dalpha]
-    Action:      (3,)  joint torques in [-u_max, u_max]
-    """
+    """Observation: (8,) [theta1..3, dtheta1..3, alpha, dalpha], Action: (3,) torques"""
 
     metadata = {"render_modes": []}
 
@@ -145,10 +115,10 @@ class CoffeePouringEnv(gym.Env):
         self.L = L if L is not None else [1.0, 1.0, 1.0]
         self.K = K if K is not None else np.diag([1.0, 2.0, 3.0])
         self.dt = dt
-        self.T  = T
+        self.T = T
         self.max_steps = int(T / dt)
-        self.u_max     = u_max
-        self.a_max     = a_max
+        self.u_max = u_max
+        self.a_max = a_max
         self.alpha_max = alpha_max
         self.goal_pos = goal_pos if goal_pos is not None else np.array([0.5, 0.5, 1.5])
 
@@ -198,12 +168,12 @@ class CoffeePouringEnv(gym.Env):
         self.state = next_state
 
         info = {
-            "cup_pos":      cup_pos,
-            "a_norm":       a_norm,
-            "alpha":        alpha,
+            "cup_pos": cup_pos,
+            "a_norm": a_norm,
+            "alpha": alpha,
             "dist_to_goal": dist_to_goal,
-            "spill_accel":  spill_accel,
-            "spill_slosh":  spill_slosh,
+            "spill_accel": spill_accel,
+            "spill_slosh": spill_slosh,
         }
 
         return self.state.copy(), reward, terminated, truncated, info
@@ -218,11 +188,8 @@ class CoffeePouringEnv(gym.Env):
         pass
 
 
-# Safety filter (placeholder for BRT)
 def safety_filter(env, state, u_policy, n_samples=100):
-    """Least-restrictive safety filter using random sampling fallback.
-    Replace with QP + BRT value function when hj_reachability is ready.
-    """
+    # random-sample fallback -- replace with QP + BRT once compute_brt is ready
     if env.is_safe(state, u_policy):
         return u_policy, False
 
@@ -234,9 +201,8 @@ def safety_filter(env, state, u_policy, n_samples=100):
     return np.zeros(3, dtype=np.float32), True
 
 
-# Verification 
 def _check_jacobian(phi_flat, L, eps=1e-6):
-    """Numerical vs analytical Jacobian check"""
+    """Numerical vs analytical Jacobian check."""
     phi_col = phi_flat.reshape(6, 1)
     J_analytical = jacobian(phi_col, L)
     J_numerical = np.zeros((3, 3))
@@ -257,7 +223,7 @@ def _check_jacobian_dot(phi_flat, L, eps=1e-6):
     # dJ/dt = sum_i (dJ/dtheta_i) * theta_i_dot
     J_dot_numerical = np.zeros((3, 3))
     for i in range(3):
-        phi_plus  = phi_flat.copy(); phi_plus[i]  += eps
+        phi_plus = phi_flat.copy(); phi_plus[i]  += eps
         phi_minus = phi_flat.copy(); phi_minus[i] -= eps
         dJ_dtheta_i = (jacobian(phi_plus.reshape(6,1), L) - jacobian(phi_minus.reshape(6,1), L)) / (2 * eps)
         J_dot_numerical += dJ_dtheta_i * phi_flat[3 + i]
@@ -274,10 +240,10 @@ if __name__ == "__main__":
         L_test = [1.0, 1.0, 1.0]
         err_J, J_an, J_nu = _check_jacobian(phi_test, L_test)
         err_Jd, Jd_an, Jd_nu = _check_jacobian_dot(phi_test, L_test)
-        ok_J  = err_J  < 1e-6
+        ok_J = err_J  < 1e-6
         ok_Jd = err_Jd < 1e-6
         all_ok = all_ok and ok_J and ok_Jd
-        print(f"  Trial {trial+1}: J_err={err_J:.2e} {'OK' if ok_J else 'FAIL'}  |  J_dot_err={err_Jd:.2e} {'OK' if ok_Jd else 'FAIL'}")
+        print(f"Trial {trial+1}: J_err={err_J:.2e} {'OK' if ok_J else 'FAIL'}  |  J_dot_err={err_Jd:.2e} {'OK' if ok_Jd else 'FAIL'}")
 
     if all_ok:
         print("\nAll Jacobian checks PASSED.")
@@ -297,8 +263,8 @@ if __name__ == "__main__":
         if terminated or truncated:
             print(f"Episode ended at step {i+1} (max_steps={env.max_steps}). "
                   f"terminated={terminated}, truncated={truncated}")
-            print(f"  cup_pos={info['cup_pos'].round(3)}, a_norm={info['a_norm']:.3f}, alpha={info['alpha']:.3f}")
-            print(f"  Total reward: {total_reward:.2f}")
+            print(f"cup_pos={info['cup_pos'].round(3)}, a_norm={info['a_norm']:.3f}, alpha={info['alpha']:.3f}")
+            print(f"Total reward: {total_reward:.2f}")
             break
     else:
         print(f"WARNING: episode did not terminate after {env.max_steps + 5} steps")

@@ -1,0 +1,16 @@
+2026-06-01 21:41:57,893 INFO    MainThread:1617 [wandb_setup.py:_flush():81] Current SDK version is 0.27.0
+2026-06-01 21:41:57,893 INFO    MainThread:1617 [wandb_setup.py:_flush():81] Configure stats pid to 1617
+2026-06-01 21:41:57,893 INFO    MainThread:1617 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-06-01 21:41:57,893 INFO    MainThread:1617 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /Users/max/Documents/aa276finalproject/wandb/offline-run-20260601_214157-orlnp826/logs/debug.log
+2026-06-01 21:41:57,893 INFO    MainThread:1617 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /Users/max/Documents/aa276finalproject/wandb/offline-run-20260601_214157-orlnp826/logs/debug-internal.log
+2026-06-01 21:41:57,897 ERROR   MainThread:1617 [util.py:get_module():232] Error importing optional module tensorboard
+Traceback (most recent call last):
+  File "/Users/max/Documents/aa276finalproject/.venv/lib/python3.13/site-packages/wandb/util.py", line 225, in get_module
+    return import_module(name)
+  File "/Users/max/miniconda3/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'tensorboard'

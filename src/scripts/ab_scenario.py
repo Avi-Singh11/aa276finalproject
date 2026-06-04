@@ -44,16 +44,29 @@ OUT_PATH = os.path.join(PROJECT_ROOT, 'ab_scenario.gif')
 L = DEFAULT_L.astype(np.float64)
 
 # ── Scenario definition ────────────────────────────────────────────────────────
-# IK solutions for A = (0.35, -0.25, 0.45 m) and B ≈ (0.35, 0.40, 0.45 m)
-Q_A    = np.array([-0.620, -0.200,  1.195], dtype=np.float32)
-Q_B    = np.array([ 0.852,  0.275,  0.000], dtype=np.float32)
-# Via-point: swing slightly up to clear the obstacle zone
-Q_MID  = (Q_A + Q_B) / 2 + np.array([0.0, 0.0, 0.30], dtype=np.float32)
+# Counter-height lateral sweep through the espresso-machine obstacle corridor.
+# q2 and q3 are held constant; only q1 (base rotation) sweeps from 0 → 1.5 rad.
+# The cup stays at z ≈ 0.23 m throughout (obstacle-height level).
+# The direct A→B path drives the arm link inside the espresso-machine sphere
+# for q1 ∈ [0.25, 0.56] rad (−2.7 cm max penetration at q1≈0.41 rad).
+# The cup-stack obstacle is not in the sweep path.
+#
+#   A ≈ cup position at q1=0.65 (clear of both obstacles)
+#   B ≈ cup position at q1=2.40 (clear of both obstacles)
+#
+# Both points are in the obstacle-free arc q1 ∈ [0.58, 3.02].
+# The fast sweep (T1=T2=0.8s) excites slosh above the spill limit.
+# Baseline (no filter): spill_slosh=True.
+# BRT filter: clamps torques so slosh stays in the safe set; reaches B.
+Q_A    = np.array([0.650, -0.400, 0.600], dtype=np.float32)
+Q_B    = np.array([2.400, -0.400, 0.600], dtype=np.float32)
+Q_MID  = (Q_A + Q_B) / 2
 GOAL_B = position_cup(np.concatenate([Q_B, np.zeros(3)]), L).astype(np.float32)
 POS_A  = position_cup(np.concatenate([Q_A, np.zeros(3)]), L).astype(np.float32)
 
 # Trajectory timing / controller gains
-T1, T2 = 1.0, 1.0          # seconds for each phase (fast enough to cause slosh)
+# T=0.8s per phase is fast enough to excite slosh above the limit without the filter
+T1, T2 = 0.8, 0.8
 KP, KD = 40.0, 5.0
 ENV_KWARGS = dict(u_max=15.0, T=10.0, dt=0.01)
 DT = ENV_KWARGS['dt']

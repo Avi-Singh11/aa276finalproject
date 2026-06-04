@@ -164,7 +164,7 @@ def build_model(dynamics, cfg=CFG):
     )
     return model.to(DEVICE)
 
-def train_brt(cfg=CFG):
+def train_brt(cfg=CFG, model=None, dynamics=None):
     if _IMPORT_ERROR is not None:
         raise ImportError(
             "DeepReach utilities are unavailable. Install/point the deepreach package correctly "
@@ -175,8 +175,10 @@ def train_brt(cfg=CFG):
     ckpt_dir = os.path.join(cfg['save_dir'], 'checkpoints')
     os.makedirs(ckpt_dir, exist_ok=True)
 
-    dynamics = CoffeeArmDynamics()
-    model = build_model(dynamics, cfg)
+    if dynamics is None:
+        dynamics = CoffeeArmDynamics()
+    if model is None:
+        model = build_model(dynamics, cfg)
 
     loss_fn = losses.init_brt_hjivi_loss(
         dynamics,
@@ -234,10 +236,26 @@ def train_brt(cfg=CFG):
     print("Building static safe trajectory pool ...")
     static_safe_chunks, static_collected = [], 0
     N_STATIC_POOL = 50_000
+    srm = dynamics.slosh_rad_max
     while static_collected < N_STATIC_POOL:
         q_rand = rng_pool.uniform(-1, 1, (8192, 3)).astype(np.float32) * dynamics.joint_limits
         zeros = np.zeros((8192, 7), dtype=np.float32)
-        cands = np.concatenate([q_rand, zeros], axis=1)  # (8192, 10) physical
+        zero_slosh = np.concatenate([q_rand, zeros], axis=1)  # joints + zero slosh
+
+        # Slosh-displaced static states: joint-random, dq=0, xs/ys nonzero, vxs=vys=0.
+        # These are physically stationary (xs doesn't grow without velocity), so V = l(x).
+        # Without these the network sees zero-slosh statics only and extrapolates wrong.
+        ang = rng_pool.uniform(0, 2 * np.pi, 8192)
+        rad = rng_pool.uniform(0.0, srm * 0.95, 8192)
+        xs = (rad * np.cos(ang)).astype(np.float32)
+        ys = (rad * np.sin(ang)).astype(np.float32)
+        slosh_displaced = np.column_stack([
+            q_rand,
+            np.zeros((8192, 3), dtype=np.float32),  # dq=0
+            xs, ys,
+            np.zeros((8192, 2), dtype=np.float32),  # vxs=vys=0
+        ])
+        cands = np.concatenate([zero_slosh, slosh_displaced], axis=0)
         lx_cand = dynamics.boundary_fn(cands)
         keep = cands[lx_cand > 0.05]
         static_safe_chunks.append(keep)
@@ -443,6 +461,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--test', action='store_true', help='Load saved model and run query checks instead of training')
     parser.add_argument('--fast', action='store_true', help='Quick ~15-min run with CFG_FAST for validating fixes')
+    parser.add_argument('--resume', type=str, default=None,
+                        help='Path to checkpoint .pth to fine-tune from (e.g. brt_model/model_final.pth)')
+    parser.add_argument('--finetune-epochs', type=int, default=20_000,
+                        help='Number of additional epochs when using --resume (default: 20000)')
+    parser.add_argument('--finetune-lr', type=float, default=5e-6,
+                        help='Learning rate for fine-tuning (default: 5e-6, lower than training to avoid forgetting)')
+    parser.add_argument('--finetune-dir', type=str, default='brt_model_finetuned',
+                        help='Output directory for fine-tuned model (default: brt_model_finetuned)')
     args = parser.parse_args()
 
     if args.test:
@@ -460,6 +486,27 @@ if __name__ == '__main__':
         for s, desc, expect in checks:
             v = query_value(model, dyn, s)
             print(f"  V({desc:40s}) = {v:+.4f}  (expect {expect})")
+
+    elif args.resume is not None:
+        # Fine-tune an existing checkpoint with the corrected static pool.
+        # Uses a low learning rate to fix the slosh-static V error without
+        # destabilising the already-correct obstacle and joint-limit regions.
+        cfg = CFG_FAST if args.fast else CFG
+        ft_cfg = {
+            **cfg,
+            'epochs': args.finetune_epochs,
+            'lr': args.finetune_lr,
+            'pretrain_iters': 0,      # skip pretrain — model already initialised
+            'save_dir': args.finetune_dir,
+            'checkpoint_every': max(1000, args.finetune_epochs // 10),
+        }
+        print(f"── FINE-TUNE mode: loading {args.resume} ──")
+        print(f"   epochs={ft_cfg['epochs']}  lr={ft_cfg['lr']}  → {ft_cfg['save_dir']}")
+        dyn = CoffeeArmDynamics()
+        ft_model = build_model(dyn, ft_cfg)
+        ft_model.load_state_dict(torch.load(args.resume, map_location=DEVICE))
+        train_brt(cfg=ft_cfg, model=ft_model, dynamics=dyn)
+
     else:
         cfg = CFG_FAST if args.fast else CFG
         if args.fast:

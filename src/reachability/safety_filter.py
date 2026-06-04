@@ -13,12 +13,10 @@ import numpy as np
 import torch
 from scipy.optimize import minimize
 
-# 1. Point to your project root workspace level
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-# 2. Add the parent of the deepreach package so 'from deepreach.utils import ...' resolves
 DEEPREACH_PATH = os.path.dirname(PROJECT_ROOT)
 if DEEPREACH_PATH not in sys.path:
     sys.path.insert(0, DEEPREACH_PATH)
@@ -42,34 +40,24 @@ def _brt_value_and_gradient(model, dynamics, state_10d_np, t):
     V = dynamics.io_to_value(result['model_in'].detach(), result['model_out'].squeeze(-1).detach())
 
     dvdt = float(dv[0, 0].item())
-    # io_to_dv returns ∂V/∂z (normalized space); divide by state_scale to get ∂V/∂x (physical)
     dvds = dv[0, 1:].detach().cpu().numpy().reshape(-1) / dynamics.state_scale
     V_val = float(V.item())
     return V_val, dvdt, dvds
 
 def _build_cbf_numerical(model, dynamics, state_10d, u_nom, t, gamma=GAMMA):
     """Builds the linear inequality constraint using numerical differences."""
-    # Force state to be a flat 1D numpy array
     state_10d = np.asarray(state_10d, dtype=np.float32).flatten()
     V, dvdt, dvds = _brt_value_and_gradient(model, dynamics, state_10d, t)
-    
-    # Ensure our spatial gradient is flat
+
     dvds = dvds.flatten()
-    
-    dt = 1e-4  # Small time increment for numerical differentiation
+    dt = 1e-4 
     u_dim = 3
-    
-    # Compute system drift f(x) by setting control u = 0
     u_zero = np.zeros(u_dim, dtype=np.float32)
     x_next_drift = coupled_dynamics(state_10d, u_zero, dynamics.K, dynamics.L, dt, l_eff=dynamics.l_eff)
-    
-    # Force the next state to be flat to prevent dimensional mismatch
     x_next_drift = np.asarray(x_next_drift, dtype=np.float32).flatten()
     f_x = (x_next_drift - state_10d) / dt
-    
-    # Compute control input matrix g(x) column-by-column via finite variations
     g_x = np.zeros((len(state_10d), u_dim), dtype=np.float32)
-    eps = 1.0  # Control perturbation scaling factor
+    eps = 1.0  
     
     for i in range(u_dim):
         u_perturb = np.zeros(u_dim, dtype=np.float32)
@@ -82,11 +70,7 @@ def _build_cbf_numerical(model, dynamics, state_10d, u_nom, t, gamma=GAMMA):
         # Approximate the columns of g(x)
         g_x[:, i] = ((x_next_perturbed - state_10d) / dt - f_x) / eps
 
-    # Map directly onto Control Barrier Function parameters
-    # dot{V} = dV/dt + dV/dx * (f(x) + g(x)u) >= -gamma * V
     a_cbf = dvds @ g_x
-    
-    # CRITICAL FIX: Extracting the scalar using .item() prevents array conversion bugs
     drift_term = np.dot(dvds, f_x).item()
     b_cbf = -gamma * V - dvdt - drift_term
     
@@ -94,8 +78,8 @@ def _build_cbf_numerical(model, dynamics, state_10d, u_nom, t, gamma=GAMMA):
 
 def _solve_qp(u_nom, a_cbf, b_cbf, u_max=DEFAULT_U_MAX):
     u_nom = np.asarray(u_nom, dtype=np.float32).reshape(-1)
-    
-    # 1. Parse u_max into a clean 3-element numpy array tracking each control input limit
+
+    # Parse u_max into a clean 3-element numpy array tracking each control input limit
     if isinstance(u_max, (int, float)):
         u_bounds_max = np.array([u_max, u_max, u_max], dtype=np.float32)
     else:
@@ -110,7 +94,7 @@ def _solve_qp(u_nom, a_cbf, b_cbf, u_max=DEFAULT_U_MAX):
     if np.dot(a_cbf, u_nom) >= b_cbf - 1e-6:
         return u_nom.copy(), False
 
-    # 2. Map limits element-by-element into explicit SciPy bounds tuples
+    # Map limits element-by-element into explicit SciPy bounds tuples
     bounds = [(-u_bounds_max[i], u_bounds_max[i]) for i in range(3)]
 
     res = minimize(
@@ -161,7 +145,6 @@ def safety_filter(model, dynamics, state_10d, u_nom, t=None, gamma=GAMMA):
 if __name__ == '__main__':
     print("=== Safety filter plumbing smoke check ===")
     
-    # LAZY IMPORT: Solves local script execution ordering
     from dynamics.dynamics import CoffeeArmDynamics
     dynamics = CoffeeArmDynamics()
 
@@ -179,8 +162,8 @@ if __name__ == '__main__':
 
         u_nom = np.array([2.0, 1.0, -1.0], dtype=np.float32)
         u_safe, intervened = safety_filter(model, dynamics, state, u_nom)
-        print(f"u_nom      = {u_nom}")
-        print(f"u_safe     = {u_safe}")
+        print(f"u_nom = {u_nom}")
+        print(f"u_safe = {u_safe}")
         print(f"intervened = {intervened}")
     except Exception as exc:
         import traceback

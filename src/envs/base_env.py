@@ -125,6 +125,8 @@ class CoffeePouringEnv(gym.Env):
             reward += 10.0
         if spill_slosh:
             reward -= 50.0
+        if below_ground:
+            reward -= 50.0
 
         self.state = next_state
 

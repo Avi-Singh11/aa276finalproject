@@ -1,0 +1,122 @@
+2026-06-01 23:36:07,028 INFO    MainThread:2186896 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-06-01 23:36:07,028 INFO    MainThread:2186896 [wandb_setup.py:_flush():81] Configure stats pid to 2186896
+2026-06-01 23:36:07,028 INFO    MainThread:2186896 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-06-01 23:36:07,028 INFO    MainThread:2186896 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/wandb/run-20260601_233607-v8p6vcsm/logs/debug.log
+2026-06-01 23:36:07,028 INFO    MainThread:2186896 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/wandb/run-20260601_233607-v8p6vcsm/logs/debug-internal.log
+2026-06-01 23:36:07,028 INFO    MainThread:2186896 [wandb_init.py:init():850] calling init triggers
+2026-06-01 23:36:07,028 INFO    MainThread:2186896 [wandb_init.py:init():855] wandb.init called with sweep_config: {}
+config: {'algorithm': 'PPO', 'use_safety_filter': False, 'total_timesteps': 2000000, 'u_max': 15.0, 'T': 10.0, 'dt': 0.01, 'learning_rate': 0.0001, 'n_steps': 2048, 'batch_size': 64, 'n_epochs': 10, 'gamma': 0.99, 'gae_lambda': 0.95, 'clip_range': 0.2, '_wandb': {'code_path': 'code/src/scripts/train_ppo.py'}}
+2026-06-01 23:36:07,028 INFO    MainThread:2186896 [wandb_init.py:init():898] starting backend
+2026-06-01 23:36:07,274 INFO    MainThread:2186896 [wandb_init.py:init():913] sending inform_init request
+2026-06-01 23:36:07,546 INFO    MainThread:2186896 [wandb_init.py:init():918] backend started and connected
+2026-06-01 23:36:07,558 INFO    MainThread:2186896 [wandb_init.py:init():988] updated telemetry
+2026-06-01 23:36:07,563 INFO    MainThread:2186896 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-06-01 23:36:07,908 INFO    MainThread:2186896 [wandb_init.py:init():1056] starting run threads in backend
+2026-06-01 23:36:08,047 INFO    MainThread:2186896 [wandb_run.py:_console_start():2554] atexit reg
+2026-06-01 23:36:08,047 INFO    MainThread:2186896 [wandb_run.py:_redirect():2403] redirect: wrap_raw
+2026-06-01 23:36:08,047 INFO    MainThread:2186896 [wandb_run.py:_redirect():2472] Wrapping output streams.
+2026-06-01 23:36:08,047 INFO    MainThread:2186896 [wandb_run.py:_redirect():2495] Redirects installed.
+2026-06-01 23:36:08,050 INFO    MainThread:2186896 [wandb_init.py:init():1094] run started, returning control to user process
+2026-06-01 23:36:08,835 INFO    MainThread:2186896 [wandb_run.py:_config_callback():1415] config_cb None None {'algo': 'PPO', 'policy_class': "<class 'stable_baselines3.common.policies.ActorCriticPolicy'>", 'device': 'cpu', 'verbose': 1, 'policy_kwargs': '{}', 'num_timesteps': 0, '_total_timesteps': 2000000, '_num_timesteps_at_start': 0, 'seed': 'None', 'action_noise': 'None', 'start_time': 1780382168832672782, 'tensorboard_log': 'None', '_last_obs': '[[ 0.00178807 -0.00183968 -0.00217458  0.          0.          0.\n   0.          0.          0.          0.         -0.00015406  0.00375571\n   0.00804679]]', '_last_episode_starts': '[ True]', '_last_original_obs': '[[ 0.18175383 -0.18718083 -0.22281118  0.          0.          0.\n   0.          0.          0.          0.         -0.01540894  0.4052771\n   1.3554775 ]]', '_episode_num': 0, 'use_sde': 'False', 'sde_sample_freq': -1, '_current_progress_remaining': 1.0, '_stats_window_size': 100, 'ep_info_buffer': 'deque([], maxlen=100)', 'ep_success_buffer': 'deque([], maxlen=100)', '_n_updates': 0, '_custom_logger': 'False', 'env': '<stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0xe13ad5b18ec0>', '_vec_normalize_env': '<stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0xe13ad5b18ec0>', 'observation_space': 'Box([ -3.1415927  -3.1415927  -3.1415927 -10.        -10.        -10.\n  -0.025      -0.025     -10.        -10.         -6.         -6.\n  -6.       ], [ 3.1415927  3.1415927  3.1415927 10.        10.        10.\n  0.025      0.025     10.        10.         6.         6.\n  6.       ], (13,), float32)', 'action_space': 'Box(-15.0, 15.0, (3,), float32)', 'n_envs': 1, 'ent_coef': 0.01, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'rollout_buffer_class': "<class 'stable_baselines3.common.buffers.RolloutBuffer'>", 'rollout_buffer_kwargs': '{}', 'clip_range_vf': 'None', 'normalize_advantage': 'True', 'target_kl': 'None', 'lr_schedule': 'FloatSchedule(ConstantSchedule(val=0.0001))', 'rollout_buffer': '<stable_baselines3.common.buffers.RolloutBuffer object at 0xe13ad5b19be0>', 'policy': 'ActorCriticPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (pi_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (vf_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor): MlpExtractor(\n    (policy_net): Sequential(\n      (0): Linear(in_features=13, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n    (value_net): Sequential(\n      (0): Linear(in_features=13, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n  )\n  (action_net): Linear(in_features=64, out_features=3, bias=True)\n  (value_net): Linear(in_features=64, out_features=1, bias=True)\n)', '_logger': '<stable_baselines3.common.logger.Logger object at 0xe13ab8684c20>'}
+2026-06-01 23:37:38,065 INFO    wandb-AsyncioManager-main:2186896 [service_client.py:_forward_responses():134] Reached EOF.
+2026-06-01 23:37:38,065 INFO    wandb-AsyncioManager-main:2186896 [mailbox.py:close():155] Closing mailbox, abandoning 1 handles.
+2026-06-01 23:37:38,115 ERROR   wandb-AsyncioManager-main:2186896 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-06-01 23:37:38,217 ERROR   wandb-AsyncioManager-main:2186896 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 78, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-06-01 23:37:38,319 ERROR   wandb-AsyncioManager-main:2186896 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 78, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-06-01 23:37:38,420 ERROR   wandb-AsyncioManager-main:2186896 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 78, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-06-01 23:37:38,523 ERROR   wandb-AsyncioManager-main:2186896 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 78, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-06-01 23:37:38,626 ERROR   wandb-AsyncioManager-main:2186896 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 78, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/avisingh/miniconda3/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost

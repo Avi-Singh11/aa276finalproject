@@ -1,0 +1,569 @@
+diff --git a/checkpoints/baseline/ppo_baseline_100000_steps.zip b/checkpoints/baseline/ppo_baseline_100000_steps.zip
+index 07540a4..96b3a53 100644
+Binary files a/checkpoints/baseline/ppo_baseline_100000_steps.zip and b/checkpoints/baseline/ppo_baseline_100000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_150000_steps.zip b/checkpoints/baseline/ppo_baseline_150000_steps.zip
+index 8a63e41..b90131c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_150000_steps.zip and b/checkpoints/baseline/ppo_baseline_150000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_200000_steps.zip b/checkpoints/baseline/ppo_baseline_200000_steps.zip
+index b932c31..c5b556d 100644
+Binary files a/checkpoints/baseline/ppo_baseline_200000_steps.zip and b/checkpoints/baseline/ppo_baseline_200000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_250000_steps.zip b/checkpoints/baseline/ppo_baseline_250000_steps.zip
+index 012a482..30b3d0f 100644
+Binary files a/checkpoints/baseline/ppo_baseline_250000_steps.zip and b/checkpoints/baseline/ppo_baseline_250000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_300000_steps.zip b/checkpoints/baseline/ppo_baseline_300000_steps.zip
+index d88c596..11fc358 100644
+Binary files a/checkpoints/baseline/ppo_baseline_300000_steps.zip and b/checkpoints/baseline/ppo_baseline_300000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_350000_steps.zip b/checkpoints/baseline/ppo_baseline_350000_steps.zip
+index cd7dde0..4452de3 100644
+Binary files a/checkpoints/baseline/ppo_baseline_350000_steps.zip and b/checkpoints/baseline/ppo_baseline_350000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_400000_steps.zip b/checkpoints/baseline/ppo_baseline_400000_steps.zip
+index 693c5f3..34ce129 100644
+Binary files a/checkpoints/baseline/ppo_baseline_400000_steps.zip and b/checkpoints/baseline/ppo_baseline_400000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_450000_steps.zip b/checkpoints/baseline/ppo_baseline_450000_steps.zip
+index 5c77347..6a21af3 100644
+Binary files a/checkpoints/baseline/ppo_baseline_450000_steps.zip and b/checkpoints/baseline/ppo_baseline_450000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_500000_steps.zip b/checkpoints/baseline/ppo_baseline_500000_steps.zip
+index b57d7f0..1732f80 100644
+Binary files a/checkpoints/baseline/ppo_baseline_500000_steps.zip and b/checkpoints/baseline/ppo_baseline_500000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_50000_steps.zip b/checkpoints/baseline/ppo_baseline_50000_steps.zip
+index 1ffe0c0..de91908 100644
+Binary files a/checkpoints/baseline/ppo_baseline_50000_steps.zip and b/checkpoints/baseline/ppo_baseline_50000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_550000_steps.zip b/checkpoints/baseline/ppo_baseline_550000_steps.zip
+index f8386bd..a5a1777 100644
+Binary files a/checkpoints/baseline/ppo_baseline_550000_steps.zip and b/checkpoints/baseline/ppo_baseline_550000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_600000_steps.zip b/checkpoints/baseline/ppo_baseline_600000_steps.zip
+index 1216103..f70da0c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_600000_steps.zip and b/checkpoints/baseline/ppo_baseline_600000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_650000_steps.zip b/checkpoints/baseline/ppo_baseline_650000_steps.zip
+index 1a2e60a..8a62671 100644
+Binary files a/checkpoints/baseline/ppo_baseline_650000_steps.zip and b/checkpoints/baseline/ppo_baseline_650000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_700000_steps.zip b/checkpoints/baseline/ppo_baseline_700000_steps.zip
+index 0aaee9e..b5a5487 100644
+Binary files a/checkpoints/baseline/ppo_baseline_700000_steps.zip and b/checkpoints/baseline/ppo_baseline_700000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl
+index f2d845a..4c71a53 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl
+index f559673..82445df 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl
+index a597e3a..6a75a16 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl
+index db259a7..67aa354 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl
+index 5d8dfe5..25fc470 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl
+index f823d09..c974377 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl
+index 81b631a..4683e2e 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl
+index 7a97beb..618d5c3 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl
+index d4b5743..7bbd889 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl
+index bb52ea4..02869a0 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl
+index 1f32c4a..dc64399 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl
+index e540a9e..9e7bcd2 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl
+index 30f0e79..7b1e75e 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl
+index 7df5ad9..2db19e0 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl differ
+diff --git a/dynamics/__pycache__/__init__.cpython-313.pyc b/dynamics/__pycache__/__init__.cpython-313.pyc
+index 1f915b0..0d9fd8a 100644
+Binary files a/dynamics/__pycache__/__init__.cpython-313.pyc and b/dynamics/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/dynamics/__pycache__/dynamics.cpython-313.pyc b/dynamics/__pycache__/dynamics.cpython-313.pyc
+index 304276a..4be9189 100644
+Binary files a/dynamics/__pycache__/dynamics.cpython-313.pyc and b/dynamics/__pycache__/dynamics.cpython-313.pyc differ
+diff --git a/dynamics/dynamics.py b/dynamics/dynamics.py
+index 8ca2a5b..1d08de6 100644
+--- a/dynamics/dynamics.py
++++ b/dynamics/dynamics.py
+@@ -20,6 +20,8 @@ from src.config.constants import (
+     DEFAULT_OBSTACLES,
+     DEFAULT_THETA_EPS,
+     STATE_DIM,
++    G,
++    SLOSH_DAMPING,
+ )
+ from src.core.arm_dynamics import position_cup, get_link_positions
+ from src.core.obstacles import dist_point_to_segment
+@@ -38,6 +40,14 @@ def _as_3vec(value, name):
+ class CoffeeArmDynamics:
+     """DeepReach adapter for the 10D coffee-arm system."""
+ 
++    # Required by DeepReach dataio and losses
++    loss_type = 'brt_hjivi'
++    deepreach_model = 'sine'
++
++    # Required by DeepReach dataio and losses
++    loss_type = 'brt_hjivi'
++    deepreach_model = 'sine'
++
+     def __init__(
+         self,
+         L=None,
+@@ -47,7 +57,7 @@ class CoffeeArmDynamics:
+         joint_limits=DEFAULT_JOINT_LIMITS,
+         obstacles=DEFAULT_OBSTACLES,
+         dt=0.01,
+-        l_eff=0.10,
++        l_eff=0.025,
+     ):
+         self.L = np.asarray(L if L is not None else DEFAULT_L, dtype=np.float32)
+         self.K = np.asarray(K if K is not None else DEFAULT_K, dtype=np.float32)
+@@ -154,13 +164,75 @@ class CoffeeArmDynamics:
+         return float(np.min(margins))
+ 
+     def boundary_fn(self, coord):
+-        """DeepReach-compatible boundary function (state-only margin)."""
+-        state = self.coord_to_state(coord)
+-        if isinstance(state, torch.Tensor):
+-            state = state.detach().cpu().numpy()
+-        if state.ndim == 1:
+-            return self.failure_margin(state)
+-        return np.array([self.failure_margin(s) for s in state], dtype=np.float32)
++        """Vectorised boundary function — no Python loop over states.
++
++        dataio already strips the time column before calling here, so coord
++        is already the state — do NOT call coord_to_state (would double-strip).
++        """
++        if isinstance(coord, torch.Tensor):
++            coord = coord.detach().cpu().numpy()
++        x = np.asarray(coord, dtype=np.float64)
++        if x.ndim == 1:
++            return self.failure_margin(x)
++
++        # x : (N, 10)
++        N  = x.shape[0]
++        q  = x[:, :3]                                           # (N, 3)
++        l1, l2, l3 = float(self.L[0]), float(self.L[1]), float(self.L[2])
++
++        t1, t2, t3 = q[:, 0], q[:, 1], q[:, 2]
++        s1, c1 = np.sin(t1), np.cos(t1)
++        s2, c2 = np.sin(t2), np.cos(t2)
++        s3, c3 = np.sin(t3), np.cos(t3)
++
++        # ── cup z (ground clearance) ──────────────────────────────────────
++        cup_z = l1 + l2*s2 + l3*(c2*s3 + c3*s2)               # (N,)
++
++        # ── slosh displacement ────────────────────────────────────────────
++        slosh_disp = np.sqrt(x[:, 6]**2 + x[:, 7]**2)         # (N,)
++
++        # ── joint limits ──────────────────────────────────────────────────
++        joint_margin = np.min(self.joint_limits - np.abs(q), axis=1)  # (N,)
++
++        # ── obstacle clearance (vectorised segment–sphere distance) ───────
++        # link endpoints: p0=(0,0,0), p1=(0,0,l1), p2, p3=cup
++        p2x = l2*c1*c2;  p2y = l2*c2*s1;  p2z = l1 + l2*s2
++        p3x = c1*(l2*c2 + l3*(c2*c3 - s2*s3))
++        p3y = s1*(l2*c2 + l3*(c2*c3 - s2*s3))
++        p3z = cup_z
++
++        # segment endpoints stacked: (N, num_segs, 3) for A and B
++        zero = np.zeros(N)
++        seg_A = np.stack([
++            np.column_stack([zero, zero, zero]),       # p0
++            np.column_stack([zero, zero, np.full(N, l1)]),  # p1
++            np.column_stack([p2x,  p2y,  p2z]),        # p2
++        ], axis=1)                                     # (N, 3, 3)
++        seg_B = np.stack([
++            np.column_stack([zero, zero, np.full(N, l1)]),  # p1
++            np.column_stack([p2x,  p2y,  p2z]),        # p2
++            np.column_stack([p3x,  p3y,  p3z]),        # p3
++        ], axis=1)                                     # (N, 3, 3)
++
++        obs_margin = np.full(N, np.inf)
++        for obs in self.obstacles:
++            c  = np.asarray(obs["center"], dtype=np.float64)   # (3,)
++            r  = float(obs["radius"])
++            ab = seg_B - seg_A                                  # (N, 3, 3)
++            ab_sq = np.sum(ab**2, axis=-1, keepdims=True)       # (N, 3, 1)
++            ab_sq = np.maximum(ab_sq, 1e-12)
++            ac = c[None, None, :] - seg_A                       # (N, 3, 3)
++            t  = np.clip(np.sum(ac*ab, axis=-1, keepdims=True) / ab_sq, 0.0, 1.0)
++            closest = seg_A + t * ab                            # (N, 3, 3)
++            dist = np.sqrt(np.sum((c - closest)**2, axis=-1))  # (N, 3)
++            obs_margin = np.minimum(obs_margin, np.min(dist, axis=1) - r)
++
++        return np.min(np.stack([
++            cup_z,
++            self.slosh_rad_max - slosh_disp,
++            joint_margin,
++            obs_margin,
++        ], axis=1), axis=1).astype(np.float32)
+ 
+     # Some DeepReach setups use these names.
+     def target_fn(self, coord):
+@@ -171,6 +243,111 @@ class CoffeeArmDynamics:
+ 
+     # --- dynamics helpers ------------------------------------------------------------
+ 
++    def hamiltonian(self, state, dvds):
++        """H(x,p) = max_u [p · f(x,u)] for box-constrained u.
++
++        For the affine-in-control system  ẋ = f_drift(x) + g(x)u:
++            H = p · f_drift + Σ_i u_max_i · |(p^T g)_i|
++
++        Fully vectorised in torch so it runs on GPU without CPU round-trips.
++        Replicates the Jacobian / slosh math from arm_dynamics.py and
++        slosh_dynamics.py, transposed to batched tensor operations.
++
++        state : (..., 10) torch.Tensor
++        dvds  : (..., 10) torch.Tensor  — ∂V/∂x
++        returns: (...,)  torch.Tensor
++        """
++        shape = state.shape[:-1]
++        s  = state.reshape(-1, 10).float()
++        p  = dvds.reshape(-1, 10).float()
++        N  = s.shape[0]
++        dv = s.device
++
++        # ── unpack state ──────────────────────────────────────────────────
++        dq  = s[:, 3:6]                          # joint velocities  (N,3)
++        xs, ys  = s[:, 6], s[:, 7]              # slosh x, y
++        vxs, vys = s[:, 8], s[:, 9]             # slosh vx, vy
++
++        L_t = torch.as_tensor(self.L, dtype=torch.float32, device=dv)
++        K_t = torch.as_tensor(self.K, dtype=torch.float32, device=dv)
++        l   = self.l_eff
++
++        # ── slosh geometry ────────────────────────────────────────────────
++        zs  = -torch.sqrt(torch.clamp(l**2 - xs**2 - ys**2, min=1e-12))
++        vzs = -(xs * vxs + ys * vys) / zs
++        v_sq = vxs**2 + vys**2 + vzs**2
++
++        # ── batched J(q) [N,3,3] — same formula as jacobian() ─────────────
++        l2, l3 = L_t[1], L_t[2]
++        t1, t2, t3 = s[:, 0], s[:, 1], s[:, 2]
++        s1, c1 = torch.sin(t1), torch.cos(t1)
++        s2, c2 = torch.sin(t2), torch.cos(t2)
++        s3, c3 = torch.sin(t3), torch.cos(t3)
++
++        J = torch.zeros(N, 3, 3, device=dv)
++        J[:, 0, 0] = -l3*s1*c2*c3 + l3*s1*s2*s3 - l2*s1*c2
++        J[:, 0, 1] = -l3*c1*s2*c3 - l3*c1*c2*s3 - l2*c1*s2
++        J[:, 0, 2] = -l3*c1*c2*s3 - l3*c1*s2*c3
++        J[:, 1, 0] =  l3*c2*c3*c1 - l3*c1*s2*s3 + l2*c2*c1
++        J[:, 1, 1] = -l3*s2*c3*s1 - l3*s1*c2*s3 - l2*s2*s1
++        J[:, 1, 2] = -l3*c2*s3*s1 - l3*s1*s2*c3
++        J[:, 2, 0] = 0.0
++        J[:, 2, 1] =  l2*c2 - l3*s2*s3 + l3*c3*c2
++        J[:, 2, 2] =  l3*c2*c3 - l3*s3*s2
++
++        # ── batched Jd(q, dq) [N,3,3] — same formula as jacobian_dot() ───
++        td1, td2, td3 = dq[:, 0], dq[:, 1], dq[:, 2]
++
++        Jd = torch.zeros(N, 3, 3, device=dv)
++        Jd[:, 0, 0] = (l3*c1*s2*s3 - l3*c1*c2*c3 - l2*c1*c2)*td1 + (l3*s1*s2*c3 + l3*s1*c2*s3 + l2*s1*s2)*td2 + (s1*c2*s3 + s1*s2*c3)*l3*td3
++        Jd[:, 0, 1] = (l3*s1*s2*c3 + l3*s1*c2*s3 + l2*s1*s2)*td1 + (l3*c1*s2*s3 - l3*c1*c2*c3 - l2*c1*c2)*td2 + (c1*s2*s3 - c1*c2*c3)*l3*td3
++        Jd[:, 0, 2] = (s1*c2*s3 + s1*s2*c3)*l3*td1 + (c1*s2*s3 - c1*c2*c3)*l3*td2 + (c1*s2*s3 - c1*c2*c3)*l3*td3
++        Jd[:, 1, 0] = (l3*s1*s2*s3 - l3*c2*c3*s1 - l2*c2*s1)*td1 - (l3*s2*c3*c1 + l3*c1*c2*s3 + l2*c1*s2)*td2 - (c1*s2*c3 + c1*c2*s3)*l3*td3
++        Jd[:, 1, 1] = -(l3*s2*c3*c1 + l3*c1*c2*s3 + l2*c1*s2)*td1 + (l3*s1*s2*s3 - l3*c2*c3*s1 - l2*s1*c2)*td2 + (s2*s3*s1 - s1*c2*c3)*l3*td3
++        Jd[:, 1, 2] = -(c1*c2*s3 + c1*s2*c3)*l3*td1 + (s1*s2*s3 - s1*c2*c3)*l3*td2 + (s1*s2*s3 - s1*c2*c3)*l3*td3
++        Jd[:, 2, 0] = 0.0
++        Jd[:, 2, 1] = -(l2*s2 + l3*c2*s3 + l3*s2*c3)*td2 - (s2*c3 + c2*s3)*l3*td3
++        Jd[:, 2, 2] = -(s2*c3 + c2*s3)*l3*td2 - (c2*s3 + s2*c3)*l3*td3
++
++        # ── drift cup acceleration a_drift = Jd @ dq  [N,3] ──────────────
++        a_drift = (Jd @ dq.unsqueeze(-1)).squeeze(-1)
++        ax_d, ay_d = a_drift[:, 0], a_drift[:, 1]
++
++        # ── Lagrange multiplier (u=0) ─────────────────────────────────────
++        r_dot_a = xs*ax_d + ys*ay_d + zs*(G + a_drift[:, 2])
++        lamb0   = (v_sq - r_dot_a) / l**2
++        c_damp  = 2.0 * SLOSH_DAMPING * (G / l) ** 0.5
++
++        # ── drift vector f(x, 0)  [N,10] ─────────────────────────────────
++        f = torch.zeros(N, 10, device=dv)
++        f[:, 0:3] = dq                                  # q̇ = dq
++        # f[:, 3:6] = 0                                 # dq̇ = K·0 = 0
++        f[:, 6]   = vxs
++        f[:, 7]   = vys
++        f[:, 8]   = -ax_d - lamb0*xs - c_damp*vxs
++        f[:, 9]   = -ay_d - lamb0*ys - c_damp*vys
++
++        # ── control matrix g(x)  [N,10,3] ────────────────────────────────
++        # Arm rows 3-5: dq̇ = K·u  →  g[3:6,:] = K
++        # Slosh rows 8-9: see derivation in slosh_dynamics.py
++        #   g_vx = -JK[0,:] + xs·(r_sl @ JK) / l²
++        #   g_vy = -JK[1,:] + ys·(r_sl @ JK) / l²
++        JK   = J @ K_t.unsqueeze(0)                    # (N,3,3)
++        r_sl = torch.stack([xs, ys, zs], dim=-1)       # (N,3)
++        r_JK = (r_sl.unsqueeze(1) @ JK).squeeze(1)     # (N,3)
++
++        g = torch.zeros(N, 10, 3, device=dv)
++        g[:, 3:6, :] = K_t.unsqueeze(0).expand(N, -1, -1)
++        g[:, 8, :] = -JK[:, 0, :] + xs.unsqueeze(-1) * r_JK / l**2
++        g[:, 9, :] = -JK[:, 1, :] + ys.unsqueeze(-1) * r_JK / l**2
++
++        # ── H = p·f + Σ_i u_max_i·|(p^T g)_i| ───────────────────────────
++        p_g     = (p.unsqueeze(1) @ g).squeeze(1)      # (N,3)
++        u_max_t = torch.as_tensor(self.u_max, dtype=torch.float32, device=dv)
++        H = (p * f).sum(-1) + (p_g.abs() * u_max_t).sum(-1)
++
++        return H.reshape(shape)
++
+     def dynamics_step(self, state, u):
+         return coupled_dynamics(
+             state,
+diff --git a/src/__pycache__/__init__.cpython-313.pyc b/src/__pycache__/__init__.cpython-313.pyc
+index 30f0fd0..3906f1d 100644
+Binary files a/src/__pycache__/__init__.cpython-313.pyc and b/src/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/config/__pycache__/constants.cpython-313.pyc b/src/config/__pycache__/constants.cpython-313.pyc
+index bfa011e..f6f9571 100644
+Binary files a/src/config/__pycache__/constants.cpython-313.pyc and b/src/config/__pycache__/constants.cpython-313.pyc differ
+diff --git a/src/config/constants.py b/src/config/constants.py
+index cde5d03..cfb5283 100644
+--- a/src/config/constants.py
++++ b/src/config/constants.py
+@@ -52,7 +52,7 @@ IDX_VY = 9
+ 
+ 
+ #DELETE
+-DEFAULT_A_MAX = 5.0
+-DEFAULT_ALPHA_MAX = 10.0
+-DEFAULT_B_DAMP = 5.0
+-DEFAULT_DAMPING = 3.0
+\ No newline at end of file
++# DEFAULT_A_MAX = 5.0
++# DEFAULT_ALPHA_MAX = 10.0
++# DEFAULT_B_DAMP = 5.0
++# DEFAULT_DAMPING = 3.0
+\ No newline at end of file
+diff --git a/src/core/__pycache__/__init__.cpython-313.pyc b/src/core/__pycache__/__init__.cpython-313.pyc
+index c59ef78..20c83f8 100644
+Binary files a/src/core/__pycache__/__init__.cpython-313.pyc and b/src/core/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/arm_dynamics.cpython-313.pyc b/src/core/__pycache__/arm_dynamics.cpython-313.pyc
+index 80e8843..c375475 100644
+Binary files a/src/core/__pycache__/arm_dynamics.cpython-313.pyc and b/src/core/__pycache__/arm_dynamics.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/obstacles.cpython-313.pyc b/src/core/__pycache__/obstacles.cpython-313.pyc
+index d3eecde..ae7fc68 100644
+Binary files a/src/core/__pycache__/obstacles.cpython-313.pyc and b/src/core/__pycache__/obstacles.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/simulation.cpython-313.pyc b/src/core/__pycache__/simulation.cpython-313.pyc
+index f2c1f2f..07e1d89 100644
+Binary files a/src/core/__pycache__/simulation.cpython-313.pyc and b/src/core/__pycache__/simulation.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/slosh_dynamics.cpython-313.pyc b/src/core/__pycache__/slosh_dynamics.cpython-313.pyc
+index cc4fad4..659c2ea 100644
+Binary files a/src/core/__pycache__/slosh_dynamics.cpython-313.pyc and b/src/core/__pycache__/slosh_dynamics.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/state.cpython-313.pyc b/src/core/__pycache__/state.cpython-313.pyc
+index 9a5f319..3de40a4 100644
+Binary files a/src/core/__pycache__/state.cpython-313.pyc and b/src/core/__pycache__/state.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/__init__.cpython-313.pyc b/src/envs/__pycache__/__init__.cpython-313.pyc
+index 8ab6be7..a17b9c2 100644
+Binary files a/src/envs/__pycache__/__init__.cpython-313.pyc and b/src/envs/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/base_env.cpython-313.pyc b/src/envs/__pycache__/base_env.cpython-313.pyc
+index 7361e0d..2d54408 100644
+Binary files a/src/envs/__pycache__/base_env.cpython-313.pyc and b/src/envs/__pycache__/base_env.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/obstacle_env.cpython-313.pyc b/src/envs/__pycache__/obstacle_env.cpython-313.pyc
+index b909def..1b9c631 100644
+Binary files a/src/envs/__pycache__/obstacle_env.cpython-313.pyc and b/src/envs/__pycache__/obstacle_env.cpython-313.pyc differ
+diff --git a/src/envs/base_env.py b/src/envs/base_env.py
+index f8acfb4..f5976cc 100644
+--- a/src/envs/base_env.py
++++ b/src/envs/base_env.py
+@@ -125,6 +125,8 @@ class CoffeePouringEnv(gym.Env):
+             reward += 10.0
+         if spill_slosh:
+             reward -= 50.0
++        if below_ground:
++            reward -= 50.0
+ 
+         self.state = next_state
+ 
+diff --git a/src/envs/obstacle_env.py b/src/envs/obstacle_env.py
+index 08777fd..d93af61 100644
+--- a/src/envs/obstacle_env.py
++++ b/src/envs/obstacle_env.py
+@@ -62,6 +62,8 @@ class CoffeeArmEnv(CoffeePouringEnv):
+             reward += 10.0
+         if spill_slosh:
+             reward -= 50.0
++        if below_ground:
++            reward -= 50.0
+         if obstacle_hit or joint_violation:
+             reward -= 50.0
+ 
+diff --git a/src/reachability/__pycache__/__init__.cpython-313.pyc b/src/reachability/__pycache__/__init__.cpython-313.pyc
+index 6a2fadd..a69be66 100644
+Binary files a/src/reachability/__pycache__/__init__.cpython-313.pyc and b/src/reachability/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/reachability/__pycache__/compute_brt.cpython-313.pyc b/src/reachability/__pycache__/compute_brt.cpython-313.pyc
+index 6cc30f2..c4259d4 100644
+Binary files a/src/reachability/__pycache__/compute_brt.cpython-313.pyc and b/src/reachability/__pycache__/compute_brt.cpython-313.pyc differ
+diff --git a/src/reachability/compute_brt.py b/src/reachability/compute_brt.py
+index ffdcfec..556f7a1 100644
+--- a/src/reachability/compute_brt.py
++++ b/src/reachability/compute_brt.py
+@@ -20,8 +20,8 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..
+ if PROJECT_ROOT not in sys.path:
+     sys.path.insert(0, PROJECT_ROOT)
+ 
+-# 2. Add the deepreach directory specifically so 'utils' can be discovered 
+-DEEPREACH_PATH = os.path.join(PROJECT_ROOT, 'deepreach')
++# 2. Add the parent of the deepreach package so 'from deepreach.utils import ...' resolves
++DEEPREACH_PATH = os.path.dirname(PROJECT_ROOT)
+ if DEEPREACH_PATH not in sys.path:
+     sys.path.insert(0, DEEPREACH_PATH)
+ 
+@@ -39,19 +39,19 @@ else:
+ DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
+ 
+ CFG = dict(
+-    epochs=100_000,
++    epochs=55_000,
+     lr=2e-5,
+-    numpoints=65_000,
+-    num_src_samples=1_000,
++    numpoints=32_000,
++    num_src_samples=500,
+     pretrain_iters=2_000,
+     tMin=0.0,
+     tMax=1.0,
+-    counter_end=100_000,
++    counter_end=55_000,
+     minWith='zero',
+-    hidden_features=512,
++    hidden_features=256,
+     num_hidden_layers=3,
+     save_dir='brt_model',
+-    checkpoint_every=10_000,
++    checkpoint_every=5_000,
+ )
+ 
+ def build_model(dynamics, cfg=CFG):
+diff --git a/src/reachability/safety_filter.py b/src/reachability/safety_filter.py
+index ccfb283..0ed84d0 100644
+--- a/src/reachability/safety_filter.py
++++ b/src/reachability/safety_filter.py
+@@ -18,8 +18,8 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..
+ if PROJECT_ROOT not in sys.path:
+     sys.path.insert(0, PROJECT_ROOT)
+ 
+-# 2. Point to the deepreach folder path
+-DEEPREACH_PATH = os.path.join(PROJECT_ROOT, 'deepreach')
++# 2. Add the parent of the deepreach package so 'from deepreach.utils import ...' resolves
++DEEPREACH_PATH = os.path.dirname(PROJECT_ROOT)
+ if DEEPREACH_PATH not in sys.path:
+     sys.path.insert(0, DEEPREACH_PATH)
+ 
+diff --git a/src/scripts/train_ppo.py b/src/scripts/train_ppo.py
+index 7cfd0ff..f449b1a 100644
+--- a/src/scripts/train_ppo.py
++++ b/src/scripts/train_ppo.py
+@@ -16,6 +16,7 @@ from stable_baselines3 import PPO
+ from stable_baselines3.common.callbacks import BaseCallback, CheckpointCallback, CallbackList
+ from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
+ from stable_baselines3.common.monitor import Monitor
++from stable_baselines3.common.logger import Logger, HumanOutputFormat, KVWriter
+ 
+ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ if PROJECT_ROOT not in sys.path:
+@@ -37,6 +38,17 @@ ENV_KWARGS = dict(
+ )
+ 
+ 
++class WandbOutputFormat(KVWriter):
++    """Pipes every SB3 logger.dump() call directly to wandb.log()."""
++    def write(self, key_values, key_excluded, step=0):
++        payload = {k: float(v) for k, v in key_values.items() if isinstance(v, (int, float))}
++        print(f"[wandb] step={step} keys={list(payload.keys())}", flush=True)
++        wandb.log(payload, step=step)
++
++    def close(self):
++        pass
++
++
+ class SafetyMetricsCallback(BaseCallback):
+     def __init__(self, log_interval, verbose=0):
+         super().__init__(verbose)
+@@ -65,14 +77,11 @@ class SafetyMetricsCallback(BaseCallback):
+                 self.ep_lengths.append(n_steps)
+ 
+         if self.num_timesteps % self.log_interval == 0 and self.ep_spills:
+-            metrics = {
++            wandb.log({
+                 "safety/spill_rate": np.mean(self.ep_spills),
+                 "safety/completion_rate": np.mean(self.ep_completions),
+                 "safety/steps_per_episode": np.mean(self.ep_lengths),
+-            }
+-            for k, v in metrics.items():
+-                self.logger.record(k, v)
+-            self.logger.dump(self.num_timesteps)
++            }, step=self.num_timesteps)
+             self._reset_buffers()
+ 
+         return True
+@@ -105,7 +114,7 @@ if __name__ == "__main__":
+             "use_safety_filter": False,
+             "total_timesteps": TOTAL_TIMESTEPS,
+             **ENV_KWARGS,
+-            "learning_rate": 3e-4,
++            "learning_rate": 1e-4,
+             "n_steps": 2048,
+             "batch_size": 64,
+             "n_epochs": 10,
+@@ -113,7 +122,7 @@ if __name__ == "__main__":
+             "gae_lambda": 0.95,
+             "clip_range": 0.2,
+         },
+-        sync_tensorboard=True,
++        sync_tensorboard=False,
+         save_code=True,
+     )
+ 
+@@ -137,9 +146,14 @@ if __name__ == "__main__":
+         ent_coef=0.01,
+         device="cpu",
+         verbose=1,
+-        tensorboard_log=f"logs/{RUN_NAME}",
++        tensorboard_log=None,
+     )
+ 
++    model.set_logger(Logger(
++        folder=None,
++        output_formats=[HumanOutputFormat(sys.stdout), WandbOutputFormat()],
++    ))
++
+     callbacks = CallbackList(
+         [
+             SafetyMetricsCallback(log_interval=LOG_INTERVAL),
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 0d7a879..e6db2a1 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-offline-run-20260601_214611-n136yoah/logs/debug-internal.log
+\ No newline at end of file
++run-20260601_234548-mel1g9vi/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index d480cab..ef9b699 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-offline-run-20260601_214611-n136yoah/logs/debug.log
+\ No newline at end of file
++run-20260601_234548-mel1g9vi/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index 5d00f0d..55f5d8f 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-offline-run-20260601_214611-n136yoah
+\ No newline at end of file
++run-20260601_234548-mel1g9vi
+\ No newline at end of file

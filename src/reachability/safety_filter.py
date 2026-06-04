@@ -18,8 +18,8 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-# 2. Point to the deepreach folder path
-DEEPREACH_PATH = os.path.join(PROJECT_ROOT, 'deepreach')
+# 2. Add the parent of the deepreach package so 'from deepreach.utils import ...' resolves
+DEEPREACH_PATH = os.path.dirname(PROJECT_ROOT)
 if DEEPREACH_PATH not in sys.path:
     sys.path.insert(0, DEEPREACH_PATH)
 
@@ -42,7 +42,8 @@ def _brt_value_and_gradient(model, dynamics, state_10d_np, t):
     V = dynamics.io_to_value(result['model_in'].detach(), result['model_out'].squeeze(-1).detach())
 
     dvdt = float(dv[0, 0].item())
-    dvds = dv[0, 1:].detach().cpu().numpy().reshape(-1)
+    # io_to_dv returns ∂V/∂z (normalized space); divide by state_scale to get ∂V/∂x (physical)
+    dvds = dv[0, 1:].detach().cpu().numpy().reshape(-1) / dynamics.state_scale
     V_val = float(V.item())
     return V_val, dvdt, dvds
 

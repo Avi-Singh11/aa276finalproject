@@ -1,0 +1,39 @@
+{
+  "os": "Linux-6.17.0-1014-nvidia-aarch64-with-glibc2.39",
+  "python": "CPython 3.13.12",
+  "startedAt": "2026-06-02T06:42:19.121894Z",
+  "program": "/home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/src/scripts/train_ppo.py",
+  "codePath": "src/scripts/train_ppo.py",
+  "codePathLocal": "src/scripts/train_ppo.py",
+  "git": {
+    "remote": "https://github.com/Avi-Singh11/aa276finalproject.git",
+    "commit": "3a9cad8993f77cdb13c868af373b2facaade666f"
+  },
+  "email": "avisingh0718@gmail.com",
+  "root": "/home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject",
+  "host": "spark-7020",
+  "executable": "/home/avisingh/miniconda3/bin/python",
+  "cpu_count": 20,
+  "cpu_count_logical": 20,
+  "gpu": "NVIDIA GB10",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "4031871553536",
+      "used": "180832968704"
+    }
+  },
+  "memory": {
+    "total": "128495648768"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GB10",
+      "cudaCores": 6144,
+      "architecture": "Blackwell",
+      "uuid": "GPU-21da9ed3-1c8a-6777-34fc-4eb8eba5c651"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "kitoi3u6zh48f6r8qeudixwiwiaw3g7w"
+}

@@ -62,6 +62,8 @@ class CoffeeArmEnv(CoffeePouringEnv):
             reward += 10.0
         if spill_slosh:
             reward -= 50.0
+        if below_ground:
+            reward -= 50.0
         if obstacle_hit or joint_violation:
             reward -= 50.0
 

@@ -20,8 +20,8 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from src.config.constants import (
-    DEFAULT_L, DEFAULT_K, DEFAULT_U_MAX, 
-    DEFAULT_SLOSH_RAD_MAX, DEFAULT_L_EFF, 
+    DEFAULT_L, DEFAULT_K, DEFAULT_U_MAX,
+    DEFAULT_SLOSH_RAD_MAX, DEFAULT_L_EFF,
     STATE_DIM, OBS_DIM
 )
 from src.core.arm_dynamics import position_cup
@@ -39,6 +39,33 @@ def safety_filter(env, state, u_policy, n_samples=100):
             return np.asarray(candidate, dtype=np.float32), True
 
     return np.zeros(3, dtype=np.float32), True
+
+def inverse_kinematics(x, y, z, L, elbow="up"):
+    l1, l2, l3 = float(L[0]), float(L[1]), float(L[2])
+
+    theta1 = np.arctan2(y, x)
+
+    rho = np.sqrt(x**2 + y**2)
+    z_rel = z - l1
+
+    D = (rho**2 + z_rel**2 - l2**2 - l3**2) / (2.0 * l2 * l3)
+
+    if D < -1.000001 or D > 1.000001:
+        raise ValueError("Target is unreachable")
+
+    D = np.clip(D, -1.0, 1.0)
+
+    if elbow == "up":
+        theta3 = np.arctan2(np.sqrt(1.0 - D**2), D)
+    else:
+        theta3 = np.arctan2(-np.sqrt(1.0 - D**2), D)
+
+    theta2 = np.arctan2(z_rel, rho) - np.arctan2(
+        l3 * np.sin(theta3),
+        l2 + l3 * np.cos(theta3),
+    )
+
+    return np.array([theta1, theta2, theta3], dtype=np.float32)
 
 class CoffeePouringEnv(gym.Env):
     """Observation: (13,) [state(10), goal-relative cup vector(3)]"""
@@ -66,7 +93,7 @@ class CoffeePouringEnv(gym.Env):
         self.u_max = float(u_max)
         self.slosh_rad_max = float(slosh_rad_max)
         self.l_eff = float(l_eff)
-        self.goal_pos = np.asarray(goal_pos if goal_pos is not None else [0.5, 0.5, 1.5], dtype=np.float32)
+        self.goal_pos = np.asarray(goal_pos if goal_pos is not None else [0.4, -0.5, 0.15], dtype=np.float32)
         self.randomize_goal = bool(randomize_goal)
 
         # Updated bounds for Cartesian slosh (bounded by l_eff)
@@ -91,8 +118,39 @@ class CoffeePouringEnv(gym.Env):
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
-        theta_init = self.np_random.uniform(-0.3, 0.3, size=3)
-        self.state = np.concatenate([theta_init, np.zeros(7)]).astype(np.float32)
+
+        # Sample random Cartesian start location
+        while True:
+            r = self.np_random.uniform(0.5, 0.7)
+
+            az = np.deg2rad(
+                self.np_random.uniform(60, 90)
+            )
+
+            el = np.deg2rad(
+                self.np_random.uniform(0, 30)
+            )
+
+            x = r * np.cos(el) * np.cos(az)
+            y = r * np.cos(el) * np.sin(az)
+            z = r * np.sin(el)
+
+            try:
+                theta_init = inverse_kinematics(
+                    x, y, z,
+                    self.L,
+                    elbow="up"
+                )
+                break
+
+            except ValueError:
+                pass
+
+        self.state = np.concatenate([
+            theta_init,
+            np.zeros(7)
+        ]).astype(np.float32)
+
         self.step_count = 0
         if self.randomize_goal:
             self.goal_pos = self.np_random.uniform(low=[-1.5, -1.5, 0.5], high=[1.5, 1.5, 2.5]).astype(np.float32)

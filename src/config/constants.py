@@ -7,7 +7,7 @@ import numpy as np
 G = 9.81
 
 # Core physical parameters
-DEFAULT_L = np.array([0.30, 0.30, 0.25], dtype=np.float32)
+DEFAULT_L = np.array([0.30, 0.50, 0.30], dtype=np.float32)
 DEFAULT_K = np.eye(3, dtype=np.float32)
 
 # Slosh model parameters
@@ -28,8 +28,9 @@ DEFAULT_JOINT_LIMITS = np.array([np.pi, np.pi, np.pi], dtype=np.float32)
 
 # Nominal obstacle set used by CoffeeArmEnv
 DEFAULT_OBSTACLES = [
-    {"center": [0.35, 0.15, 0.15], "radius": 0.08},  # espresso machine
-    {"center": [0.55, -0.10, 0.20], "radius": 0.06},  # cup stack
+    {"center": [0.24, -0.3, 0.08], "radius": 0.08},  # obstacle 1
+    {"center": [0.39, 0, 0.30], "radius": 0.15},  # obstacle 2
+    {"center": [0.21, 0.21, 0.08], "radius": 0.08},  # obstacle 3
 ]
 
 # State layout for the 10D Cartesian model:

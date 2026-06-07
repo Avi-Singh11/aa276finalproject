@@ -85,10 +85,11 @@ def jacobian_dot(phi, L):
     return Jd
 
 
-def A_matrix():
-    """Pure decoupled double integrator."""
+def A_matrix(damping=1.0):
+    """Damped double integrator: dq_dot = -damping*dq + K*u."""
     A = np.zeros((6, 6), dtype=np.float64)
     A[0:3, 3:6] = np.eye(3)
+    A[3:6, 3:6] = -damping * np.eye(3)
     return A
 
 
@@ -98,12 +99,12 @@ def B_matrix(K):
     return B
 
 
-def arm_dynamics(phi_flat, u_flat, K, dt):
-    """Forward Euler step for the linearized 3-DoF arm model."""
+def arm_dynamics(phi_flat, u_flat, K, dt, damping=1.0):
+    """Forward Euler step for the damped 3-DoF arm model."""
     phi = np.asarray(phi_flat, dtype=np.float64).reshape(6, 1)
     u = np.asarray(u_flat, dtype=np.float64).reshape(3, 1)
-    phi_dot = A_matrix() @ phi + B_matrix(K) @ u
-    
+    phi_dot = A_matrix(damping) @ phi + B_matrix(K) @ u
+
     return (phi.reshape(-1) + dt * phi_dot.reshape(-1)).astype(np.float64)
 
 
@@ -167,5 +168,5 @@ def get_cup_acceleration(phi_flat, u_flat, K, L):
     J = jacobian(phi, L)
     Jd = jacobian_dot(phi, L)
     theta_dot = phi[3:6]
-    theta_ddot = np.asarray(K, dtype=np.float64) @ u
+    theta_ddot = -theta_dot + np.asarray(K, dtype=np.float64) @ u   # damping=1.0, matches arm_dynamics()
     return (Jd @ theta_dot + J @ theta_ddot).reshape(-1)

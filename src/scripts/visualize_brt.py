@@ -62,9 +62,13 @@ def query_grid(model, dyn, states_np: np.ndarray, t: float) -> np.ndarray:
 
 
 def make_base_state():
-    """Return a nominal 10D state (arm at home, slosh at rest)."""
+    """Return a nominal 10D state (arm at home, slosh at rest).
+    q1=1.2 (az~69deg), q2=0.3 (el~17deg) — mid-range of the safe reset distribution,
+    clear of all obstacles.
+    """
     s = np.zeros(10, dtype=np.float32)
-    s[0] = 0.1   # slight azimuth offset so arm isn't in a degenerate config
+    s[0] = 1.2   # azimuth ~69 deg (reset range is 60-90 deg)
+    s[1] = 0.3   # elevation ~17 deg
     return s
 
 

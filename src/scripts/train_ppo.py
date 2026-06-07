@@ -22,12 +22,14 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(_
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from src.envs.obstacle_env import CoffeeArmEnv
+from src.envs.base_env import CoffeeArmEnv
 
-TOTAL_TIMESTEPS = 2_000_000
-LOG_INTERVAL = 5_000
-SAVE_INTERVAL = 50_000
-RUN_NAME = "baseline"
+N_ENVS = 8
+TOTAL_TIMESTEPS = 5_000_000
+# LOG_INTERVAL must be a multiple of (N_ENVS * n_steps) = 8192
+LOG_INTERVAL = 8_192
+SAVE_INTERVAL = 100_000
+RUN_NAME = "same_sector_v1"
 CKPT_DIR = f"checkpoints/{RUN_NAME}"
 
 # Environment parameters (Cleaned up old a_max and alpha_max variables)
@@ -62,29 +64,35 @@ class SafetyMetricsCallback(BaseCallback):
         self._reset_buffers()
 
     def _reset_buffers(self):
-        self.ep_spills = []
+        self.ep_spills  = []
+        self.ep_ground  = []
+        self.ep_obs     = []
         self.ep_completions = []
         self.ep_lengths = []
 
     def _on_step(self):
         for info, done in zip(self.locals["infos"], self.locals["dones"]):
             if done:
-                # FIXED: Removed non-existent spill_accel metric
-                spill = float(
-                    info.get("spill_slosh", False)
-                    or info.get("obstacle_hit", False)
+                spill   = float(info.get("spill_slosh", False))
+                ground  = float(info.get("below_ground", False))
+                obs_hit = float(
+                    info.get("obstacle_hit", False)
                     or info.get("joint_violation", False)
                 )
-                dist = info.get("dist_to_goal", float("inf"))
+                dist    = info.get("dist_to_goal", float("inf"))
                 n_steps = info.get("step_count_ep", info.get("episode", {}).get("l", 1))
 
                 self.ep_spills.append(spill)
+                self.ep_ground.append(ground)
+                self.ep_obs.append(obs_hit)
                 self.ep_completions.append(float(dist < 0.1))
                 self.ep_lengths.append(n_steps)
 
         if self.num_timesteps % self.log_interval == 0 and self.ep_spills:
             wandb.log({
-                "safety/spill_rate": np.mean(self.ep_spills),
+                "safety/spill_rate":      np.mean(self.ep_spills),
+                "safety/ground_rate":     np.mean(self.ep_ground),
+                "safety/obstacle_rate":   np.mean(self.ep_obs),
                 "safety/completion_rate": np.mean(self.ep_completions),
                 "safety/steps_per_episode": np.mean(self.ep_lengths),
             }, step=self.num_timesteps)
@@ -100,9 +108,10 @@ def make_env(seed=0):
             env,
             info_keywords=(
                 "spill_slosh",
-                "dist_to_goal",
+                "below_ground",
                 "obstacle_hit",
                 "joint_violation",
+                "dist_to_goal",
             ),
         )
         return env
@@ -117,16 +126,23 @@ if __name__ == "__main__":
         name=RUN_NAME,
         config={
             "algorithm": "PPO",
+            "env": "CoffeeArmEnv",
             "use_safety_filter": False,
+            "norm_reward": False,
             "total_timesteps": TOTAL_TIMESTEPS,
             **ENV_KWARGS,
-            "learning_rate": 1e-4,
-            "n_steps": 2048,
-            "batch_size": 64,
+            "learning_rate": 3e-4,
+            "n_steps": 1024,
+            "n_envs": N_ENVS,
+            "batch_size": 2048,
             "n_epochs": 10,
             "gamma": 0.99,
             "gae_lambda": 0.95,
             "clip_range": 0.2,
+            "ent_coef": 0.05,
+            "goal": "[0.55, 0.10, 0.10]",
+            "start_az_deg": "[70, 90]",
+            "at_goal_bonus": 100.0,
         },
         sync_tensorboard=False,
         save_code=True,
@@ -136,21 +152,21 @@ if __name__ == "__main__":
     print("Filter: False")
     print(f"Steps: {TOTAL_TIMESTEPS:,}\n")
 
-    vec_env = DummyVecEnv([make_env(seed=0)])
+    vec_env = DummyVecEnv([make_env(seed=i) for i in range(N_ENVS)])
     vec_env = VecNormalize(vec_env, norm_obs=True, norm_reward=False, clip_obs=10.0)
 
     model = PPO(
         "MlpPolicy",
         vec_env,
-        learning_rate=1e-4,
-        n_steps=2048,
-        batch_size=64,
-        n_epochs=5,
+        learning_rate=3e-4,
+        n_steps=1024,
+        batch_size=2048,
+        n_epochs=10,
         gamma=0.99,
         gae_lambda=0.95,
         clip_range=0.2,
-        ent_coef=0.01,
-        device="cpu",
+        ent_coef=0.05,
+        device="cuda",
         verbose=1,
         tensorboard_log=None,
     )

@@ -1,0 +1,271 @@
+diff --git a/ab_scenario.gif b/ab_scenario.gif
+index 124cced..f48e8eb 100644
+Binary files a/ab_scenario.gif and b/ab_scenario.gif differ
+diff --git a/brt_model/checkpoints/model_epoch_015000.pth b/brt_model/checkpoints/model_epoch_015000.pth
+index 809d30b..d4b6f0d 100644
+Binary files a/brt_model/checkpoints/model_epoch_015000.pth and b/brt_model/checkpoints/model_epoch_015000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_020000.pth b/brt_model/checkpoints/model_epoch_020000.pth
+index 9cce2d2..a0e25d2 100644
+Binary files a/brt_model/checkpoints/model_epoch_020000.pth and b/brt_model/checkpoints/model_epoch_020000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_025000.pth b/brt_model/checkpoints/model_epoch_025000.pth
+index c8e908f..f03d154 100644
+Binary files a/brt_model/checkpoints/model_epoch_025000.pth and b/brt_model/checkpoints/model_epoch_025000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_030000.pth b/brt_model/checkpoints/model_epoch_030000.pth
+index 6774298..b5bc33b 100644
+Binary files a/brt_model/checkpoints/model_epoch_030000.pth and b/brt_model/checkpoints/model_epoch_030000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_035000.pth b/brt_model/checkpoints/model_epoch_035000.pth
+index 9ccb00e..89b83c3 100644
+Binary files a/brt_model/checkpoints/model_epoch_035000.pth and b/brt_model/checkpoints/model_epoch_035000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_040000.pth b/brt_model/checkpoints/model_epoch_040000.pth
+index 67366a2..67d18c0 100644
+Binary files a/brt_model/checkpoints/model_epoch_040000.pth and b/brt_model/checkpoints/model_epoch_040000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_045000.pth b/brt_model/checkpoints/model_epoch_045000.pth
+index 8723d3f..49352de 100644
+Binary files a/brt_model/checkpoints/model_epoch_045000.pth and b/brt_model/checkpoints/model_epoch_045000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_050000.pth b/brt_model/checkpoints/model_epoch_050000.pth
+index 62226b5..5f422f9 100644
+Binary files a/brt_model/checkpoints/model_epoch_050000.pth and b/brt_model/checkpoints/model_epoch_050000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_055000.pth b/brt_model/checkpoints/model_epoch_055000.pth
+index 48730c9..97f7b0b 100644
+Binary files a/brt_model/checkpoints/model_epoch_055000.pth and b/brt_model/checkpoints/model_epoch_055000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_060000.pth b/brt_model/checkpoints/model_epoch_060000.pth
+index 1f9fbfa..ca7d492 100644
+Binary files a/brt_model/checkpoints/model_epoch_060000.pth and b/brt_model/checkpoints/model_epoch_060000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_065000.pth b/brt_model/checkpoints/model_epoch_065000.pth
+index aedacac..1cf227a 100644
+Binary files a/brt_model/checkpoints/model_epoch_065000.pth and b/brt_model/checkpoints/model_epoch_065000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_070000.pth b/brt_model/checkpoints/model_epoch_070000.pth
+index 11b7f2f..c7bad7c 100644
+Binary files a/brt_model/checkpoints/model_epoch_070000.pth and b/brt_model/checkpoints/model_epoch_070000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_075000.pth b/brt_model/checkpoints/model_epoch_075000.pth
+index 048f1ac..c711ccb 100644
+Binary files a/brt_model/checkpoints/model_epoch_075000.pth and b/brt_model/checkpoints/model_epoch_075000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_080000.pth b/brt_model/checkpoints/model_epoch_080000.pth
+index fa3286e..791a77d 100644
+Binary files a/brt_model/checkpoints/model_epoch_080000.pth and b/brt_model/checkpoints/model_epoch_080000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_085000.pth b/brt_model/checkpoints/model_epoch_085000.pth
+index 4e11ad4..e729790 100644
+Binary files a/brt_model/checkpoints/model_epoch_085000.pth and b/brt_model/checkpoints/model_epoch_085000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_090000.pth b/brt_model/checkpoints/model_epoch_090000.pth
+index d79546e..f49875b 100644
+Binary files a/brt_model/checkpoints/model_epoch_090000.pth and b/brt_model/checkpoints/model_epoch_090000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_095000.pth b/brt_model/checkpoints/model_epoch_095000.pth
+index b429602..fd52b4d 100644
+Binary files a/brt_model/checkpoints/model_epoch_095000.pth and b/brt_model/checkpoints/model_epoch_095000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_100000.pth b/brt_model/checkpoints/model_epoch_100000.pth
+index 371b519..dc16f2e 100644
+Binary files a/brt_model/checkpoints/model_epoch_100000.pth and b/brt_model/checkpoints/model_epoch_100000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_105000.pth b/brt_model/checkpoints/model_epoch_105000.pth
+index 1fd8354..56300f3 100644
+Binary files a/brt_model/checkpoints/model_epoch_105000.pth and b/brt_model/checkpoints/model_epoch_105000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_110000.pth b/brt_model/checkpoints/model_epoch_110000.pth
+index 50096ac..148267e 100644
+Binary files a/brt_model/checkpoints/model_epoch_110000.pth and b/brt_model/checkpoints/model_epoch_110000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_115000.pth b/brt_model/checkpoints/model_epoch_115000.pth
+index 3119816..39ce941 100644
+Binary files a/brt_model/checkpoints/model_epoch_115000.pth and b/brt_model/checkpoints/model_epoch_115000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_120000.pth b/brt_model/checkpoints/model_epoch_120000.pth
+index c94972d..173aed0 100644
+Binary files a/brt_model/checkpoints/model_epoch_120000.pth and b/brt_model/checkpoints/model_epoch_120000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_125000.pth b/brt_model/checkpoints/model_epoch_125000.pth
+index 536e734..364b135 100644
+Binary files a/brt_model/checkpoints/model_epoch_125000.pth and b/brt_model/checkpoints/model_epoch_125000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_130000.pth b/brt_model/checkpoints/model_epoch_130000.pth
+index ae1c6dc..f567f1c 100644
+Binary files a/brt_model/checkpoints/model_epoch_130000.pth and b/brt_model/checkpoints/model_epoch_130000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_135000.pth b/brt_model/checkpoints/model_epoch_135000.pth
+index d8deeba..360dc2e 100644
+Binary files a/brt_model/checkpoints/model_epoch_135000.pth and b/brt_model/checkpoints/model_epoch_135000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_140000.pth b/brt_model/checkpoints/model_epoch_140000.pth
+index 0d633a7..70795c9 100644
+Binary files a/brt_model/checkpoints/model_epoch_140000.pth and b/brt_model/checkpoints/model_epoch_140000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_145000.pth b/brt_model/checkpoints/model_epoch_145000.pth
+index 0f021ad..a8c20ed 100644
+Binary files a/brt_model/checkpoints/model_epoch_145000.pth and b/brt_model/checkpoints/model_epoch_145000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_150000.pth b/brt_model/checkpoints/model_epoch_150000.pth
+index af35b7e..5ee8cc6 100644
+Binary files a/brt_model/checkpoints/model_epoch_150000.pth and b/brt_model/checkpoints/model_epoch_150000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_155000.pth b/brt_model/checkpoints/model_epoch_155000.pth
+index 371022a..da41c56 100644
+Binary files a/brt_model/checkpoints/model_epoch_155000.pth and b/brt_model/checkpoints/model_epoch_155000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_160000.pth b/brt_model/checkpoints/model_epoch_160000.pth
+index b54dc5d..debc5ff 100644
+Binary files a/brt_model/checkpoints/model_epoch_160000.pth and b/brt_model/checkpoints/model_epoch_160000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_165000.pth b/brt_model/checkpoints/model_epoch_165000.pth
+index 0d555fa..18ddeaf 100644
+Binary files a/brt_model/checkpoints/model_epoch_165000.pth and b/brt_model/checkpoints/model_epoch_165000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_170000.pth b/brt_model/checkpoints/model_epoch_170000.pth
+index fe41645..e9c1af5 100644
+Binary files a/brt_model/checkpoints/model_epoch_170000.pth and b/brt_model/checkpoints/model_epoch_170000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_175000.pth b/brt_model/checkpoints/model_epoch_175000.pth
+index 950be7e..bac77a8 100644
+Binary files a/brt_model/checkpoints/model_epoch_175000.pth and b/brt_model/checkpoints/model_epoch_175000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_180000.pth b/brt_model/checkpoints/model_epoch_180000.pth
+index 184ed0d..2ff61f1 100644
+Binary files a/brt_model/checkpoints/model_epoch_180000.pth and b/brt_model/checkpoints/model_epoch_180000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_185000.pth b/brt_model/checkpoints/model_epoch_185000.pth
+index 3589b9b..fd93803 100644
+Binary files a/brt_model/checkpoints/model_epoch_185000.pth and b/brt_model/checkpoints/model_epoch_185000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_190000.pth b/brt_model/checkpoints/model_epoch_190000.pth
+index 0aafae2..52ca395 100644
+Binary files a/brt_model/checkpoints/model_epoch_190000.pth and b/brt_model/checkpoints/model_epoch_190000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_195000.pth b/brt_model/checkpoints/model_epoch_195000.pth
+index 3d65713..845d767 100644
+Binary files a/brt_model/checkpoints/model_epoch_195000.pth and b/brt_model/checkpoints/model_epoch_195000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_200000.pth b/brt_model/checkpoints/model_epoch_200000.pth
+index 3cc2e77..d858534 100644
+Binary files a/brt_model/checkpoints/model_epoch_200000.pth and b/brt_model/checkpoints/model_epoch_200000.pth differ
+diff --git a/dynamics/__pycache__/__init__.cpython-313.pyc b/dynamics/__pycache__/__init__.cpython-313.pyc
+index 1f915b0..0d9fd8a 100644
+Binary files a/dynamics/__pycache__/__init__.cpython-313.pyc and b/dynamics/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/dynamics/__pycache__/dynamics.cpython-313.pyc b/dynamics/__pycache__/dynamics.cpython-313.pyc
+index 3e9ae71..c658244 100644
+Binary files a/dynamics/__pycache__/dynamics.cpython-313.pyc and b/dynamics/__pycache__/dynamics.cpython-313.pyc differ
+diff --git a/smoke_test_brt.py b/smoke_test_brt.py
+index f19c8d2..15d5e55 100644
+--- a/smoke_test_brt.py
++++ b/smoke_test_brt.py
+@@ -50,10 +50,11 @@ def test_hamiltonian_scaling():
+     # which then multiplied by scale again → double scaling.
+     # Demonstrate: at a non-zero joint angle, slosh control terms depend on J(q).
+     # With q2=π/6 (normalized), J is different from q2=π/6*scale[1] (double-scaled).
+-    # Use p[8]=1 (vx_slosh gradient) so we activate J-dependent terms.
++    # Use p[8]=0.1 (vx_slosh gradient) — small enough that neither value hits the
++    # H_MAX=25 clamp, so the double-scaling bug remains detectable.
+     z_norm = torch.zeros(1, 10); z_norm[0, 1] = np.pi/6  # q2 = π/6 in normalized space
+     z_norm[0, 6] = 0.5  # xs = 0.5 in normalized space
+-    p_slosh = torch.zeros(1, 10); p_slosh[0, 8] = 1.0
++    p_slosh = torch.zeros(1, 10); p_slosh[0, 8] = 0.1
+ 
+     H_correct = dyn.hamiltonian(z_norm, p_slosh).item()
+ 
+@@ -228,12 +229,63 @@ def test_short_training():
+     return ok_pt and ok_sep and ok
+ 
+ 
++# ── 4. Obstacle boundary function sanity check ────────────────────────────────
++def test_obstacle_boundary():
++    print("\n=== Test 4: Obstacle boundary function ===")
++    from dynamics.dynamics import CoffeeArmDynamics
++    dyn = CoffeeArmDynamics()
++
++    print(f"  Obstacles loaded: {len(dyn.obstacles)}")
++    for i, obs in enumerate(dyn.obstacles):
++        print(f"    [{i}] center={obs['center']}  radius={obs['radius']}")
++
++    all_ok = True
++
++    # For each obstacle: build a state where the arm's elbow (link 2 endpoint)
++    # sits inside that obstacle sphere, then check boundary_fn < 0.
++    for i, obs in enumerate(dyn.obstacles):
++        cx, cy, cz = obs['center']
++        r = float(obs['radius'])
++
++        # q1 points the arm toward the obstacle in XY
++        q1 = float(np.arctan2(cy, cx))
++        # q2 tilts the arm to put the elbow near the obstacle height
++        l1 = float(dyn.L[0])
++        l2 = float(dyn.L[1])
++        elev = np.clip((cz - l1) / l2, -0.98, 0.98)
++        q2 = float(np.arcsin(elev))
++        q3 = 0.0
++        state_inside = np.array([q1, q2, q3, 0, 0, 0, 0, 0, 0, 0], dtype=np.float32)
++
++        lx = float(dyn.boundary_fn(state_inside))
++        inside_obs = lx < 0.0
++        print(f"  Obs {i}: state aimed at center → l(x)={lx:+.4f}  (expect < 0)  [{PASS if inside_obs else FAIL}]")
++        all_ok = all_ok and inside_obs
++
++    # A clearly safe state: q1=π/2 points the arm in +y, clearing all obstacles.
++    # (q=[0,0,0] sends link 2 through obstacle 2 at [0.39,0,0.30] — not safe.)
++    safe_state = np.array([np.pi/2, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=np.float32)
++    lx_safe = float(dyn.boundary_fn(safe_state))
++    ok_safe = lx_safe > 0.0
++    print(f"  Safe state (q1=π/2, arm in +y, zero slosh) → l(x)={lx_safe:+.4f}  (expect > 0)  [{PASS if ok_safe else FAIL}]")
++
++    # A slosh-violated state must be < 0
++    spill_state = np.zeros(10, dtype=np.float32)
++    spill_state[6] = dyn.slosh_rad_max * 1.5
++    lx_spill = float(dyn.boundary_fn(spill_state))
++    ok_spill = lx_spill < 0.0
++    print(f"  Spill state (slosh 1.5× max)  → l(x)={lx_spill:+.4f}  (expect < 0)  [{PASS if ok_spill else FAIL}]")
++
++    return all_ok and ok_safe and ok_spill
++
++
+ # ── main ───────────────────────────────────────────────────────────────────────
+ if __name__ == '__main__':
+     results = []
+     results.append(test_hamiltonian_scaling())
+     results.append(test_safety_filter_gradient())
+     results.append(test_short_training())
++    results.append(test_obstacle_boundary())
+ 
+     passed  = [r for r in results if r is True]
+     failed  = [r for r in results if r is False]
+diff --git a/src/__pycache__/__init__.cpython-313.pyc b/src/__pycache__/__init__.cpython-313.pyc
+index 30f0fd0..3906f1d 100644
+Binary files a/src/__pycache__/__init__.cpython-313.pyc and b/src/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/config/__pycache__/constants.cpython-313.pyc b/src/config/__pycache__/constants.cpython-313.pyc
+index fcf8d5d..25897d8 100644
+Binary files a/src/config/__pycache__/constants.cpython-313.pyc and b/src/config/__pycache__/constants.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/__init__.cpython-313.pyc b/src/core/__pycache__/__init__.cpython-313.pyc
+index c59ef78..20c83f8 100644
+Binary files a/src/core/__pycache__/__init__.cpython-313.pyc and b/src/core/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/arm_dynamics.cpython-313.pyc b/src/core/__pycache__/arm_dynamics.cpython-313.pyc
+index 80e8843..c375475 100644
+Binary files a/src/core/__pycache__/arm_dynamics.cpython-313.pyc and b/src/core/__pycache__/arm_dynamics.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/obstacles.cpython-313.pyc b/src/core/__pycache__/obstacles.cpython-313.pyc
+index d3eecde..ae7fc68 100644
+Binary files a/src/core/__pycache__/obstacles.cpython-313.pyc and b/src/core/__pycache__/obstacles.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/simulation.cpython-313.pyc b/src/core/__pycache__/simulation.cpython-313.pyc
+index f2c1f2f..07e1d89 100644
+Binary files a/src/core/__pycache__/simulation.cpython-313.pyc and b/src/core/__pycache__/simulation.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/slosh_dynamics.cpython-313.pyc b/src/core/__pycache__/slosh_dynamics.cpython-313.pyc
+index 7277863..659c2ea 100644
+Binary files a/src/core/__pycache__/slosh_dynamics.cpython-313.pyc and b/src/core/__pycache__/slosh_dynamics.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/state.cpython-313.pyc b/src/core/__pycache__/state.cpython-313.pyc
+index 9a5f319..3de40a4 100644
+Binary files a/src/core/__pycache__/state.cpython-313.pyc and b/src/core/__pycache__/state.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/__init__.cpython-313.pyc b/src/envs/__pycache__/__init__.cpython-313.pyc
+index 8ab6be7..a17b9c2 100644
+Binary files a/src/envs/__pycache__/__init__.cpython-313.pyc and b/src/envs/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/base_env.cpython-313.pyc b/src/envs/__pycache__/base_env.cpython-313.pyc
+index 60a05d8..cab63f6 100644
+Binary files a/src/envs/__pycache__/base_env.cpython-313.pyc and b/src/envs/__pycache__/base_env.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/obstacle_env.cpython-313.pyc b/src/envs/__pycache__/obstacle_env.cpython-313.pyc
+index 2c60d39..1b9c631 100644
+Binary files a/src/envs/__pycache__/obstacle_env.cpython-313.pyc and b/src/envs/__pycache__/obstacle_env.cpython-313.pyc differ
+diff --git a/src/reachability/__pycache__/__init__.cpython-313.pyc b/src/reachability/__pycache__/__init__.cpython-313.pyc
+index 6a2fadd..a69be66 100644
+Binary files a/src/reachability/__pycache__/__init__.cpython-313.pyc and b/src/reachability/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/reachability/__pycache__/safety_filter.cpython-313.pyc b/src/reachability/__pycache__/safety_filter.cpython-313.pyc
+index dc13286..6dc7216 100644
+Binary files a/src/reachability/__pycache__/safety_filter.cpython-313.pyc and b/src/reachability/__pycache__/safety_filter.cpython-313.pyc differ
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 55da260..d0600d6 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260602_144056-nusi9t6x/logs/debug-internal.log
+\ No newline at end of file
++run-20260605_211448-k5q9wshm/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 94b40d7..ac04b1b 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260602_144056-nusi9t6x/logs/debug.log
+\ No newline at end of file
++run-20260605_211448-k5q9wshm/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index 8c4670a..af880ad 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260602_144056-nusi9t6x
+\ No newline at end of file
++run-20260605_211448-k5q9wshm
+\ No newline at end of file

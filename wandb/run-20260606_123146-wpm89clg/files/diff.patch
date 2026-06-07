@@ -1,0 +1,611 @@
+diff --git a/ab_scenario.gif b/ab_scenario.gif
+index 124cced..f48e8eb 100644
+Binary files a/ab_scenario.gif and b/ab_scenario.gif differ
+diff --git a/brt_model/checkpoints/model_epoch_005000.pth b/brt_model/checkpoints/model_epoch_005000.pth
+index d4d0d2a..79c2bf3 100644
+Binary files a/brt_model/checkpoints/model_epoch_005000.pth and b/brt_model/checkpoints/model_epoch_005000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_010000.pth b/brt_model/checkpoints/model_epoch_010000.pth
+index d98d895..41ea3e2 100644
+Binary files a/brt_model/checkpoints/model_epoch_010000.pth and b/brt_model/checkpoints/model_epoch_010000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_015000.pth b/brt_model/checkpoints/model_epoch_015000.pth
+index 809d30b..d08643b 100644
+Binary files a/brt_model/checkpoints/model_epoch_015000.pth and b/brt_model/checkpoints/model_epoch_015000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_020000.pth b/brt_model/checkpoints/model_epoch_020000.pth
+index 9cce2d2..b283799 100644
+Binary files a/brt_model/checkpoints/model_epoch_020000.pth and b/brt_model/checkpoints/model_epoch_020000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_025000.pth b/brt_model/checkpoints/model_epoch_025000.pth
+index c8e908f..25ec553 100644
+Binary files a/brt_model/checkpoints/model_epoch_025000.pth and b/brt_model/checkpoints/model_epoch_025000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_030000.pth b/brt_model/checkpoints/model_epoch_030000.pth
+index 6774298..3e08253 100644
+Binary files a/brt_model/checkpoints/model_epoch_030000.pth and b/brt_model/checkpoints/model_epoch_030000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_035000.pth b/brt_model/checkpoints/model_epoch_035000.pth
+index 9ccb00e..62b087e 100644
+Binary files a/brt_model/checkpoints/model_epoch_035000.pth and b/brt_model/checkpoints/model_epoch_035000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_040000.pth b/brt_model/checkpoints/model_epoch_040000.pth
+index 67366a2..19d6c8a 100644
+Binary files a/brt_model/checkpoints/model_epoch_040000.pth and b/brt_model/checkpoints/model_epoch_040000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_045000.pth b/brt_model/checkpoints/model_epoch_045000.pth
+index 8723d3f..d46b3dd 100644
+Binary files a/brt_model/checkpoints/model_epoch_045000.pth and b/brt_model/checkpoints/model_epoch_045000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_050000.pth b/brt_model/checkpoints/model_epoch_050000.pth
+index 62226b5..513a85e 100644
+Binary files a/brt_model/checkpoints/model_epoch_050000.pth and b/brt_model/checkpoints/model_epoch_050000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_055000.pth b/brt_model/checkpoints/model_epoch_055000.pth
+index 48730c9..e3f92a1 100644
+Binary files a/brt_model/checkpoints/model_epoch_055000.pth and b/brt_model/checkpoints/model_epoch_055000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_060000.pth b/brt_model/checkpoints/model_epoch_060000.pth
+index 1f9fbfa..2f248c5 100644
+Binary files a/brt_model/checkpoints/model_epoch_060000.pth and b/brt_model/checkpoints/model_epoch_060000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_065000.pth b/brt_model/checkpoints/model_epoch_065000.pth
+index aedacac..4b97a73 100644
+Binary files a/brt_model/checkpoints/model_epoch_065000.pth and b/brt_model/checkpoints/model_epoch_065000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_070000.pth b/brt_model/checkpoints/model_epoch_070000.pth
+index 11b7f2f..107a45b 100644
+Binary files a/brt_model/checkpoints/model_epoch_070000.pth and b/brt_model/checkpoints/model_epoch_070000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_075000.pth b/brt_model/checkpoints/model_epoch_075000.pth
+index 048f1ac..351e735 100644
+Binary files a/brt_model/checkpoints/model_epoch_075000.pth and b/brt_model/checkpoints/model_epoch_075000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_080000.pth b/brt_model/checkpoints/model_epoch_080000.pth
+index fa3286e..a1a4f64 100644
+Binary files a/brt_model/checkpoints/model_epoch_080000.pth and b/brt_model/checkpoints/model_epoch_080000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_085000.pth b/brt_model/checkpoints/model_epoch_085000.pth
+index 4e11ad4..16fce15 100644
+Binary files a/brt_model/checkpoints/model_epoch_085000.pth and b/brt_model/checkpoints/model_epoch_085000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_090000.pth b/brt_model/checkpoints/model_epoch_090000.pth
+index d79546e..faea621 100644
+Binary files a/brt_model/checkpoints/model_epoch_090000.pth and b/brt_model/checkpoints/model_epoch_090000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_095000.pth b/brt_model/checkpoints/model_epoch_095000.pth
+index b429602..9a9c81e 100644
+Binary files a/brt_model/checkpoints/model_epoch_095000.pth and b/brt_model/checkpoints/model_epoch_095000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_100000.pth b/brt_model/checkpoints/model_epoch_100000.pth
+index 371b519..c0a552c 100644
+Binary files a/brt_model/checkpoints/model_epoch_100000.pth and b/brt_model/checkpoints/model_epoch_100000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_105000.pth b/brt_model/checkpoints/model_epoch_105000.pth
+index 1fd8354..ff65f3c 100644
+Binary files a/brt_model/checkpoints/model_epoch_105000.pth and b/brt_model/checkpoints/model_epoch_105000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_110000.pth b/brt_model/checkpoints/model_epoch_110000.pth
+index 50096ac..5281d63 100644
+Binary files a/brt_model/checkpoints/model_epoch_110000.pth and b/brt_model/checkpoints/model_epoch_110000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_115000.pth b/brt_model/checkpoints/model_epoch_115000.pth
+index 3119816..cb0e0cb 100644
+Binary files a/brt_model/checkpoints/model_epoch_115000.pth and b/brt_model/checkpoints/model_epoch_115000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_120000.pth b/brt_model/checkpoints/model_epoch_120000.pth
+index c94972d..e446a00 100644
+Binary files a/brt_model/checkpoints/model_epoch_120000.pth and b/brt_model/checkpoints/model_epoch_120000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_125000.pth b/brt_model/checkpoints/model_epoch_125000.pth
+index 536e734..2517bb9 100644
+Binary files a/brt_model/checkpoints/model_epoch_125000.pth and b/brt_model/checkpoints/model_epoch_125000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_130000.pth b/brt_model/checkpoints/model_epoch_130000.pth
+index ae1c6dc..7707c92 100644
+Binary files a/brt_model/checkpoints/model_epoch_130000.pth and b/brt_model/checkpoints/model_epoch_130000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_135000.pth b/brt_model/checkpoints/model_epoch_135000.pth
+index d8deeba..bc34701 100644
+Binary files a/brt_model/checkpoints/model_epoch_135000.pth and b/brt_model/checkpoints/model_epoch_135000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_140000.pth b/brt_model/checkpoints/model_epoch_140000.pth
+index 0d633a7..ffaedf0 100644
+Binary files a/brt_model/checkpoints/model_epoch_140000.pth and b/brt_model/checkpoints/model_epoch_140000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_145000.pth b/brt_model/checkpoints/model_epoch_145000.pth
+index 0f021ad..2797dbc 100644
+Binary files a/brt_model/checkpoints/model_epoch_145000.pth and b/brt_model/checkpoints/model_epoch_145000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_150000.pth b/brt_model/checkpoints/model_epoch_150000.pth
+index af35b7e..df3ad30 100644
+Binary files a/brt_model/checkpoints/model_epoch_150000.pth and b/brt_model/checkpoints/model_epoch_150000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_155000.pth b/brt_model/checkpoints/model_epoch_155000.pth
+index 371022a..201359d 100644
+Binary files a/brt_model/checkpoints/model_epoch_155000.pth and b/brt_model/checkpoints/model_epoch_155000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_160000.pth b/brt_model/checkpoints/model_epoch_160000.pth
+index b54dc5d..126dbb1 100644
+Binary files a/brt_model/checkpoints/model_epoch_160000.pth and b/brt_model/checkpoints/model_epoch_160000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_165000.pth b/brt_model/checkpoints/model_epoch_165000.pth
+index 0d555fa..09c3b52 100644
+Binary files a/brt_model/checkpoints/model_epoch_165000.pth and b/brt_model/checkpoints/model_epoch_165000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_170000.pth b/brt_model/checkpoints/model_epoch_170000.pth
+index fe41645..4e5abd7 100644
+Binary files a/brt_model/checkpoints/model_epoch_170000.pth and b/brt_model/checkpoints/model_epoch_170000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_175000.pth b/brt_model/checkpoints/model_epoch_175000.pth
+index 950be7e..d0e5ab7 100644
+Binary files a/brt_model/checkpoints/model_epoch_175000.pth and b/brt_model/checkpoints/model_epoch_175000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_180000.pth b/brt_model/checkpoints/model_epoch_180000.pth
+index 184ed0d..323ba98 100644
+Binary files a/brt_model/checkpoints/model_epoch_180000.pth and b/brt_model/checkpoints/model_epoch_180000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_185000.pth b/brt_model/checkpoints/model_epoch_185000.pth
+index 3589b9b..34cb5fd 100644
+Binary files a/brt_model/checkpoints/model_epoch_185000.pth and b/brt_model/checkpoints/model_epoch_185000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_190000.pth b/brt_model/checkpoints/model_epoch_190000.pth
+index 0aafae2..0612b2b 100644
+Binary files a/brt_model/checkpoints/model_epoch_190000.pth and b/brt_model/checkpoints/model_epoch_190000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_195000.pth b/brt_model/checkpoints/model_epoch_195000.pth
+index 3d65713..925f5d6 100644
+Binary files a/brt_model/checkpoints/model_epoch_195000.pth and b/brt_model/checkpoints/model_epoch_195000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_200000.pth b/brt_model/checkpoints/model_epoch_200000.pth
+index 3cc2e77..5fd6295 100644
+Binary files a/brt_model/checkpoints/model_epoch_200000.pth and b/brt_model/checkpoints/model_epoch_200000.pth differ
+diff --git a/checkpoints/baseline/ppo_baseline_1000000_steps.zip b/checkpoints/baseline/ppo_baseline_1000000_steps.zip
+index bd4fe74..c933e81 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1000000_steps.zip and b/checkpoints/baseline/ppo_baseline_1000000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_100000_steps.zip b/checkpoints/baseline/ppo_baseline_100000_steps.zip
+index 8138596..8355866 100644
+Binary files a/checkpoints/baseline/ppo_baseline_100000_steps.zip and b/checkpoints/baseline/ppo_baseline_100000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1050000_steps.zip b/checkpoints/baseline/ppo_baseline_1050000_steps.zip
+index 1d4e313..f8ba150 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1050000_steps.zip and b/checkpoints/baseline/ppo_baseline_1050000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1100000_steps.zip b/checkpoints/baseline/ppo_baseline_1100000_steps.zip
+index 972f1fb..6d90474 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1100000_steps.zip and b/checkpoints/baseline/ppo_baseline_1100000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1150000_steps.zip b/checkpoints/baseline/ppo_baseline_1150000_steps.zip
+index 5eb5af3..8c2867c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1150000_steps.zip and b/checkpoints/baseline/ppo_baseline_1150000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1200000_steps.zip b/checkpoints/baseline/ppo_baseline_1200000_steps.zip
+index 3ab0149..bcdba3b 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1200000_steps.zip and b/checkpoints/baseline/ppo_baseline_1200000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1250000_steps.zip b/checkpoints/baseline/ppo_baseline_1250000_steps.zip
+index b7113c3..0c0a5ca 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1250000_steps.zip and b/checkpoints/baseline/ppo_baseline_1250000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1300000_steps.zip b/checkpoints/baseline/ppo_baseline_1300000_steps.zip
+index c903845..97529c6 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1300000_steps.zip and b/checkpoints/baseline/ppo_baseline_1300000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1350000_steps.zip b/checkpoints/baseline/ppo_baseline_1350000_steps.zip
+index d27b5a9..6f4a73e 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1350000_steps.zip and b/checkpoints/baseline/ppo_baseline_1350000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1400000_steps.zip b/checkpoints/baseline/ppo_baseline_1400000_steps.zip
+index f038613..5b530b3 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1400000_steps.zip and b/checkpoints/baseline/ppo_baseline_1400000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1450000_steps.zip b/checkpoints/baseline/ppo_baseline_1450000_steps.zip
+index 00c973d..940c77c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1450000_steps.zip and b/checkpoints/baseline/ppo_baseline_1450000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1500000_steps.zip b/checkpoints/baseline/ppo_baseline_1500000_steps.zip
+index e8e45d5..d4715e2 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1500000_steps.zip and b/checkpoints/baseline/ppo_baseline_1500000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_150000_steps.zip b/checkpoints/baseline/ppo_baseline_150000_steps.zip
+index eae3cd4..6d107a4 100644
+Binary files a/checkpoints/baseline/ppo_baseline_150000_steps.zip and b/checkpoints/baseline/ppo_baseline_150000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1550000_steps.zip b/checkpoints/baseline/ppo_baseline_1550000_steps.zip
+index f3f1236..b1beaf5 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1550000_steps.zip and b/checkpoints/baseline/ppo_baseline_1550000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1600000_steps.zip b/checkpoints/baseline/ppo_baseline_1600000_steps.zip
+index ac8b89f..07e4e29 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1600000_steps.zip and b/checkpoints/baseline/ppo_baseline_1600000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1650000_steps.zip b/checkpoints/baseline/ppo_baseline_1650000_steps.zip
+index f371365..ce0846c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1650000_steps.zip and b/checkpoints/baseline/ppo_baseline_1650000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1700000_steps.zip b/checkpoints/baseline/ppo_baseline_1700000_steps.zip
+index 6e397e3..09f4334 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1700000_steps.zip and b/checkpoints/baseline/ppo_baseline_1700000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1750000_steps.zip b/checkpoints/baseline/ppo_baseline_1750000_steps.zip
+index 0477bc5..a45974c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1750000_steps.zip and b/checkpoints/baseline/ppo_baseline_1750000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1800000_steps.zip b/checkpoints/baseline/ppo_baseline_1800000_steps.zip
+index c29c246..b702eb9 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1800000_steps.zip and b/checkpoints/baseline/ppo_baseline_1800000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1850000_steps.zip b/checkpoints/baseline/ppo_baseline_1850000_steps.zip
+index 56c5486..690ec02 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1850000_steps.zip and b/checkpoints/baseline/ppo_baseline_1850000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1900000_steps.zip b/checkpoints/baseline/ppo_baseline_1900000_steps.zip
+index 0802e5c..bbcc79d 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1900000_steps.zip and b/checkpoints/baseline/ppo_baseline_1900000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1950000_steps.zip b/checkpoints/baseline/ppo_baseline_1950000_steps.zip
+index 4c22a4a..dfc66b3 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1950000_steps.zip and b/checkpoints/baseline/ppo_baseline_1950000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_2000000_steps.zip b/checkpoints/baseline/ppo_baseline_2000000_steps.zip
+index 33d730b..58491bf 100644
+Binary files a/checkpoints/baseline/ppo_baseline_2000000_steps.zip and b/checkpoints/baseline/ppo_baseline_2000000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_200000_steps.zip b/checkpoints/baseline/ppo_baseline_200000_steps.zip
+index 2326a0c..3b3270c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_200000_steps.zip and b/checkpoints/baseline/ppo_baseline_200000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_250000_steps.zip b/checkpoints/baseline/ppo_baseline_250000_steps.zip
+index 5147d37..f553825 100644
+Binary files a/checkpoints/baseline/ppo_baseline_250000_steps.zip and b/checkpoints/baseline/ppo_baseline_250000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_300000_steps.zip b/checkpoints/baseline/ppo_baseline_300000_steps.zip
+index 4896666..b4c18cc 100644
+Binary files a/checkpoints/baseline/ppo_baseline_300000_steps.zip and b/checkpoints/baseline/ppo_baseline_300000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_350000_steps.zip b/checkpoints/baseline/ppo_baseline_350000_steps.zip
+index 7094aae..7e2228a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_350000_steps.zip and b/checkpoints/baseline/ppo_baseline_350000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_400000_steps.zip b/checkpoints/baseline/ppo_baseline_400000_steps.zip
+index b8b4cfa..38367c9 100644
+Binary files a/checkpoints/baseline/ppo_baseline_400000_steps.zip and b/checkpoints/baseline/ppo_baseline_400000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_450000_steps.zip b/checkpoints/baseline/ppo_baseline_450000_steps.zip
+index 8ba4501..1cb9bc1 100644
+Binary files a/checkpoints/baseline/ppo_baseline_450000_steps.zip and b/checkpoints/baseline/ppo_baseline_450000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_500000_steps.zip b/checkpoints/baseline/ppo_baseline_500000_steps.zip
+index dc44e32..ee88332 100644
+Binary files a/checkpoints/baseline/ppo_baseline_500000_steps.zip and b/checkpoints/baseline/ppo_baseline_500000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_50000_steps.zip b/checkpoints/baseline/ppo_baseline_50000_steps.zip
+index 8f833bc..933efae 100644
+Binary files a/checkpoints/baseline/ppo_baseline_50000_steps.zip and b/checkpoints/baseline/ppo_baseline_50000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_550000_steps.zip b/checkpoints/baseline/ppo_baseline_550000_steps.zip
+index e57ae65..fcb6d79 100644
+Binary files a/checkpoints/baseline/ppo_baseline_550000_steps.zip and b/checkpoints/baseline/ppo_baseline_550000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_600000_steps.zip b/checkpoints/baseline/ppo_baseline_600000_steps.zip
+index 52473de..891b458 100644
+Binary files a/checkpoints/baseline/ppo_baseline_600000_steps.zip and b/checkpoints/baseline/ppo_baseline_600000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_650000_steps.zip b/checkpoints/baseline/ppo_baseline_650000_steps.zip
+index f4874ca..8d182ab 100644
+Binary files a/checkpoints/baseline/ppo_baseline_650000_steps.zip and b/checkpoints/baseline/ppo_baseline_650000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_700000_steps.zip b/checkpoints/baseline/ppo_baseline_700000_steps.zip
+index a9e7041..a215adf 100644
+Binary files a/checkpoints/baseline/ppo_baseline_700000_steps.zip and b/checkpoints/baseline/ppo_baseline_700000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_750000_steps.zip b/checkpoints/baseline/ppo_baseline_750000_steps.zip
+index 276e670..019d68d 100644
+Binary files a/checkpoints/baseline/ppo_baseline_750000_steps.zip and b/checkpoints/baseline/ppo_baseline_750000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_800000_steps.zip b/checkpoints/baseline/ppo_baseline_800000_steps.zip
+index b57e72f..d489443 100644
+Binary files a/checkpoints/baseline/ppo_baseline_800000_steps.zip and b/checkpoints/baseline/ppo_baseline_800000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_850000_steps.zip b/checkpoints/baseline/ppo_baseline_850000_steps.zip
+index 12f7bb6..e835603 100644
+Binary files a/checkpoints/baseline/ppo_baseline_850000_steps.zip and b/checkpoints/baseline/ppo_baseline_850000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_900000_steps.zip b/checkpoints/baseline/ppo_baseline_900000_steps.zip
+index cf59972..0a5d8df 100644
+Binary files a/checkpoints/baseline/ppo_baseline_900000_steps.zip and b/checkpoints/baseline/ppo_baseline_900000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_950000_steps.zip b/checkpoints/baseline/ppo_baseline_950000_steps.zip
+index df1b878..895e114 100644
+Binary files a/checkpoints/baseline/ppo_baseline_950000_steps.zip and b/checkpoints/baseline/ppo_baseline_950000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1000000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1000000_steps.pkl
+index 5c55e34..f810067 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1000000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1000000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl
+index 8bf7862..05c1890 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1050000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1050000_steps.pkl
+index c1b72f1..2041980 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1050000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1050000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1100000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1100000_steps.pkl
+index d38f359..6f84858 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1100000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1100000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1150000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1150000_steps.pkl
+index a18f820..eac4c57 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1150000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1150000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1200000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1200000_steps.pkl
+index c8f2a75..88508df 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1200000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1200000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1250000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1250000_steps.pkl
+index 5196b91..82e383b 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1250000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1250000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1300000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1300000_steps.pkl
+index 7342429..e175df7 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1300000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1300000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1350000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1350000_steps.pkl
+index f0c33d7..21f95c2 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1350000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1350000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1400000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1400000_steps.pkl
+index b3ec05b..b2ab810 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1400000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1400000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1450000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1450000_steps.pkl
+index 5151327..16b5566 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1450000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1450000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1500000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1500000_steps.pkl
+index 876966a..3fcb14d 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1500000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1500000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl
+index a0c416f..36cc384 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1550000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1550000_steps.pkl
+index 401f040..3a2430a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1550000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1550000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1600000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1600000_steps.pkl
+index 7850d2a..8c452d1 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1600000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1600000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1650000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1650000_steps.pkl
+index 1bd3754..1832268 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1650000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1650000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1700000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1700000_steps.pkl
+index ea08c5c..625e268 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1700000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1700000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1750000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1750000_steps.pkl
+index b7c2d1f..38e4f46 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1750000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1750000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1800000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1800000_steps.pkl
+index a82e16d..196be3a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1800000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1800000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1850000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1850000_steps.pkl
+index ff42c59..206a2fd 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1850000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1850000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1900000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1900000_steps.pkl
+index acd83e1..e2dd6c8 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1900000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1900000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1950000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1950000_steps.pkl
+index 3443afe..bc271b9 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1950000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1950000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_2000000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_2000000_steps.pkl
+index 8ccdf0c..17189d0 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_2000000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_2000000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl
+index d143a3c..ace3714 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl
+index 36bb4c6..8787b19 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl
+index 7267b4b..57ee653 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl
+index e48f35d..f6280b3 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl
+index a501714..1599295 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl
+index 3354dec..1676fbe 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl
+index 231dcb5..1f83828 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl
+index 4708c85..bfcb46a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl
+index e3b9b1e..2eb7775 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl
+index 159a1b2..c497286 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl
+index cc2704e..804657a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl
+index cf11948..2f5b33a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_750000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_750000_steps.pkl
+index 2503b1a..ec79174 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_750000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_750000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_800000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_800000_steps.pkl
+index 1b59607..1edb32c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_800000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_800000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_850000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_850000_steps.pkl
+index d90efe9..0e78b07 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_850000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_850000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_900000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_900000_steps.pkl
+index c3c0ab0..0f040e9 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_900000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_900000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_950000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_950000_steps.pkl
+index 9e5f17f..b7c3e04 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_950000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_950000_steps.pkl differ
+diff --git a/dynamics/__pycache__/__init__.cpython-313.pyc b/dynamics/__pycache__/__init__.cpython-313.pyc
+index 1f915b0..0d9fd8a 100644
+Binary files a/dynamics/__pycache__/__init__.cpython-313.pyc and b/dynamics/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/dynamics/__pycache__/dynamics.cpython-313.pyc b/dynamics/__pycache__/dynamics.cpython-313.pyc
+index 3e9ae71..3af350d 100644
+Binary files a/dynamics/__pycache__/dynamics.cpython-313.pyc and b/dynamics/__pycache__/dynamics.cpython-313.pyc differ
+diff --git a/dynamics/dynamics.py b/dynamics/dynamics.py
+index cacd756..fa2c491 100644
+--- a/dynamics/dynamics.py
++++ b/dynamics/dynamics.py
+@@ -451,12 +451,16 @@ class CoffeeArmDynamics:
+         # satisfy dV/dt ≈ −600 at slosh-boundary states while keeping V(rest)>0
+         # at safe states far away. It compromises by outputting −1.705 everywhere.
+         #
++        # The same collapse occurs for large NEGATIVE H (states with rapidly
++        # outward-moving slosh): H ≈ −600 drives dV/dt = 600, creating massive
++        # PDE residuals that overwhelm the larger 256-feature network over 200k
++        # epochs and corrupt the obstacle/joint-space representation (isolated
++        # red dots instead of smooth contours).  Symmetric clipping prevents both.
++        #
+         # The correct BRT gives V(rest, T) = l(rest) = +0.35 for all T because
+         # the optimal controller u=0 keeps the arm stationary (H=0 at rest).
+-        # Clipping H at H_MAX prevents the high-gradient slosh states from
+-        # contaminating V at safe states, while leaving H≈0 at rest unchanged.
+         H_MAX = 25.0
+-        H = H.clamp(max=H_MAX)
++        H = H.clamp(min=-H_MAX, max=H_MAX)
+ 
+         return H.reshape(shape)
+ 
+diff --git a/ppo_baseline_final.zip b/ppo_baseline_final.zip
+index e4c7396..091b678 100644
+Binary files a/ppo_baseline_final.zip and b/ppo_baseline_final.zip differ
+diff --git a/ppo_baseline_vecnormalize.pkl b/ppo_baseline_vecnormalize.pkl
+index d34efef..b650662 100644
+Binary files a/ppo_baseline_vecnormalize.pkl and b/ppo_baseline_vecnormalize.pkl differ
+diff --git a/smoke_test_brt.py b/smoke_test_brt.py
+index f19c8d2..15d5e55 100644
+--- a/smoke_test_brt.py
++++ b/smoke_test_brt.py
+@@ -50,10 +50,11 @@ def test_hamiltonian_scaling():
+     # which then multiplied by scale again → double scaling.
+     # Demonstrate: at a non-zero joint angle, slosh control terms depend on J(q).
+     # With q2=π/6 (normalized), J is different from q2=π/6*scale[1] (double-scaled).
+-    # Use p[8]=1 (vx_slosh gradient) so we activate J-dependent terms.
++    # Use p[8]=0.1 (vx_slosh gradient) — small enough that neither value hits the
++    # H_MAX=25 clamp, so the double-scaling bug remains detectable.
+     z_norm = torch.zeros(1, 10); z_norm[0, 1] = np.pi/6  # q2 = π/6 in normalized space
+     z_norm[0, 6] = 0.5  # xs = 0.5 in normalized space
+-    p_slosh = torch.zeros(1, 10); p_slosh[0, 8] = 1.0
++    p_slosh = torch.zeros(1, 10); p_slosh[0, 8] = 0.1
+ 
+     H_correct = dyn.hamiltonian(z_norm, p_slosh).item()
+ 
+@@ -228,12 +229,63 @@ def test_short_training():
+     return ok_pt and ok_sep and ok
+ 
+ 
++# ── 4. Obstacle boundary function sanity check ────────────────────────────────
++def test_obstacle_boundary():
++    print("\n=== Test 4: Obstacle boundary function ===")
++    from dynamics.dynamics import CoffeeArmDynamics
++    dyn = CoffeeArmDynamics()
++
++    print(f"  Obstacles loaded: {len(dyn.obstacles)}")
++    for i, obs in enumerate(dyn.obstacles):
++        print(f"    [{i}] center={obs['center']}  radius={obs['radius']}")
++
++    all_ok = True
++
++    # For each obstacle: build a state where the arm's elbow (link 2 endpoint)
++    # sits inside that obstacle sphere, then check boundary_fn < 0.
++    for i, obs in enumerate(dyn.obstacles):
++        cx, cy, cz = obs['center']
++        r = float(obs['radius'])
++
++        # q1 points the arm toward the obstacle in XY
++        q1 = float(np.arctan2(cy, cx))
++        # q2 tilts the arm to put the elbow near the obstacle height
++        l1 = float(dyn.L[0])
++        l2 = float(dyn.L[1])
++        elev = np.clip((cz - l1) / l2, -0.98, 0.98)
++        q2 = float(np.arcsin(elev))
++        q3 = 0.0
++        state_inside = np.array([q1, q2, q3, 0, 0, 0, 0, 0, 0, 0], dtype=np.float32)
++
++        lx = float(dyn.boundary_fn(state_inside))
++        inside_obs = lx < 0.0
++        print(f"  Obs {i}: state aimed at center → l(x)={lx:+.4f}  (expect < 0)  [{PASS if inside_obs else FAIL}]")
++        all_ok = all_ok and inside_obs
++
++    # A clearly safe state: q1=π/2 points the arm in +y, clearing all obstacles.
++    # (q=[0,0,0] sends link 2 through obstacle 2 at [0.39,0,0.30] — not safe.)
++    safe_state = np.array([np.pi/2, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=np.float32)
++    lx_safe = float(dyn.boundary_fn(safe_state))
++    ok_safe = lx_safe > 0.0
++    print(f"  Safe state (q1=π/2, arm in +y, zero slosh) → l(x)={lx_safe:+.4f}  (expect > 0)  [{PASS if ok_safe else FAIL}]")
++
++    # A slosh-violated state must be < 0
++    spill_state = np.zeros(10, dtype=np.float32)
++    spill_state[6] = dyn.slosh_rad_max * 1.5
++    lx_spill = float(dyn.boundary_fn(spill_state))
++    ok_spill = lx_spill < 0.0
++    print(f"  Spill state (slosh 1.5× max)  → l(x)={lx_spill:+.4f}  (expect < 0)  [{PASS if ok_spill else FAIL}]")
++
++    return all_ok and ok_safe and ok_spill
++
++
+ # ── main ───────────────────────────────────────────────────────────────────────
+ if __name__ == '__main__':
+     results = []
+     results.append(test_hamiltonian_scaling())
+     results.append(test_safety_filter_gradient())
+     results.append(test_short_training())
++    results.append(test_obstacle_boundary())
+ 
+     passed  = [r for r in results if r is True]
+     failed  = [r for r in results if r is False]
+diff --git a/src/__pycache__/__init__.cpython-313.pyc b/src/__pycache__/__init__.cpython-313.pyc
+index 30f0fd0..3906f1d 100644
+Binary files a/src/__pycache__/__init__.cpython-313.pyc and b/src/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/config/__pycache__/constants.cpython-313.pyc b/src/config/__pycache__/constants.cpython-313.pyc
+index fcf8d5d..25897d8 100644
+Binary files a/src/config/__pycache__/constants.cpython-313.pyc and b/src/config/__pycache__/constants.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/__init__.cpython-313.pyc b/src/core/__pycache__/__init__.cpython-313.pyc
+index c59ef78..20c83f8 100644
+Binary files a/src/core/__pycache__/__init__.cpython-313.pyc and b/src/core/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/arm_dynamics.cpython-313.pyc b/src/core/__pycache__/arm_dynamics.cpython-313.pyc
+index 80e8843..c375475 100644
+Binary files a/src/core/__pycache__/arm_dynamics.cpython-313.pyc and b/src/core/__pycache__/arm_dynamics.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/obstacles.cpython-313.pyc b/src/core/__pycache__/obstacles.cpython-313.pyc
+index d3eecde..ae7fc68 100644
+Binary files a/src/core/__pycache__/obstacles.cpython-313.pyc and b/src/core/__pycache__/obstacles.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/simulation.cpython-313.pyc b/src/core/__pycache__/simulation.cpython-313.pyc
+index f2c1f2f..07e1d89 100644
+Binary files a/src/core/__pycache__/simulation.cpython-313.pyc and b/src/core/__pycache__/simulation.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/slosh_dynamics.cpython-313.pyc b/src/core/__pycache__/slosh_dynamics.cpython-313.pyc
+index 7277863..659c2ea 100644
+Binary files a/src/core/__pycache__/slosh_dynamics.cpython-313.pyc and b/src/core/__pycache__/slosh_dynamics.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/state.cpython-313.pyc b/src/core/__pycache__/state.cpython-313.pyc
+index 9a5f319..3de40a4 100644
+Binary files a/src/core/__pycache__/state.cpython-313.pyc and b/src/core/__pycache__/state.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/__init__.cpython-313.pyc b/src/envs/__pycache__/__init__.cpython-313.pyc
+index 8ab6be7..a17b9c2 100644
+Binary files a/src/envs/__pycache__/__init__.cpython-313.pyc and b/src/envs/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/base_env.cpython-313.pyc b/src/envs/__pycache__/base_env.cpython-313.pyc
+index 60a05d8..cab63f6 100644
+Binary files a/src/envs/__pycache__/base_env.cpython-313.pyc and b/src/envs/__pycache__/base_env.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/obstacle_env.cpython-313.pyc b/src/envs/__pycache__/obstacle_env.cpython-313.pyc
+index 2c60d39..c903ff0 100644
+Binary files a/src/envs/__pycache__/obstacle_env.cpython-313.pyc and b/src/envs/__pycache__/obstacle_env.cpython-313.pyc differ
+diff --git a/src/reachability/__pycache__/__init__.cpython-313.pyc b/src/reachability/__pycache__/__init__.cpython-313.pyc
+index 6a2fadd..a69be66 100644
+Binary files a/src/reachability/__pycache__/__init__.cpython-313.pyc and b/src/reachability/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/reachability/__pycache__/compute_brt.cpython-313.pyc b/src/reachability/__pycache__/compute_brt.cpython-313.pyc
+index 8340ebb..e1b4bd9 100644
+Binary files a/src/reachability/__pycache__/compute_brt.cpython-313.pyc and b/src/reachability/__pycache__/compute_brt.cpython-313.pyc differ
+diff --git a/src/reachability/__pycache__/safety_filter.cpython-313.pyc b/src/reachability/__pycache__/safety_filter.cpython-313.pyc
+index dc13286..6dc7216 100644
+Binary files a/src/reachability/__pycache__/safety_filter.cpython-313.pyc and b/src/reachability/__pycache__/safety_filter.cpython-313.pyc differ
+diff --git a/src/scripts/train_ppo.py b/src/scripts/train_ppo.py
+index f7385cd..26456d1 100644
+--- a/src/scripts/train_ppo.py
++++ b/src/scripts/train_ppo.py
+@@ -14,7 +14,7 @@ import wandb
+ 
+ from stable_baselines3 import PPO
+ from stable_baselines3.common.callbacks import BaseCallback, CheckpointCallback, CallbackList
+-from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
++from stable_baselines3.common.vec_env import SubprocVecEnv, VecNormalize
+ from stable_baselines3.common.monitor import Monitor
+ from stable_baselines3.common.logger import Logger, HumanOutputFormat, KVWriter
+ 
+@@ -22,8 +22,9 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(_
+ if PROJECT_ROOT not in sys.path:
+     sys.path.insert(0, PROJECT_ROOT)
+ 
+-from src.envs.obstacle_env import CoffeeArmEnv
++from src.envs.base_env import CoffeePouringEnv as CoffeeArmEnv
+ 
++N_ENVS = 8
+ TOTAL_TIMESTEPS = 2_000_000
+ LOG_INTERVAL = 5_000
+ SAVE_INTERVAL = 50_000
+@@ -101,8 +102,6 @@ def make_env(seed=0):
+             info_keywords=(
+                 "spill_slosh",
+                 "dist_to_goal",
+-                "obstacle_hit",
+-                "joint_violation",
+             ),
+         )
+         return env
+@@ -122,7 +121,8 @@ if __name__ == "__main__":
+             **ENV_KWARGS,
+             "learning_rate": 1e-4,
+             "n_steps": 2048,
+-            "batch_size": 64,
++            "n_envs": N_ENVS,
++            "batch_size": 256,
+             "n_epochs": 10,
+             "gamma": 0.99,
+             "gae_lambda": 0.95,
+@@ -136,7 +136,7 @@ if __name__ == "__main__":
+     print("Filter: False")
+     print(f"Steps: {TOTAL_TIMESTEPS:,}\n")
+ 
+-    vec_env = DummyVecEnv([make_env(seed=0)])
++    vec_env = SubprocVecEnv([make_env(seed=i) for i in range(N_ENVS)])
+     vec_env = VecNormalize(vec_env, norm_obs=True, norm_reward=False, clip_obs=10.0)
+ 
+     model = PPO(
+@@ -144,7 +144,7 @@ if __name__ == "__main__":
+         vec_env,
+         learning_rate=1e-4,
+         n_steps=2048,
+-        batch_size=64,
++        batch_size=256,
+         n_epochs=5,
+         gamma=0.99,
+         gae_lambda=0.95,
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 55da260..8845510 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260602_144056-nusi9t6x/logs/debug-internal.log
+\ No newline at end of file
++run-20260606_123146-wpm89clg/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 94b40d7..f6d6612 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260602_144056-nusi9t6x/logs/debug.log
+\ No newline at end of file
++run-20260606_123146-wpm89clg/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index 8c4670a..6ead8f4 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260602_144056-nusi9t6x
+\ No newline at end of file
++run-20260606_123146-wpm89clg
+\ No newline at end of file

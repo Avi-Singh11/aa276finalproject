@@ -26,7 +26,7 @@ import torch
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 
-from src.envs.obstacle_env import CoffeeArmEnv
+from src.envs.base_env import CoffeeArmEnv
 from src.reachability.safety_filter import safety_filter as brt_safety_filter
 from src.reachability.compute_brt import CFG as BRT_CFG
 

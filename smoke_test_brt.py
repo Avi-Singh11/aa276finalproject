@@ -50,10 +50,11 @@ def test_hamiltonian_scaling():
     # which then multiplied by scale again → double scaling.
     # Demonstrate: at a non-zero joint angle, slosh control terms depend on J(q).
     # With q2=π/6 (normalized), J is different from q2=π/6*scale[1] (double-scaled).
-    # Use p[8]=1 (vx_slosh gradient) so we activate J-dependent terms.
+    # Use p[8]=0.1 (vx_slosh gradient) — small enough that neither value hits the
+    # H_MAX=25 clamp, so the double-scaling bug remains detectable.
     z_norm = torch.zeros(1, 10); z_norm[0, 1] = np.pi/6  # q2 = π/6 in normalized space
     z_norm[0, 6] = 0.5  # xs = 0.5 in normalized space
-    p_slosh = torch.zeros(1, 10); p_slosh[0, 8] = 1.0
+    p_slosh = torch.zeros(1, 10); p_slosh[0, 8] = 0.1
 
     H_correct = dyn.hamiltonian(z_norm, p_slosh).item()
 
@@ -228,12 +229,63 @@ def test_short_training():
     return ok_pt and ok_sep and ok
 
 
+# ── 4. Obstacle boundary function sanity check ────────────────────────────────
+def test_obstacle_boundary():
+    print("\n=== Test 4: Obstacle boundary function ===")
+    from dynamics.dynamics import CoffeeArmDynamics
+    dyn = CoffeeArmDynamics()
+
+    print(f"  Obstacles loaded: {len(dyn.obstacles)}")
+    for i, obs in enumerate(dyn.obstacles):
+        print(f"    [{i}] center={obs['center']}  radius={obs['radius']}")
+
+    all_ok = True
+
+    # For each obstacle: build a state where the arm's elbow (link 2 endpoint)
+    # sits inside that obstacle sphere, then check boundary_fn < 0.
+    for i, obs in enumerate(dyn.obstacles):
+        cx, cy, cz = obs['center']
+        r = float(obs['radius'])
+
+        # q1 points the arm toward the obstacle in XY
+        q1 = float(np.arctan2(cy, cx))
+        # q2 tilts the arm to put the elbow near the obstacle height
+        l1 = float(dyn.L[0])
+        l2 = float(dyn.L[1])
+        elev = np.clip((cz - l1) / l2, -0.98, 0.98)
+        q2 = float(np.arcsin(elev))
+        q3 = 0.0
+        state_inside = np.array([q1, q2, q3, 0, 0, 0, 0, 0, 0, 0], dtype=np.float32)
+
+        lx = float(dyn.boundary_fn(state_inside))
+        inside_obs = lx < 0.0
+        print(f"  Obs {i}: state aimed at center → l(x)={lx:+.4f}  (expect < 0)  [{PASS if inside_obs else FAIL}]")
+        all_ok = all_ok and inside_obs
+
+    # A clearly safe state: q1=π/2 points the arm in +y, clearing all obstacles.
+    # (q=[0,0,0] sends link 2 through obstacle 2 at [0.39,0,0.30] — not safe.)
+    safe_state = np.array([np.pi/2, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=np.float32)
+    lx_safe = float(dyn.boundary_fn(safe_state))
+    ok_safe = lx_safe > 0.0
+    print(f"  Safe state (q1=π/2, arm in +y, zero slosh) → l(x)={lx_safe:+.4f}  (expect > 0)  [{PASS if ok_safe else FAIL}]")
+
+    # A slosh-violated state must be < 0
+    spill_state = np.zeros(10, dtype=np.float32)
+    spill_state[6] = dyn.slosh_rad_max * 1.5
+    lx_spill = float(dyn.boundary_fn(spill_state))
+    ok_spill = lx_spill < 0.0
+    print(f"  Spill state (slosh 1.5× max)  → l(x)={lx_spill:+.4f}  (expect < 0)  [{PASS if ok_spill else FAIL}]")
+
+    return all_ok and ok_safe and ok_spill
+
+
 # ── main ───────────────────────────────────────────────────────────────────────
 if __name__ == '__main__':
     results = []
     results.append(test_hamiltonian_scaling())
     results.append(test_safety_filter_gradient())
     results.append(test_short_training())
+    results.append(test_obstacle_boundary())
 
     passed  = [r for r in results if r is True]
     failed  = [r for r in results if r is False]

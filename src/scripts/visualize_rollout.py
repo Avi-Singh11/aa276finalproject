@@ -36,7 +36,7 @@ import torch
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 
-from src.envs.obstacle_env import CoffeeArmEnv
+from src.envs.base_env import CoffeeArmEnv
 from src.core.arm_dynamics import get_link_positions
 from src.config.constants import DEFAULT_OBSTACLES, DEFAULT_SLOSH_RAD_MAX, DEFAULT_L_EFF
 from src.reachability.safety_filter import safety_filter as brt_safety_filter

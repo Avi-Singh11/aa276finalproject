@@ -28,7 +28,7 @@ if DEEPREACH_PATH not in sys.path:
     sys.path.insert(0, DEEPREACH_PATH)
 
 import torch
-from src.envs.obstacle_env import CoffeeArmEnv
+from src.envs.base_env import CoffeeArmEnv
 from src.core.arm_dynamics import get_link_positions, position_cup
 from src.config.constants import (
     DEFAULT_OBSTACLES, DEFAULT_SLOSH_RAD_MAX, DEFAULT_L_EFF, DEFAULT_L,

@@ -72,7 +72,7 @@ def _build_cbf_numerical(model, dynamics, state_10d, u_nom, t, gamma=GAMMA):
 
     a_cbf = dvds @ g_x
     drift_term = np.dot(dvds, f_x).item()
-    b_cbf = -gamma * V - dvdt - drift_term
+    b_cbf = -gamma * V + dvdt - drift_term
     
     return a_cbf.astype(np.float32), float(b_cbf)
 

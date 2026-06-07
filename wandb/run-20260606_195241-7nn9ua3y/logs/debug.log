@@ -1,0 +1,14 @@
+2026-06-06 19:52:41,493 INFO    MainThread:3005680 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-06-06 19:52:41,493 INFO    MainThread:3005680 [wandb_setup.py:_flush():81] Configure stats pid to 3005680
+2026-06-06 19:52:41,493 INFO    MainThread:3005680 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-06-06 19:52:41,493 INFO    MainThread:3005680 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/wandb/run-20260606_195241-7nn9ua3y/logs/debug.log
+2026-06-06 19:52:41,493 INFO    MainThread:3005680 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/wandb/run-20260606_195241-7nn9ua3y/logs/debug-internal.log
+2026-06-06 19:52:41,493 INFO    MainThread:3005680 [wandb_init.py:init():850] calling init triggers
+2026-06-06 19:52:41,493 INFO    MainThread:3005680 [wandb_init.py:init():855] wandb.init called with sweep_config: {}
+config: {'algorithm': 'PPO', 'env': 'CoffeeArmEnv', 'use_safety_filter': False, 'norm_reward': False, 'total_timesteps': 5000000, 'u_max': 15.0, 'T': 10.0, 'dt': 0.01, 'learning_rate': 0.0003, 'n_steps': 1024, 'n_envs': 8, 'batch_size': 2048, 'n_epochs': 10, 'gamma': 0.99, 'gae_lambda': 0.95, 'clip_range': 0.2, 'ent_coef': 0.05, 'goal': '[0.55, 0.10, 0.10]', 'start_az_deg': '[70, 90]', 'at_goal_bonus': 100.0, '_wandb': {}}
+2026-06-06 19:52:41,493 INFO    MainThread:3005680 [wandb_init.py:init():898] starting backend
+2026-06-06 19:52:41,718 INFO    MainThread:3005680 [wandb_init.py:init():913] sending inform_init request
+2026-06-06 19:52:41,938 INFO    MainThread:3005680 [wandb_init.py:init():918] backend started and connected
+2026-06-06 19:52:41,949 INFO    MainThread:3005680 [wandb_init.py:init():988] updated telemetry
+2026-06-06 19:52:41,952 INFO    MainThread:3005680 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-06-06 19:52:42,181 INFO    MainThread:3005680 [wandb_init.py:init():1056] starting run threads in backend

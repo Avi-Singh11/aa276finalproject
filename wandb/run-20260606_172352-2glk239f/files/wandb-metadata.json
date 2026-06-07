@@ -1,0 +1,15 @@
+{
+  "os": "Linux-6.17.0-1014-nvidia-aarch64-with-glibc2.39",
+  "python": "CPython 3.13.12",
+  "startedAt": "2026-06-07T00:23:52.329996Z",
+  "program": "-m src.scripts.train_ppo",
+  "git": {
+    "remote": "https://github.com/Avi-Singh11/aa276finalproject.git",
+    "commit": "8422650b7700f1d4e285446824e5fb7abac1885d"
+  },
+  "email": "avisingh0718@gmail.com",
+  "root": "/home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject",
+  "host": "spark-7020",
+  "executable": "/home/avisingh/miniconda3/bin/python",
+  "writerId": "n7qccby0yk0mrrvvsjbmf7n7gyuowlo0"
+}

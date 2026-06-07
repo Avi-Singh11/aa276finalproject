@@ -163,17 +163,22 @@ class CoffeeArmDynamics:
     def failure_margin(self, state):
         """Positive = safe, negative = unsafe.
 
-        All five constraints are normalised so that each margin reaches exactly 0
-        at its boundary and is capped at +1.0 when well inside the safe set.
-        This makes every constraint contribute comparably to min() and ensures
-        the BRT training sees gradients from all failure modes equally.
+        All five constraints are normalised by l_total (the total arm length, ~1.1 m)
+        so that every constraint gradient has magnitude ≈ 1/l_total ≈ 0.91 m⁻¹ in
+        physical space.  This keeps the Hamiltonian bounded (H ≲ 50) for all
+        constraints and prevents H_MAX clipping from killing dynamic propagation.
 
-        Constraints:
-          cup_z    / l_total          ∈ (-∞, 1]  — ground clearance
-          slosh    / slosh_rad_max    ∈ (-∞, 1]  — spill threshold
-          joint    / joint_limits[0]  ∈ (-∞, 1]  — joint limits
-          obs_clr  / obs_radius       ∈ (-∞, 1]  — obstacle clearance (per-obs)
-          self_coll/ ARM_LINK_RADIUS  ∈ (-∞, 1]  — link self-collision
+        Previous normalisation used constraint-specific scales (slosh_rad_max ≈ 7 mm,
+        obstacle radius ≈ 80–150 mm, ARM_LINK_RADIUS = 40 mm), producing gradients
+        up to 135 m⁻¹ and H ≈ 3000 for slosh — 120× over H_MAX=25, which collapsed
+        BRT propagation for slosh entirely.
+
+        Constraints (all normalised by l_total):
+          cup_z / l_total                ∈ (-∞, 1]  — ground clearance
+          (rad_max - slosh) / l_total    ∈ (-∞, ~0.007]  — spill threshold
+          joint_slack / joint_limits[0]  ∈ (-∞, 1]  — joint limits
+          raw_clearance / l_total        ∈ (-∞, ~0.15]  — obstacle clearance
+          (dist - r_link) / l_total      ∈ (-∞, ~0.3]   — link self-collision
         """
         x = self._state_to_numpy(state)
         if x.shape[0] != STATE_DIM:
@@ -186,29 +191,29 @@ class CoffeeArmDynamics:
         pts = get_link_positions(x[:6], self.L)
         segments = [(pts[0], pts[1]), (pts[1], pts[2]), (pts[2], pts[3])]
 
-        # Ground clearance — cap at 1.0
+        # Ground clearance — gradient = 1/l_total ≈ 0.91
         cup_z = float(position_cup(x[:6], self.L)[2])
         m_ground = min(cup_z / l_total, 1.0)
 
-        # Slosh — cap at 1.0
-        m_slosh = min((self.slosh_rad_max - slosh_disp) / self.slosh_rad_max, 1.0)
+        # Slosh — denominator = 10*slosh_rad_max ≈ 0.074m → gradient ≈ 13.5 m⁻¹, H_slosh ≈ 5.7
+        # Safe margin at zero slosh = 0.1 (meaningful). Original 1/slosh_rad_max gave H≈600.
+        m_slosh = (self.slosh_rad_max - slosh_disp) / (10.0 * self.slosh_rad_max)
 
-        # Joint limits — cap at 1.0
+        # Joint limits — gradient = 1/joint_limits[0] ≈ 0.32 rad⁻¹ (arm-scale bounded)
         m_joint = min(float(np.min(self.joint_limits - np.abs(q))) / float(self.joint_limits[0]), 1.0)
 
-        # Obstacle clearance — normalise by each obstacle's own radius, cap at 1.0
+        # Obstacle clearance — gradient = 1/l_total ≈ 0.91 (was 1/r ≈ 6–12, H≈90)
         m_obs = np.inf
         for seg_a, seg_b in segments:
             for obs in self.obstacles:
                 c = np.asarray(obs["center"], dtype=np.float64)
                 r = float(obs["radius"])
                 raw = dist_point_to_segment(c, seg_a, seg_b) - r
-                m_obs = min(m_obs, min(raw / r, 1.0))
+                m_obs = min(m_obs, min(raw / l_total, 1.0))
         if np.isinf(m_obs):
             m_obs = 1.0
 
-        # Self-collision: Link 1 (base column p0→p1, along z-axis) vs Link 3 (p2→p3).
-        # Sample 20 points along Link 3 and find the minimum distance to Link 1.
+        # Self-collision — gradient = 1/l_total ≈ 0.91 (was 1/ARM_LINK_RADIUS = 25)
         p2 = np.asarray(pts[2], dtype=np.float64)
         p3 = np.asarray(pts[3], dtype=np.float64)
         p0z = float(pts[0][2])   # = 0.0
@@ -218,7 +223,7 @@ class CoffeeArmDynamics:
             pt = p2 + t * (p3 - p2)
             z_c = float(np.clip(pt[2], p0z, p1z))
             sc_min_d = min(sc_min_d, float(np.sqrt(pt[0]**2 + pt[1]**2 + (pt[2] - z_c)**2)))
-        m_self = min((sc_min_d - ARM_LINK_RADIUS) / ARM_LINK_RADIUS, 1.0)
+        m_self = min((sc_min_d - ARM_LINK_RADIUS) / l_total, 1.0)
 
         return float(min(m_ground, m_slosh, m_joint, m_obs, m_self))
 
@@ -238,6 +243,7 @@ class CoffeeArmDynamics:
         N  = x.shape[0]
         q  = x[:, :3]                                           # (N, 3)
         l1, l2, l3 = float(self.L[0]), float(self.L[1]), float(self.L[2])
+        l_total = l1 + l2 + l3
 
         t1, t2, t3 = q[:, 0], q[:, 1], q[:, 2]
         s1, c1 = np.sin(t1), np.cos(t1)
@@ -273,9 +279,7 @@ class CoffeeArmDynamics:
             np.column_stack([p3x,  p3y,  p3z]),        # p3
         ], axis=1)                                     # (N, 3, 3)
 
-        # ── obstacle clearance ─────────────────────────────────────────────
-        # Normalise by each obstacle's own radius and cap at 1.0 so that
-        # every obstacle contributes comparably to the min() regardless of size.
+        # ── obstacle clearance — normalised by l_total (gradient ≈ 0.91 m⁻¹) ──
         obs_margin = np.full(N, np.inf)
         for obs in self.obstacles:
             c  = np.asarray(obs["center"], dtype=np.float64)
@@ -288,32 +292,26 @@ class CoffeeArmDynamics:
             closest = seg_A + t * ab
             dist = np.sqrt(np.sum((c - closest)**2, axis=-1))  # (N, 3)
             raw_clr = np.min(dist, axis=1) - r                 # (N,) raw clearance
-            obs_margin = np.minimum(obs_margin, np.minimum(raw_clr / r, 1.0))
+            obs_margin = np.minimum(obs_margin, np.minimum(raw_clr / l_total, 1.0))
 
-        # ── self-collision: Link 1 (z-axis) vs Link 3 (p2→p3) ─────────────
-        # Sample N_SC points along Link 3 and measure min distance to Link 1.
+        # ── self-collision — normalised by l_total (gradient ≈ 0.91 m⁻¹) ───
         N_SC = 15
         t_sc = np.linspace(0.0, 1.0, N_SC)                     # (N_SC,)
-        # Coordinates of sample points along Link 3: (N, N_SC)
         sc_px = p2x[:, None] + t_sc[None, :] * (p3x - p2x)[:, None]
         sc_py = p2y[:, None] + t_sc[None, :] * (p3y - p2y)[:, None]
         sc_pz = p2z[:, None] + t_sc[None, :] * (p3z - p2z)[:, None]
-        # Closest point on Link 1 (base column: x=y=0, z∈[0, l1]) for each sample
         sc_z_c = np.clip(sc_pz, 0.0, l1)
         sc_dist = np.sqrt(sc_px**2 + sc_py**2 + (sc_pz - sc_z_c)**2)  # (N, N_SC)
         link1_link3_d = np.min(sc_dist, axis=1)                # (N,)
-        # Normalise by ARM_LINK_RADIUS and cap at 1.0
         self_coll_margin = np.minimum(
-            (link1_link3_d - ARM_LINK_RADIUS) / ARM_LINK_RADIUS, 1.0
+            (link1_link3_d - ARM_LINK_RADIUS) / l_total, 1.0
         )
 
-        l_total = l1 + l2 + l3
-
         return np.min(np.stack([
-            np.minimum(cup_z / l_total,                                    1.0),
-            np.minimum((self.slosh_rad_max - slosh_disp) / self.slosh_rad_max, 1.0),
-            np.minimum(joint_margin / float(self.joint_limits[0]),         1.0),
-            obs_margin,          # already capped at 1.0 per obstacle above
+            np.minimum(cup_z / l_total,                                         1.0),
+            (self.slosh_rad_max - slosh_disp) / (10.0 * self.slosh_rad_max),  # max = 0.1
+            np.minimum(joint_margin / float(self.joint_limits[0]),              1.0),
+            obs_margin,          # already capped at 1.0
             self_coll_margin,    # already capped at 1.0
         ], axis=1), axis=1).astype(np.float32)
 
@@ -401,8 +399,11 @@ class CoffeeArmDynamics:
         Jd[:, 2, 1] = -(l2*s2 + l3*c2*s3 + l3*s2*c3)*td2 - (s2*c3 + c2*s3)*l3*td3
         Jd[:, 2, 2] = -(s2*c3 + c2*s3)*l3*td2 - (c2*s3 + s2*c3)*l3*td3
 
-        # ── drift cup acceleration a_drift = Jd @ dq  [N,3] ──────────────
-        a_drift = (Jd @ dq.unsqueeze(-1)).squeeze(-1)
+        # ── drift cup acceleration [N,3] ──────────────────────────────────
+        # Simulator: dq̈_drift = -damping*dq (damping=1.0).  Cup acceleration:
+        # ṙ̈ = J*dq̈_drift + Jd*dq = J*(-dq) + Jd*dq = (Jd - J)*dq
+        dq_drift = -dq                                           # joint accel drift (N,3)
+        a_drift = ((Jd - J) @ dq.unsqueeze(-1)).squeeze(-1)     # (N,3)
         ax_d, ay_d = a_drift[:, 0], a_drift[:, 1]
 
         # ── Lagrange multiplier (u=0) ─────────────────────────────────────
@@ -413,7 +414,7 @@ class CoffeeArmDynamics:
         # ── drift vector f(x, 0)  [N,10] ─────────────────────────────────
         f = torch.zeros(N, 10, device=dv)
         f[:, 0:3] = dq                                  # q̇ = dq
-        # f[:, 3:6] = 0                                 # dq̇ = K·0 = 0
+        f[:, 3:6] = dq_drift                            # dq̇_drift = -dq (damping=1.0)
         f[:, 6]   = vxs
         f[:, 7]   = vys
         f[:, 8]   = -ax_d - lamb0*xs - c_damp*vxs
@@ -451,12 +452,16 @@ class CoffeeArmDynamics:
         # satisfy dV/dt ≈ −600 at slosh-boundary states while keeping V(rest)>0
         # at safe states far away. It compromises by outputting −1.705 everywhere.
         #
+        # The same collapse occurs for large NEGATIVE H (states with rapidly
+        # outward-moving slosh): H ≈ −600 drives dV/dt = 600, creating massive
+        # PDE residuals that overwhelm the larger 256-feature network over 200k
+        # epochs and corrupt the obstacle/joint-space representation (isolated
+        # red dots instead of smooth contours).  Symmetric clipping prevents both.
+        #
         # The correct BRT gives V(rest, T) = l(rest) = +0.35 for all T because
         # the optimal controller u=0 keeps the arm stationary (H=0 at rest).
-        # Clipping H at H_MAX prevents the high-gradient slosh states from
-        # contaminating V at safe states, while leaving H≈0 at rest unchanged.
-        H_MAX = 25.0
-        H = H.clamp(max=H_MAX)
+        H_MAX = 50.0
+        H = H.clamp(min=-H_MAX, max=H_MAX)
 
         return H.reshape(shape)
 

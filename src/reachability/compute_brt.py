@@ -95,7 +95,7 @@ def _targeted_boundary_states(dynamics, n: int) -> np.ndarray:
     n_slosh = max(1, int(n * 0.15))
     n_ground = max(1, int(n * 0.10))
     n_selfc = max(1, int(n * 0.10))
-    n_joint = max(1, n - 2*n_per_obs - n_slosh - n_ground - n_selfc)
+    n_joint = max(1, n - len(dynamics.obstacles)*n_per_obs - n_slosh - n_ground - n_selfc)
 
     for obs in dynamics.obstacles:
         cx, cy, cz = obs['center']
@@ -308,85 +308,201 @@ def train_brt(cfg=CFG, model=None, dynamics=None):
             tqdm.write(f"  pretrain [{i+1:>6}] loss={loss.item():.5f}  V_std={V.detach().std().item():.5f}")
     print("Pretrain done.\n")
 
-    dataset = dataio.ReachabilityDataset(
-        dynamics=dynamics,
-        numpoints=cfg['numpoints'],
-        pretrain=False,
-        pretrain_iters=0,
-        tMin=cfg['tMin'],
-        tMax=cfg['tMax'],
-        counter_start=0,
-        counter_end=cfg['counter_end'],
-        num_src_samples=cfg['num_src_samples'],
-        num_target_samples=0,
-    )
-    loader = DataLoader(dataset, shuffle=True, batch_size=1, pin_memory=False, num_workers=0)
+    # ── ORIGINAL: DeepReach DataLoader (CPU data generation, ~14 it/s, ~50% GPU) ──
+    # dataset = dataio.ReachabilityDataset(
+    #     dynamics=dynamics,
+    #     numpoints=cfg['numpoints'],
+    #     pretrain=False,
+    #     pretrain_iters=0,
+    #     tMin=cfg['tMin'],
+    #     tMax=cfg['tMax'],
+    #     counter_start=0,
+    #     counter_end=cfg['counter_end'],
+    #     num_src_samples=cfg['num_src_samples'],
+    #     num_target_samples=0,
+    # )
+    # loader = DataLoader(dataset, shuffle=True, batch_size=1, pin_memory=False, num_workers=0)
+    #
+    # log_every = cfg.get('log_every', 500)
+    # model.train()
+    # for epoch in tqdm(range(cfg['epochs']), desc='BRT training'):
+    #     for model_input, gt in loader:
+    #         model_input = {k: v.to(DEVICE) for k, v in model_input.items()}
+    #         gt = {k: v.to(DEVICE) for k, v in gt.items()}
+    #
+    #         results = model({'coords': model_input['model_coords']})
+    #         states = results['model_in'].detach()[..., 1:]
+    #         values = dynamics.io_to_value(results['model_in'].detach(), results['model_out'].squeeze(-1))
+    #         dvs = dynamics.io_to_dv(results['model_in'], results['model_out'].squeeze(-1))
+    #
+    #         step_losses = loss_fn(
+    #             states, values,
+    #             dvs[..., 0], dvs[..., 1:],
+    #             gt['boundary_values'], gt['dirichlet_masks'],
+    #             results['model_out'],
+    #             times=model_input['model_coords'][..., 0],
+    #         )
+    #
+    #         n_pde = cfg['numpoints'] - cfg['num_src_samples']
+    #         total_loss = step_losses['dirichlet'] + step_losses['diff_constraint_hom'] / n_pde
+    #
+    #         if (epoch + 1) % cfg.get('targeted_freq', 3) == 0:
+    #             tgt_idx = torch.randint(0, n_third, (cfg['n_targeted'],), device=DEVICE)
+    #             tgt_norm = pool_norm_gpu[tgt_idx]
+    #             l_tgt = pool_lx_gpu[tgt_idx]
+    #             t_zero = torch.zeros(cfg['n_targeted'], 1, device=DEVICE)
+    #             tgt_coords = torch.cat([t_zero, tgt_norm], dim=1)
+    #             tgt_out = model({'coords': tgt_coords})
+    #             V_tgt = dynamics.io_to_value(
+    #                 tgt_out['model_in'].detach(), tgt_out['model_out'].squeeze(-1)
+    #             )
+    #             targeted_loss = torch.abs(V_tgt - l_tgt).mean()
+    #             total_loss = total_loss + cfg.get('targeted_weight', 3.0) * targeted_loss
+    #
+    #         n_st = cfg.get('static_traj_n', 512)
+    #         n_st_half = n_st // 2
+    #         t_curr = cfg['tMin'] + (cfg['tMax'] - cfg['tMin']) * min(
+    #             dataset.counter / cfg['counter_end'], 1.0)
+    #         t_range = (cfg['tMin'], max(t_curr, cfg['tMin'] + 0.01))
+    #
+    #         st_idx = torch.randint(0, N_static_safe, (n_st_half,), device=DEVICE)
+    #         st_norm = static_safe_norm_gpu[st_idx]
+    #         st_lx = static_safe_lx_gpu[st_idx]
+    #         st_times  = torch.empty(n_st_half, 1, device=DEVICE).uniform_(*t_range)
+    #         st_coords = torch.cat([st_times, st_norm], dim=1)
+    #         st_out = model({'coords': st_coords})
+    #         V_st = dynamics.io_to_value(st_out['model_in'].detach(), st_out['model_out'].squeeze(-1))
+    #         static_traj_loss = torch.abs(V_st - st_lx).mean()
+    #         ust_idx = torch.randint(0, N_static_unsafe, (n_st_half,), device=DEVICE)
+    #         ust_norm = static_unsafe_norm_gpu[ust_idx]
+    #         ust_lx = static_unsafe_lx_gpu[ust_idx]
+    #         ust_times = torch.empty(n_st_half, 1, device=DEVICE).uniform_(*t_range)
+    #         ust_coords = torch.cat([ust_times, ust_norm], dim=1)
+    #         ust_out = model({'coords': ust_coords})
+    #         V_ust = dynamics.io_to_value(ust_out['model_in'].detach(), ust_out['model_out'].squeeze(-1))
+    #         static_traj_loss = static_traj_loss + torch.abs(V_ust - ust_lx).mean()
+    #
+    #         total_loss = total_loss + cfg.get('static_traj_weight', 5.0) * static_traj_loss
+    #
+    #         optimizer.zero_grad()
+    #         total_loss.backward()
+    #         optimizer.step()
+    #
+    #     if (epoch + 1) % log_every == 0:
+    #         loss_parts = "  ".join(f"{k}={v.mean().item():.5f}" for k, v in step_losses.items())
+    #         v_std = values.detach().std().item()
+    #         tqdm.write(f"  [{epoch+1:>6}] {loss_parts}  traj={static_traj_loss.item():.5f}  V_std={v_std:.5f}")
+    #
+    #     if (epoch + 1) % cfg['checkpoint_every'] == 0:
+    #         path = os.path.join(ckpt_dir, f'model_epoch_{epoch+1:06d}.pth')
+    #         torch.save({'epoch': epoch + 1, 'model': model.state_dict()}, path)
+    #         t_trained = cfg['tMin'] + (cfg['tMax'] - cfg['tMin']) * min(
+    #             dataset.counter / cfg['counter_end'], 1.0)
+    # ── END ORIGINAL ──────────────────────────────────────────────────────────────
+
+    # ── TEMP: all-GPU training loop (no DataLoader, ~30-50% faster) ──────────────
+    # Replaces the DataLoader with direct GPU tensor generation each epoch.
+    # Boundary (t=tMin) samples drawn from pre-computed pool_norm_gpu/pool_lx_gpu.
+    # PDE interior samples use torch.empty().uniform_() on DEVICE — zero CPU work.
+    # Curriculum: dataset.counter increments by 1 per __getitem__ (= 1 per epoch),
+    # so (epoch + 1) is the exact equivalent replacement for dataset.counter.
+    # To revert: comment this block out and uncomment the ORIGINAL block above.
+    n_src = cfg['num_src_samples']
+    n_pde = cfg['numpoints'] - n_src
 
     log_every = cfg.get('log_every', 500)
     model.train()
     for epoch in tqdm(range(cfg['epochs']), desc='BRT training'):
-        for model_input, gt in loader:
-            model_input = {k: v.to(DEVICE) for k, v in model_input.items()}
-            gt = {k: v.to(DEVICE) for k, v in gt.items()}
+        # Curriculum time horizon (mirrors dataset.counter / counter_end)
+        t_frac     = min((epoch + 1) / cfg['counter_end'], 1.0)
+        t_max_curr = cfg['tMin'] + (cfg['tMax'] - cfg['tMin']) * t_frac
+        t_max_curr = max(t_max_curr, cfg['tMin'] + 1e-4)
 
-            results = model({'coords': model_input['model_coords']})
-            states = results['model_in'].detach()[..., 1:]
-            values = dynamics.io_to_value(results['model_in'].detach(), results['model_out'].squeeze(-1))
-            dvs = dynamics.io_to_dv(results['model_in'], results['model_out'].squeeze(-1))
+        # PDE interior: random state + random time in [tMin, t_max_curr]
+        z_pde = torch.empty(n_pde, 10, device=DEVICE).uniform_(-1.0, 1.0)
+        t_pde = torch.empty(n_pde,  1, device=DEVICE).uniform_(cfg['tMin'], t_max_curr)
 
-            step_losses = loss_fn(
-                states, values,
-                dvs[..., 0], dvs[..., 1:],
-                gt['boundary_values'], gt['dirichlet_masks'],
-                results['model_out'],
-                times=model_input['model_coords'][..., 0],
+        # Boundary (terminal): sample from pre-computed GPU pool, t = tMin
+        src_idx = torch.randint(0, N_pool, (n_src,), device=DEVICE)
+        z_src   = pool_norm_gpu[src_idx]                          # (n_src, 10)
+        t_src   = torch.full((n_src, 1), cfg['tMin'], device=DEVICE)
+        bv_src  = pool_lx_gpu[src_idx]                           # (n_src,)
+
+        # Assemble coords: (1, numpoints, 11) = [t, z_normalised]
+        coords = torch.cat([
+            torch.cat([t_pde, z_pde], dim=1),
+            torch.cat([t_src, z_src], dim=1),
+        ], dim=0).unsqueeze(0)
+
+        # Compute l(x) for PDE interior points — losses.py uses boundary_value for ALL
+        # numpoints (not just terminal), so we cannot leave interior points at 0.
+        x_pde_phys = (z_pde.cpu().numpy() * scale_np).astype(np.float32)  # (n_pde, 10)
+        lx_pde = dynamics.boundary_fn(x_pde_phys)                # (n_pde,) vectorised numpy
+        bv_pde = torch.tensor(lx_pde, dtype=torch.float32, device=DEVICE)
+        bv = torch.cat([bv_pde, bv_src], dim=0).unsqueeze(0)     # (1, numpoints) ← correct
+
+        dirichlet_mask = torch.zeros(cfg['numpoints'], dtype=torch.bool, device=DEVICE)
+        dirichlet_mask[n_pde:] = True
+        dirichlet_mask = dirichlet_mask.unsqueeze(0)              # (1, numpoints) ← correct
+
+        model_input = {'model_coords': coords}
+        gt          = {'boundary_values': bv, 'dirichlet_masks': dirichlet_mask}
+
+        results = model({'coords': model_input['model_coords']})
+        states  = results['model_in'].detach()[..., 1:]
+        values  = dynamics.io_to_value(results['model_in'].detach(), results['model_out'].squeeze(-1))
+        dvs     = dynamics.io_to_dv(results['model_in'], results['model_out'].squeeze(-1))
+
+        step_losses = loss_fn(
+            states, values,
+            dvs[..., 0], dvs[..., 1:],
+            gt['boundary_values'], gt['dirichlet_masks'],
+            results['model_out'],
+            times=model_input['model_coords'][..., 0],
+        )
+
+        total_loss = step_losses['dirichlet'] + step_losses['diff_constraint_hom'] / n_pde
+
+        if (epoch + 1) % cfg.get('targeted_freq', 3) == 0:
+            tgt_idx    = torch.randint(0, n_third, (cfg['n_targeted'],), device=DEVICE)
+            tgt_norm   = pool_norm_gpu[tgt_idx]
+            l_tgt      = pool_lx_gpu[tgt_idx]
+            t_zero     = torch.zeros(cfg['n_targeted'], 1, device=DEVICE)
+            tgt_coords = torch.cat([t_zero, tgt_norm], dim=1)
+            tgt_out    = model({'coords': tgt_coords})
+            V_tgt      = dynamics.io_to_value(
+                tgt_out['model_in'].detach(), tgt_out['model_out'].squeeze(-1)
             )
+            targeted_loss = torch.abs(V_tgt - l_tgt).mean()
+            total_loss    = total_loss + cfg.get('targeted_weight', 3.0) * targeted_loss
 
-            n_pde = cfg['numpoints'] - cfg['num_src_samples']
-            total_loss = step_losses['dirichlet'] + step_losses['diff_constraint_hom'] / n_pde
+        n_st      = cfg.get('static_traj_n', 512)
+        n_st_half = n_st // 2
+        t_range   = (cfg['tMin'], max(t_max_curr, cfg['tMin'] + 0.01))
 
-            if (epoch + 1) % cfg.get('targeted_freq', 3) == 0:
-                tgt_idx = torch.randint(0, n_third, (cfg['n_targeted'],), device=DEVICE)
-                tgt_norm = pool_norm_gpu[tgt_idx]          # (N, 10) already normalised (z = x/scale)
-                l_tgt = pool_lx_gpu[tgt_idx]            # (N,) boundary values for those states
-                t_zero = torch.zeros(cfg['n_targeted'], 1, device=DEVICE)
-                tgt_coords = torch.cat([t_zero, tgt_norm], dim=1)   # (N, 11) = [t, z]
-                tgt_out = model({'coords': tgt_coords})
-                V_tgt = dynamics.io_to_value(
-                    tgt_out['model_in'].detach(), tgt_out['model_out'].squeeze(-1)
-                )
-                targeted_loss = torch.abs(V_tgt - l_tgt).mean()
-                total_loss = total_loss + cfg.get('targeted_weight', 3.0) * targeted_loss
+        st_idx    = torch.randint(0, N_static_safe,   (n_st_half,), device=DEVICE)
+        st_norm   = static_safe_norm_gpu[st_idx]
+        st_lx     = static_safe_lx_gpu[st_idx]
+        st_times  = torch.empty(n_st_half, 1, device=DEVICE).uniform_(*t_range)
+        st_coords = torch.cat([st_times, st_norm], dim=1)
+        st_out    = model({'coords': st_coords})
+        V_st      = dynamics.io_to_value(st_out['model_in'].detach(), st_out['model_out'].squeeze(-1))
+        static_traj_loss = torch.abs(V_st - st_lx).mean()
 
-            n_st = cfg.get('static_traj_n', 512)
-            n_st_half = n_st // 2
-            t_curr = cfg['tMin'] + (cfg['tMax'] - cfg['tMin']) * min(
-                dataset.counter / cfg['counter_end'], 1.0)
-            t_range = (cfg['tMin'], max(t_curr, cfg['tMin'] + 0.01))
+        ust_idx    = torch.randint(0, N_static_unsafe, (n_st_half,), device=DEVICE)
+        ust_norm   = static_unsafe_norm_gpu[ust_idx]
+        ust_lx     = static_unsafe_lx_gpu[ust_idx]
+        ust_times  = torch.empty(n_st_half, 1, device=DEVICE).uniform_(*t_range)
+        ust_coords = torch.cat([ust_times, ust_norm], dim=1)
+        ust_out    = model({'coords': ust_coords})
+        V_ust      = dynamics.io_to_value(ust_out['model_in'].detach(), ust_out['model_out'].squeeze(-1))
+        static_traj_loss = static_traj_loss + torch.abs(V_ust - ust_lx).mean()
 
-            # safe half
-            st_idx = torch.randint(0, N_static_safe,   (n_st_half,), device=DEVICE)
-            st_norm = static_safe_norm_gpu[st_idx]
-            st_lx = static_safe_lx_gpu[st_idx]
-            st_times  = torch.empty(n_st_half, 1, device=DEVICE).uniform_(*t_range)
-            st_coords = torch.cat([st_times, st_norm], dim=1)
-            st_out = model({'coords': st_coords})
-            V_st = dynamics.io_to_value(st_out['model_in'].detach(), st_out['model_out'].squeeze(-1))
-            static_traj_loss = torch.abs(V_st - st_lx).mean()
-            ust_idx = torch.randint(0, N_static_unsafe, (n_st_half,), device=DEVICE)
-            ust_norm = static_unsafe_norm_gpu[ust_idx]
-            ust_lx = static_unsafe_lx_gpu[ust_idx]
-            ust_times = torch.empty(n_st_half, 1, device=DEVICE).uniform_(*t_range)
-            ust_coords = torch.cat([ust_times, ust_norm], dim=1)
-            ust_out = model({'coords': ust_coords})
-            V_ust = dynamics.io_to_value(ust_out['model_in'].detach(), ust_out['model_out'].squeeze(-1))
-            static_traj_loss = static_traj_loss + torch.abs(V_ust - ust_lx).mean()
+        total_loss = total_loss + cfg.get('static_traj_weight', 5.0) * static_traj_loss
 
-            total_loss = total_loss + cfg.get('static_traj_weight', 5.0) * static_traj_loss
-
-            optimizer.zero_grad()
-            total_loss.backward()
-            optimizer.step()
+        optimizer.zero_grad()
+        total_loss.backward()
+        optimizer.step()
 
         if (epoch + 1) % log_every == 0:
             loss_parts = "  ".join(f"{k}={v.mean().item():.5f}" for k, v in step_losses.items())
@@ -397,7 +513,7 @@ def train_brt(cfg=CFG, model=None, dynamics=None):
             path = os.path.join(ckpt_dir, f'model_epoch_{epoch+1:06d}.pth')
             torch.save({'epoch': epoch + 1, 'model': model.state_dict()}, path)
             t_trained = cfg['tMin'] + (cfg['tMax'] - cfg['tMin']) * min(
-                dataset.counter / cfg['counter_end'], 1.0)
+                (epoch + 1) / cfg['counter_end'], 1.0)
             model.eval()
             with torch.no_grad():
                 def _probe(state_np, t):

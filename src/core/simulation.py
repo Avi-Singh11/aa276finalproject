@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import numpy as np
-
 import os
 import sys
 
@@ -16,40 +15,18 @@ from .slosh_dynamics import slosh_dynamics
 from src.config.constants import DEFAULT_L_EFF, DEFAULT_THETA_EPS
 
 
-def coupled_dynamics(
-    state,
-    u_flat,
-    K,
-    L,
-    dt,
-    l_eff=DEFAULT_L_EFF,
-    theta_eps=DEFAULT_THETA_EPS,
-):
+def coupled_dynamics(state, u_flat, K, L, dt, l_eff=DEFAULT_L_EFF, theta_eps=DEFAULT_THETA_EPS):
     """Single forward-Euler step of the 10D coupled system."""
     state = np.asarray(state, dtype=np.float64).reshape(-1)
     if state.shape[0] != 10:
         raise ValueError(f"Expected 10D state, got {state.shape[0]}D")
 
     next_arm = arm_dynamics(state[:6], u_flat, K, dt)
-    next_slosh = slosh_dynamics(
-        state[6:],
-        state[:6],
-        u_flat,
-        K,
-        L,
-        dt,
-        l_eff=l_eff,
-        theta_eps=theta_eps,
-    )
-    
-    # 1. Combine into a single 64-bit array first
+    next_slosh = slosh_dynamics(state[6:], state[:6], u_flat, K, L, dt, l_eff=l_eff, theta_eps=theta_eps)
+
     combined = np.concatenate([next_arm, next_slosh])
-    
-    # 2. Clip values to safe float32 limits so they can't overflow into 'inf'
     f32_info = np.finfo(np.float32)
     combined_clipped = np.clip(combined, f32_info.min, f32_info.max)
-    
-    # 3. Cast the safely bounded numbers to float32
     return combined_clipped.astype(np.float32)
 
 

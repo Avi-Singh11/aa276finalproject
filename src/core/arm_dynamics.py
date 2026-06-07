@@ -1,4 +1,4 @@
-"""Arm kinematics and linear joint dynamics for a fully free 3-DoF arm."""
+"""Arm kinematics and linear joint dynamics for a 3-DoF arm."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ def _as_col(phi):
 
 
 def jacobian(phi, L):
-    """3x3 translational end-effector Jacobian (unconstrained 3-DoF)."""
+    """3x3 translational end-effector Jacobian."""
     phi = _as_col(phi)
     l1, l2, l3 = L[0], L[1], L[2]
     theta1, theta2, theta3 = phi[0, 0], phi[1, 0], phi[2, 0]
@@ -104,7 +104,6 @@ def arm_dynamics(phi_flat, u_flat, K, dt, damping=1.0):
     phi = np.asarray(phi_flat, dtype=np.float64).reshape(6, 1)
     u = np.asarray(u_flat, dtype=np.float64).reshape(3, 1)
     phi_dot = A_matrix(damping) @ phi + B_matrix(K) @ u
-
     return (phi.reshape(-1) + dt * phi_dot.reshape(-1)).astype(np.float64)
 
 
@@ -162,11 +161,11 @@ def get_joint_jacobians(phi_flat, L):
 
 
 def get_cup_acceleration(phi_flat, u_flat, K, L):
-    """Cartesian acceleration of the cup based on the 3-DoF arm model."""
+    """Cartesian acceleration of the cup."""
     phi = np.asarray(phi_flat, dtype=np.float64).reshape(6, 1)
     u = np.asarray(u_flat, dtype=np.float64).reshape(3, 1)
     J = jacobian(phi, L)
     Jd = jacobian_dot(phi, L)
     theta_dot = phi[3:6]
-    theta_ddot = -theta_dot + np.asarray(K, dtype=np.float64) @ u   # damping=1.0, matches arm_dynamics()
+    theta_ddot = -theta_dot + np.asarray(K, dtype=np.float64) @ u
     return (Jd @ theta_dot + J @ theta_ddot).reshape(-1)

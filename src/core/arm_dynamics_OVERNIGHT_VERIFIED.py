@@ -78,9 +78,10 @@ def jacobian_dot(phi, L):
         + (s1 * s2 * s3 - s1 * c2 * c3) * l3 * theta3d
     )
     Jd[2, 0] = 0.0
-    Jd[2, 1] = -(l2 * s2 + l3 * c2 * s3 + l3 * s2 * c3) * theta2d - (
-        s2 * c3 + c2 * s3
-    ) * l3 * theta3d
+    Jd[2, 1] = (
+        -(l2 * s2 + l3 * c2 * s3 + l3 * s2 * c3) * theta2d
+        - (s2 * c3 + c2 * s3) * l3 * theta3d
+    )
     Jd[2, 2] = -(s2 * c3 + c2 * s3) * l3 * theta2d - (c2 * s3 + s2 * c3) * l3 * theta3d
     return Jd
 

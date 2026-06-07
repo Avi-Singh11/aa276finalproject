@@ -1,9 +1,4 @@
-"""BRT-based safety filter using numerical differentiation over core physics.
-
-This handles the 10D Cartesian model space cleanly without hardcoded spherical
-approximations:
-    a_cbf @ u >= b_cbf
-"""
+"""BRT-based safety filter using numerical differentiation."""
 
 from __future__ import annotations
 
@@ -27,8 +22,9 @@ from dynamics.dynamics import CoffeeArmDynamics
 
 GAMMA = 1.0
 
+
 def _brt_value_and_gradient(model, dynamics, state_10d_np, t):
-    """Query value and spatial state gradient from DeepReach model."""
+    """Query value and spatial gradient from the DeepReach model."""
     coord = torch.cat([
         torch.tensor([t], dtype=torch.float32),
         torch.tensor(state_10d_np, dtype=torch.float32),
@@ -44,57 +40,49 @@ def _brt_value_and_gradient(model, dynamics, state_10d_np, t):
     V_val = float(V.item())
     return V_val, dvdt, dvds
 
+
 def _build_cbf_numerical(model, dynamics, state_10d, u_nom, t, gamma=GAMMA):
-    """Builds the linear inequality constraint using numerical differences."""
+    """Build the linear CBF constraint using numerical differentiation."""
     state_10d = np.asarray(state_10d, dtype=np.float32).flatten()
     V, dvdt, dvds = _brt_value_and_gradient(model, dynamics, state_10d, t)
 
     dvds = dvds.flatten()
-    dt = 1e-4 
+    dt = 1e-4
     u_dim = 3
     u_zero = np.zeros(u_dim, dtype=np.float32)
     x_next_drift = coupled_dynamics(state_10d, u_zero, dynamics.K, dynamics.L, dt, l_eff=dynamics.l_eff)
     x_next_drift = np.asarray(x_next_drift, dtype=np.float32).flatten()
     f_x = (x_next_drift - state_10d) / dt
     g_x = np.zeros((len(state_10d), u_dim), dtype=np.float32)
-    eps = 1.0  
-    
+    eps = 1.0
+
     for i in range(u_dim):
         u_perturb = np.zeros(u_dim, dtype=np.float32)
         u_perturb[i] = eps
         x_next_perturbed = coupled_dynamics(state_10d, u_perturb, dynamics.K, dynamics.L, dt, l_eff=dynamics.l_eff)
-        
-        # Force flat
         x_next_perturbed = np.asarray(x_next_perturbed, dtype=np.float32).flatten()
-        
-        # Approximate the columns of g(x)
         g_x[:, i] = ((x_next_perturbed - state_10d) / dt - f_x) / eps
 
     a_cbf = dvds @ g_x
     drift_term = np.dot(dvds, f_x).item()
     b_cbf = -gamma * V + dvdt - drift_term
-    
     return a_cbf.astype(np.float32), float(b_cbf)
+
 
 def _solve_qp(u_nom, a_cbf, b_cbf, u_max=DEFAULT_U_MAX):
     u_nom = np.asarray(u_nom, dtype=np.float32).reshape(-1)
 
-    # Parse u_max into a clean 3-element numpy array tracking each control input limit
     if isinstance(u_max, (int, float)):
         u_bounds_max = np.array([u_max, u_max, u_max], dtype=np.float32)
     else:
-        # If it's already an array/tensor, flatten it to a 1D numpy array
         u_bounds_max = np.asarray(u_max, dtype=np.float32).flatten()
-        # If it was a single-element array, tile it to 3 dimensions
         if u_bounds_max.size == 1:
             val = float(u_bounds_max[0])
             u_bounds_max = np.array([val, val, val], dtype=np.float32)
 
-    # Simple validation check before running optimization
     if np.dot(a_cbf, u_nom) >= b_cbf - 1e-6:
         return u_nom.copy(), False
 
-    # Map limits element-by-element into explicit SciPy bounds tuples
     bounds = [(-u_bounds_max[i], u_bounds_max[i]) for i in range(3)]
 
     res = minimize(
@@ -102,7 +90,7 @@ def _solve_qp(u_nom, a_cbf, b_cbf, u_max=DEFAULT_U_MAX):
         x0=u_nom.copy(),
         jac=lambda u: u - u_nom,
         method='SLSQP',
-        bounds=bounds,  # Flawless per-element optimization constraints
+        bounds=bounds,
         constraints=[{
             'type': 'ineq',
             'fun': lambda u: np.dot(a_cbf, u) - b_cbf,
@@ -116,7 +104,7 @@ def _solve_qp(u_nom, a_cbf, b_cbf, u_max=DEFAULT_U_MAX):
         intervened = float(np.linalg.norm(u_safe - u_nom)) > 1e-4
         return u_safe, intervened
 
-    # Clean directional fallback using per-element limits
+    # Directional fallback if QP fails.
     u_fb = np.array([
         u_bounds_max[0] * np.sign(a_cbf[0]) if abs(a_cbf[0]) > 1e-5 else 0.0,
         u_bounds_max[1] * np.sign(a_cbf[1]) if abs(a_cbf[1]) > 1e-5 else 0.0,
@@ -124,10 +112,10 @@ def _solve_qp(u_nom, a_cbf, b_cbf, u_max=DEFAULT_U_MAX):
     ], dtype=np.float32)
     return u_fb, True
 
+
 def safety_filter(model, dynamics, state_10d, u_nom, t=None, gamma=GAMMA):
-    """Main deployment interface for the reachability filter."""
+    """Apply the BRT as a CBF safety filter."""
     if t is None:
-        # Breaking the potential circular layout via local scoping
         from src.reachability.compute_brt import CFG
         t = CFG['tMax']
 
@@ -142,9 +130,10 @@ def safety_filter(model, dynamics, state_10d, u_nom, t=None, gamma=GAMMA):
     )
     return _solve_qp(u_nom, a_cbf, b_cbf, u_max=dynamics.u_max)
 
+
 if __name__ == '__main__':
-    print("=== Safety filter plumbing smoke check ===")
-    
+    print("=== Safety filter smoke check ===")
+
     from dynamics.dynamics import CoffeeArmDynamics
     dynamics = CoffeeArmDynamics()
 
@@ -158,7 +147,7 @@ if __name__ == '__main__':
         model.eval()
 
         state = np.zeros(10, dtype=np.float32)
-        state[6] = 0.02  # 2cm slosh displacement
+        state[6] = 0.02
 
         u_nom = np.array([2.0, 1.0, -1.0], dtype=np.float32)
         u_safe, intervened = safety_filter(model, dynamics, state, u_nom)

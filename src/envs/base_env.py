@@ -1,14 +1,6 @@
 """Coffee-arm gym environment.
 
 10D state: [q1, q2, q3, dq1, dq2, dq3, x_slosh, y_slosh, vx_slosh, vy_slosh]
-
-Failure set:
-  - cup below ground  (cup_z < 0)
-  - slosh radius > slosh_rad_max  (spill)
-  - any arm link hits an obstacle
-  - joint angle exceeds joint_limits
-
-CoffeeArmEnv is an alias for CoffeePouringEnv (same class).
 """
 
 from __future__ import annotations
@@ -40,7 +32,7 @@ from src.core.obstacles import (
 
 
 def safety_filter(env, state, u_policy, n_samples=100):
-    """Random-sampling safety filter (backward-compatible helper)."""
+    """Random-sampling safety filter."""
     if env.is_safe(state, u_policy):
         return np.asarray(u_policy, dtype=np.float32), False
     for _ in range(n_samples):
@@ -70,10 +62,10 @@ def inverse_kinematics(x, y, z, L, elbow="up"):
 
 
 class CoffeePouringEnv(gym.Env):
-    """Coffee-arm environment.
+    """Coffee-arm gym environment.
 
     Observation: (13,) = [state(10), goal-relative cup vector(3)]
-    Action:      (3,)  = joint acceleration commands, clipped to ±u_max
+    Action:      (3,)  = joint acceleration commands, clipped to +/-u_max
     """
 
     metadata = {"render_modes": []}
@@ -93,20 +85,20 @@ class CoffeePouringEnv(gym.Env):
         joint_limits=None,
     ):
         super().__init__()
-        self.L             = np.asarray(L if L is not None else DEFAULT_L, dtype=np.float32)
-        self.K             = np.asarray(K if K is not None else DEFAULT_K, dtype=np.float32)
-        self.dt            = float(dt)
-        self.T             = float(T)
-        self.max_steps     = int(T / dt)
-        self.u_max         = float(u_max)
+        self.L = np.asarray(L if L is not None else DEFAULT_L, dtype=np.float32)
+        self.K = np.asarray(K if K is not None else DEFAULT_K, dtype=np.float32)
+        self.dt = float(dt)
+        self.T = float(T)
+        self.max_steps = int(T / dt)
+        self.u_max = float(u_max)
         self.slosh_rad_max = float(slosh_rad_max)
-        self.l_eff         = float(l_eff)
-        self.goal_pos      = np.asarray(
+        self.l_eff = float(l_eff)
+        self.goal_pos = np.asarray(
             goal_pos if goal_pos is not None else [0.55, 0.10, 0.10], dtype=np.float32
         )
         self.randomize_goal = bool(randomize_goal)
-        self.obstacles      = list(obstacles if obstacles is not None else DEFAULT_OBSTACLES)
-        self.joint_limits   = np.asarray(
+        self.obstacles = list(obstacles if obstacles is not None else DEFAULT_OBSTACLES)
+        self.joint_limits = np.asarray(
             joint_limits if joint_limits is not None else DEFAULT_JOINT_LIMITS, dtype=np.float32
         )
 
@@ -115,11 +107,11 @@ class CoffeePouringEnv(gym.Env):
             dtype=np.float32,
         )
         self.observation_space = spaces.Box(-obs_high, obs_high, dtype=np.float32)
-        self.action_space      = spaces.Box(
+        self.action_space = spaces.Box(
             low=-self.u_max, high=self.u_max, shape=(3,), dtype=np.float32
         )
 
-        self.state      = None
+        self.state = None
         self.step_count = 0
         self._prev_dist = None
 
@@ -134,12 +126,12 @@ class CoffeePouringEnv(gym.Env):
         super().reset(seed=seed)
 
         while True:
-            r  = self.np_random.uniform(0.5, 0.65)
+            r = self.np_random.uniform(0.5, 0.65)
             az = np.deg2rad(self.np_random.uniform(70, 90))
             el = np.deg2rad(self.np_random.uniform(0, 30))
-            x  = r * np.cos(el) * np.cos(az)
-            y  = r * np.cos(el) * np.sin(az)
-            z  = r * np.sin(el)
+            x = r * np.cos(el) * np.cos(az)
+            y = r * np.cos(el) * np.sin(az)
+            z = r * np.sin(el)
             try:
                 theta_init = inverse_kinematics(x, y, z, self.L, elbow="up")
                 break
@@ -165,22 +157,22 @@ class CoffeePouringEnv(gym.Env):
         ).astype(np.float32)
 
         x_slosh, y_slosh = float(next_state[6]), float(next_state[7])
-        slosh_rad    = np.sqrt(x_slosh**2 + y_slosh**2)
-        cup_pos      = position_cup(next_state[:6], self.L)
+        slosh_rad = np.sqrt(x_slosh**2 + y_slosh**2)
+        cup_pos = position_cup(next_state[:6], self.L)
         dist_to_goal = float(np.linalg.norm(cup_pos - self.goal_pos))
 
-        spill_slosh     = bool(slosh_rad > self.slosh_rad_max)
-        below_ground    = bool(cup_pos[2] < 0.0)
-        obstacle_hit    = bool(check_arm_obstacle_collision(next_state[:6], self.L, self.obstacles))
+        spill_slosh = bool(slosh_rad > self.slosh_rad_max)
+        below_ground = bool(cup_pos[2] < 0.0)
+        obstacle_hit = bool(check_arm_obstacle_collision(next_state[:6], self.L, self.obstacles))
         joint_violation = bool(check_joint_limits(next_state[:3], self.joint_limits))
-        at_goal         = bool(dist_to_goal < 0.1)
+        at_goal = bool(dist_to_goal < 0.1)
 
         terminated = spill_slosh or below_ground or obstacle_hit or joint_violation or at_goal
         self.step_count += 1
         truncated = bool(self.step_count >= self.max_steps)
 
         progress = self._prev_dist - dist_to_goal
-        reward   = 10.0 * progress - 0.01 * float(np.linalg.norm(action) ** 2)
+        reward = 10.0 * progress - 0.01 * float(np.linalg.norm(action) ** 2)
         if spill_slosh:
             reward -= 50.0
         if below_ground:
@@ -191,22 +183,22 @@ class CoffeePouringEnv(gym.Env):
             reward += 100.0
 
         self._prev_dist = dist_to_goal
-        self.state      = next_state
+        self.state = next_state
 
         info = {
-            "cup_pos":         cup_pos.astype(np.float32),
-            "slosh_rad":       slosh_rad,
-            "dist_to_goal":    dist_to_goal,
-            "spill_slosh":     spill_slosh,
-            "below_ground":    below_ground,
-            "obstacle_hit":    obstacle_hit,
+            "cup_pos": cup_pos.astype(np.float32),
+            "slosh_rad": slosh_rad,
+            "dist_to_goal": dist_to_goal,
+            "spill_slosh": spill_slosh,
+            "below_ground": below_ground,
+            "obstacle_hit": obstacle_hit,
             "joint_violation": joint_violation,
-            "step_count_ep":   self.step_count,
+            "step_count_ep": self.step_count,
         }
         return self._make_obs(), reward, terminated, truncated, info
 
     def is_safe(self, state, action):
-        state  = np.asarray(state,  dtype=np.float32).reshape(-1)
+        state = np.asarray(state, dtype=np.float32).reshape(-1)
         action = np.asarray(action, dtype=np.float32).reshape(-1)
         next_state = coupled_dynamics(
             state, action, self.K, self.L, self.dt, l_eff=self.l_eff
@@ -223,12 +215,11 @@ class CoffeePouringEnv(gym.Env):
         pass
 
 
-# Alias — CoffeeArmEnv and CoffeePouringEnv are the same class.
 CoffeeArmEnv = CoffeePouringEnv
 
 
 if __name__ == "__main__":
-    print("=== CoffeePouringEnv / CoffeeArmEnv sanity check ===")
+    print("=== CoffeePouringEnv sanity check ===")
     env = CoffeePouringEnv()
     obs, _ = env.reset(seed=0)
     print(f"Obs shape: {obs.shape}  (expected {OBS_DIM})")

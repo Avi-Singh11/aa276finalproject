@@ -1,0 +1,34 @@
+{
+  "PD": {
+    "steps": 10,
+    "duration_s": 0.1,
+    "cause": "spill",
+    "peak_slosh_mm": 8.020919683092911,
+    "minimum_goal_distance_m": 0.6162754205475801,
+    "interventions": 0
+  },
+  "PD + BRT": {
+    "steps": 509,
+    "duration_s": 5.09,
+    "cause": "goal",
+    "peak_slosh_mm": 2.775122488829674,
+    "minimum_goal_distance_m": 0.09952637076668498,
+    "interventions": 467
+  },
+  "PPO": {
+    "steps": 174,
+    "duration_s": 1.74,
+    "cause": "obstacle",
+    "peak_slosh_mm": 0.8924288342879076,
+    "minimum_goal_distance_m": 0.4241455191884763,
+    "interventions": 0
+  },
+  "PPO + BRT": {
+    "steps": 530,
+    "duration_s": 5.3,
+    "cause": "goal",
+    "peak_slosh_mm": 1.9549061481076868,
+    "minimum_goal_distance_m": 0.09946440774493472,
+    "interventions": 371
+  }
+}

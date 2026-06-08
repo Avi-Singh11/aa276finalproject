@@ -1,0 +1,14 @@
+{"time":"2026-06-01T21:46:12.007461-07:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-06-01T21:46:12.007485-07:00","level":"INFO","msg":"stream: starting","core version":"0.27.0"}
+{"time":"2026-06-01T21:46:12.117162-07:00","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2026-06-01T21:46:12.117193-07:00","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2026-06-01T21:46:12.117543-07:00","level":"INFO","msg":"stream: created new stream","id":"n136yoah"}
+{"time":"2026-06-01T21:46:12.117812-07:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-06-01T21:46:12.117808-07:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-06-01T21:46:12.117829-07:00","level":"INFO","msg":"writer: started","stream_id":"n136yoah"}
+{"time":"2026-06-01T21:46:12.118124-07:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-06-01T21:46:12.145103-07:00","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2026-06-01T21:46:12.145118-07:00","level":"WARN","msg":"runupserter: server does not expand metric globs but the x_server_side_expand_glob_metrics setting is set; ignoring"}
+{"time":"2026-06-01T21:46:22.628747-07:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-06-01T21:46:22.628836-07:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/Users/max/Documents/aa276finalproject/logs/baseline/PPO_1\")","namespace":""}
+{"time":"2026-06-01T21:46:22.632447-07:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/Users/max/Documents/aa276finalproject/logs/baseline/PPO_1/events.out.tfevents.1780375572.DNa80a750.SUNet.2241.0","runPath":"logs/baseline/PPO_1/events.out.tfevents.1780375572.DNa80a750.SUNet.2241.0"}

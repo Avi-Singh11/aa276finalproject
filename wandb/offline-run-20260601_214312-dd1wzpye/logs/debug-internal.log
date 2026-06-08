@@ -1,0 +1,19 @@
+{"time":"2026-06-01T21:43:12.806918-07:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-06-01T21:43:12.806955-07:00","level":"INFO","msg":"stream: starting","core version":"0.27.0"}
+{"time":"2026-06-01T21:43:12.91594-07:00","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2026-06-01T21:43:12.915975-07:00","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2026-06-01T21:43:12.916301-07:00","level":"INFO","msg":"stream: created new stream","id":"dd1wzpye"}
+{"time":"2026-06-01T21:43:12.91647-07:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-06-01T21:43:12.916712-07:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-06-01T21:43:12.916716-07:00","level":"INFO","msg":"writer: started","stream_id":"dd1wzpye"}
+{"time":"2026-06-01T21:43:12.917012-07:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-06-01T21:43:12.943147-07:00","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2026-06-01T21:43:12.943159-07:00","level":"WARN","msg":"runupserter: server does not expand metric globs but the x_server_side_expand_glob_metrics setting is set; ignoring"}
+{"time":"2026-06-01T21:43:23.456337-07:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-06-01T21:43:23.45672-07:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/Users/max/Documents/aa276finalproject/logs/baseline/PPO_2\")","namespace":""}
+{"time":"2026-06-01T21:43:23.459987-07:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/Users/max/Documents/aa276finalproject/logs/baseline/PPO_2/events.out.tfevents.1780375393.DNa80a750.SUNet.2060.0","runPath":"logs/baseline/PPO_2/events.out.tfevents.1780375393.DNa80a750.SUNet.2060.0"}
+{"time":"2026-06-01T21:43:23.462726-07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-06-01T21:43:23.465244-07:00","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-06-01T21:43:23.46526-07:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-06-01T21:43:23.465406-07:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-06-01T21:43:23.465415-07:00","level":"INFO","msg":"stream: all finished"}

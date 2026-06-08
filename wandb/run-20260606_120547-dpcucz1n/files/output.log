@@ -1,0 +1,41 @@
+Run: baseline  (https://wandb.ai/avisingh-stanford-university/aa276-coffee-pouring/runs/dpcucz1n)
+Filter: False
+Steps: 2,000,000
+
+Using cpu device
+Traceback (most recent call last):
+  File "/home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/src/scripts/train_ppo.py", line 175, in <module>
+    model.learn(total_timesteps=TOTAL_TIMESTEPS, callback=callbacks, progress_bar=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/ppo/ppo.py", line 311, in learn
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+                                     ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/vec_env/base_vec_env.py", line 222, in step
+    return self.step_wait()
+           ~~~~~~~~~~~~~~^^
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/vec_env/vec_normalize.py", line 181, in step_wait
+    obs, rewards, dones, infos = self.venv.step_wait()
+                                 ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 59, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.actions[env_idx]
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/monitor.py", line 102, in step
+    ep_info[key] = info[key]
+                   ~~~~^^^^^
+KeyError: 'obstacle_hit'

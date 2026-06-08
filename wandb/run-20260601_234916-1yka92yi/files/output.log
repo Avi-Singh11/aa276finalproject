@@ -1,0 +1,147 @@
+Run: baseline  (https://wandb.ai/avisingh-stanford-university/aa276-coffee-pouring/runs/1yka92yi)
+Filter: False
+Steps: 2,000,000
+
+Using cpu device
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1,974/2,000,000 [0m [ [33m0:00:00[0m < [36m0:06:50[0m , [31m4,882 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 922      |
+|    ep_rew_mean     | -166     |
+| time/              |          |
+|    fps             | 4809     |
+|    iterations      | 1        |
+|    time_elapsed    | 0        |
+|    total_timesteps | 2048     |
+---------------------------------
+[2K[wandb] step=2048 keys=['time/iterations', 'rollout/ep_rew_mean', 'rollout/ep_len_mean', 'time/fps', 'time/time_elapsed', 'time/total_timesteps']0,000 [0m [ [33m0:00:00[0m < [36m0:06:50[0m , [31m4,882 it/s[0m ]
+[2K------------------------------------------━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3,966/2,000,000 [0m [ [33m0:00:01[0m < [36m0:16:40[0m , [31m1,998 it/s[0m ]
+| rollout/                |              |
+|    ep_len_mean          | 566          |
+|    ep_rew_mean          | -123         |
+| time/                   |              |
+|    fps                  | 2188         |
+|    iterations           | 2            |
+|    time_elapsed         | 1            |
+|    total_timesteps      | 4096         |
+| train/                  |              |
+|    approx_kl            | 0.0018108169 |
+|    clip_fraction        | 0.00107      |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -4.26        |
+|    explained_variance   | 0.0201       |
+|    learning_rate        | 0.0001       |
+|    loss                 | 5.33         |
+|    n_updates            | 5            |
+|    policy_gradient_loss | -0.00276     |
+|    std                  | 1            |
+|    value_loss           | 15.7         |
+------------------------------------------
+[2K[wandb] step=4096 keys=['train/learning_rate', 'train/entropy_loss', 'train/policy_gradient_loss', 'train/value_loss', 'train/clip_fraction', 'train/loss', [ [33m0:00:01[0m < [36m0:16:40[0m , [31m1,998 it/s[0m ]
+'train/explained_variance', 'train/std', 'train/n_updates', 'train/clip_range', 'time/iterations', 'rollout/ep_rew_mean', 'rollout/ep_len_mean', 'time/fps',
+'time/time_elapsed', 'time/total_timesteps']
+[2K------------------------------------------━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5,875/2,000,000 [0m [ [33m0:00:03[0m < [36m0:18:42[0m , [31m1,777 it/s[0m ]
+| rollout/                |              |
+|    ep_len_mean          | 507          |
+|    ep_rew_mean          | -121         |
+| time/                   |              |
+|    fps                  | 1925         |
+|    iterations           | 3            |
+|    time_elapsed         | 3            |
+|    total_timesteps      | 6144         |
+| train/                  |              |
+|    approx_kl            | 0.0010675587 |
+|    clip_fraction        | 0.00176      |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -4.26        |
+|    explained_variance   | 0.0196       |
+|    learning_rate        | 0.0001       |
+|    loss                 | 14.6         |
+|    n_updates            | 10           |
+|    policy_gradient_loss | -0.00201     |
+|    std                  | 1            |
+|    value_loss           | 37.3         |
+------------------------------------------
+[2K[wandb] step=6144 keys=['train/learning_rate', 'train/entropy_loss', 'train/policy_gradient_loss', 'train/value_loss', 'train/clip_fraction', 'train/loss', [ [33m0:00:03[0m < [36m0:18:42[0m , [31m1,777 it/s[0m ]
+'train/explained_variance', 'train/std', 'train/n_updates', 'train/clip_range', 'time/iterations', 'rollout/ep_rew_mean', 'rollout/ep_len_mean', 'time/fps',
+'time/time_elapsed', 'time/total_timesteps']
+[2K-------------------------------------------━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7,821/2,000,000 [0m [ [33m0:00:04[0m < [36m0:20:09[0m , [31m1,649 it/s[0m ]
+| rollout/                |               |
+|    ep_len_mean          | 548           |
+|    ep_rew_mean          | -127          |
+| time/                   |               |
+|    fps                  | 1772          |
+|    iterations           | 4             |
+|    time_elapsed         | 4             |
+|    total_timesteps      | 8192          |
+| train/                  |               |
+|    approx_kl            | 0.00023310739 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.2           |
+|    entropy_loss         | -4.26         |
+|    explained_variance   | -0.0295       |
+|    learning_rate        | 0.0001        |
+|    loss                 | 26.8          |
+|    n_updates            | 15            |
+|    policy_gradient_loss | -0.000413     |
+|    std                  | 1             |
+|    value_loss           | 44.8          |
+-------------------------------------------
+[2K[wandb] step=8192 keys=['train/learning_rate', 'train/entropy_loss', 'train/policy_gradient_loss', 'train/value_loss', 'train/clip_fraction', 'train/loss', [ [33m0:00:04[0m < [36m0:20:09[0m , [31m1,649 it/s[0m ]
+'train/explained_variance', 'train/std', 'train/n_updates', 'train/clip_range', 'time/iterations', 'rollout/ep_rew_mean', 'rollout/ep_len_mean', 'time/fps',
+'time/time_elapsed', 'time/total_timesteps']
+[2K-------------------------------------------━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m9,750/2,000,000 [0m [ [33m0:00:05[0m < [36m0:20:52[0m , [31m1,590 it/s[0m ]
+| rollout/                |               |
+|    ep_len_mean          | 553           |
+|    ep_rew_mean          | -127          |
+| time/                   |               |
+|    fps                  | 1697          |
+|    iterations           | 5             |
+|    time_elapsed         | 6             |
+|    total_timesteps      | 10240         |
+| train/                  |               |
+|    approx_kl            | 0.00032102436 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.2           |
+|    entropy_loss         | -4.27         |
+|    explained_variance   | 0.148         |
+|    learning_rate        | 0.0001        |
+|    loss                 | 1.11          |
+|    n_updates            | 20            |
+|    policy_gradient_loss | -0.000604     |
+|    std                  | 1             |
+|    value_loss           | 21.9          |
+-------------------------------------------
+[2K[wandb] step=10240 keys=['train/learning_rate', 'train/entropy_loss', 'train/policy_gradient_loss', 'train/value_loss', 'train/clip_fraction', 'train/loss', ,000,000 [0m [ [33m0:00:05[0m < [36m0:20:52[0m , [31m1,590 it/s[0m ]
+'train/explained_variance', 'train/std', 'train/n_updates', 'train/clip_range', 'time/iterations', 'rollout/ep_rew_mean', 'rollout/ep_len_mean', 'time/fps',
+'time/time_elapsed', 'time/total_timesteps']
+[2KTraceback (most recent call last):8;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]
+[2K  File "/home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/src/scripts/train_ppo.py", line 169, in <module>━━━━━━━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]
+    model.learn(total_timesteps=TOTAL_TIMESTEPS, callback=callbacks, progress_bar=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/ppo/ppo.py", line 311, in learn━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 337, in learn━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]
+    self.train()
+    ~~~~~~~~~~^^
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/ppo/ppo.py", line 277, in train━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]
+    th.nn.utils.clip_grad_norm_(self.policy.parameters(), self.max_grad_norm)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/torch/nn/utils/clip_grad.py", line 42, in _no_grad_wrapper━━━━━━━━━━━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]
+    return func(*args, **kwargs)
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/torch/nn/utils/clip_grad.py", line 231, in clip_grad_norm_━━━━━━━━━━━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]
+    total_norm = _get_total_norm(grads, norm_type, error_if_nonfinite, foreach)
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/torch/nn/utils/clip_grad.py", line 42, in _no_grad_wrapper━━━━━━━━━━━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]
+    return func(*args, **kwargs)
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/torch/nn/utils/clip_grad.py", line 96, in _get_total_norm━━━━━━━━━━━━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]
+    norms.extend(torch._foreach_norm(device_tensors, norm_type))
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2KKeyboardInterrupt;197m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]
+[35m   1%[0m [38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10,212/2,000,000 [0m [ [33m0:00:06[0m < [36m0:20:13[0m , [31m1,641 it/s[0m ]

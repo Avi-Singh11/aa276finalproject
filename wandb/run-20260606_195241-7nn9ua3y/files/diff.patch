@@ -1,0 +1,1230 @@
+diff --git a/ab_scenario.gif b/ab_scenario.gif
+index 124cced..f48e8eb 100644
+Binary files a/ab_scenario.gif and b/ab_scenario.gif differ
+diff --git a/brt_model/checkpoints/model_epoch_005000.pth b/brt_model/checkpoints/model_epoch_005000.pth
+index d4d0d2a..79c2bf3 100644
+Binary files a/brt_model/checkpoints/model_epoch_005000.pth and b/brt_model/checkpoints/model_epoch_005000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_010000.pth b/brt_model/checkpoints/model_epoch_010000.pth
+index d98d895..41ea3e2 100644
+Binary files a/brt_model/checkpoints/model_epoch_010000.pth and b/brt_model/checkpoints/model_epoch_010000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_015000.pth b/brt_model/checkpoints/model_epoch_015000.pth
+index 809d30b..565dacb 100644
+Binary files a/brt_model/checkpoints/model_epoch_015000.pth and b/brt_model/checkpoints/model_epoch_015000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_020000.pth b/brt_model/checkpoints/model_epoch_020000.pth
+index 9cce2d2..b450c19 100644
+Binary files a/brt_model/checkpoints/model_epoch_020000.pth and b/brt_model/checkpoints/model_epoch_020000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_025000.pth b/brt_model/checkpoints/model_epoch_025000.pth
+index c8e908f..bb51e9e 100644
+Binary files a/brt_model/checkpoints/model_epoch_025000.pth and b/brt_model/checkpoints/model_epoch_025000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_030000.pth b/brt_model/checkpoints/model_epoch_030000.pth
+index 6774298..3a6f006 100644
+Binary files a/brt_model/checkpoints/model_epoch_030000.pth and b/brt_model/checkpoints/model_epoch_030000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_035000.pth b/brt_model/checkpoints/model_epoch_035000.pth
+index 9ccb00e..a3f0d72 100644
+Binary files a/brt_model/checkpoints/model_epoch_035000.pth and b/brt_model/checkpoints/model_epoch_035000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_040000.pth b/brt_model/checkpoints/model_epoch_040000.pth
+index 67366a2..e9c433e 100644
+Binary files a/brt_model/checkpoints/model_epoch_040000.pth and b/brt_model/checkpoints/model_epoch_040000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_045000.pth b/brt_model/checkpoints/model_epoch_045000.pth
+index 8723d3f..2f6f15e 100644
+Binary files a/brt_model/checkpoints/model_epoch_045000.pth and b/brt_model/checkpoints/model_epoch_045000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_050000.pth b/brt_model/checkpoints/model_epoch_050000.pth
+index 62226b5..fe025ab 100644
+Binary files a/brt_model/checkpoints/model_epoch_050000.pth and b/brt_model/checkpoints/model_epoch_050000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_055000.pth b/brt_model/checkpoints/model_epoch_055000.pth
+index 48730c9..6a7f860 100644
+Binary files a/brt_model/checkpoints/model_epoch_055000.pth and b/brt_model/checkpoints/model_epoch_055000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_060000.pth b/brt_model/checkpoints/model_epoch_060000.pth
+index 1f9fbfa..39be764 100644
+Binary files a/brt_model/checkpoints/model_epoch_060000.pth and b/brt_model/checkpoints/model_epoch_060000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_065000.pth b/brt_model/checkpoints/model_epoch_065000.pth
+index aedacac..cb13ef5 100644
+Binary files a/brt_model/checkpoints/model_epoch_065000.pth and b/brt_model/checkpoints/model_epoch_065000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_070000.pth b/brt_model/checkpoints/model_epoch_070000.pth
+index 11b7f2f..7e5f5f3 100644
+Binary files a/brt_model/checkpoints/model_epoch_070000.pth and b/brt_model/checkpoints/model_epoch_070000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_075000.pth b/brt_model/checkpoints/model_epoch_075000.pth
+index 048f1ac..c870445 100644
+Binary files a/brt_model/checkpoints/model_epoch_075000.pth and b/brt_model/checkpoints/model_epoch_075000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_080000.pth b/brt_model/checkpoints/model_epoch_080000.pth
+index fa3286e..02ddbbe 100644
+Binary files a/brt_model/checkpoints/model_epoch_080000.pth and b/brt_model/checkpoints/model_epoch_080000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_085000.pth b/brt_model/checkpoints/model_epoch_085000.pth
+index 4e11ad4..d45f97e 100644
+Binary files a/brt_model/checkpoints/model_epoch_085000.pth and b/brt_model/checkpoints/model_epoch_085000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_090000.pth b/brt_model/checkpoints/model_epoch_090000.pth
+index d79546e..97b8eff 100644
+Binary files a/brt_model/checkpoints/model_epoch_090000.pth and b/brt_model/checkpoints/model_epoch_090000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_095000.pth b/brt_model/checkpoints/model_epoch_095000.pth
+index b429602..4a0f36b 100644
+Binary files a/brt_model/checkpoints/model_epoch_095000.pth and b/brt_model/checkpoints/model_epoch_095000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_100000.pth b/brt_model/checkpoints/model_epoch_100000.pth
+index 371b519..98e4cb0 100644
+Binary files a/brt_model/checkpoints/model_epoch_100000.pth and b/brt_model/checkpoints/model_epoch_100000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_105000.pth b/brt_model/checkpoints/model_epoch_105000.pth
+index 1fd8354..dcf5089 100644
+Binary files a/brt_model/checkpoints/model_epoch_105000.pth and b/brt_model/checkpoints/model_epoch_105000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_110000.pth b/brt_model/checkpoints/model_epoch_110000.pth
+index 50096ac..92c2de3 100644
+Binary files a/brt_model/checkpoints/model_epoch_110000.pth and b/brt_model/checkpoints/model_epoch_110000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_115000.pth b/brt_model/checkpoints/model_epoch_115000.pth
+index 3119816..c565950 100644
+Binary files a/brt_model/checkpoints/model_epoch_115000.pth and b/brt_model/checkpoints/model_epoch_115000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_120000.pth b/brt_model/checkpoints/model_epoch_120000.pth
+index c94972d..a5785d3 100644
+Binary files a/brt_model/checkpoints/model_epoch_120000.pth and b/brt_model/checkpoints/model_epoch_120000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_125000.pth b/brt_model/checkpoints/model_epoch_125000.pth
+index 536e734..895b1eb 100644
+Binary files a/brt_model/checkpoints/model_epoch_125000.pth and b/brt_model/checkpoints/model_epoch_125000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_130000.pth b/brt_model/checkpoints/model_epoch_130000.pth
+index ae1c6dc..b1f63d1 100644
+Binary files a/brt_model/checkpoints/model_epoch_130000.pth and b/brt_model/checkpoints/model_epoch_130000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_135000.pth b/brt_model/checkpoints/model_epoch_135000.pth
+index d8deeba..750ef91 100644
+Binary files a/brt_model/checkpoints/model_epoch_135000.pth and b/brt_model/checkpoints/model_epoch_135000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_140000.pth b/brt_model/checkpoints/model_epoch_140000.pth
+index 0d633a7..fb6acce 100644
+Binary files a/brt_model/checkpoints/model_epoch_140000.pth and b/brt_model/checkpoints/model_epoch_140000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_145000.pth b/brt_model/checkpoints/model_epoch_145000.pth
+index 0f021ad..59e8f4f 100644
+Binary files a/brt_model/checkpoints/model_epoch_145000.pth and b/brt_model/checkpoints/model_epoch_145000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_150000.pth b/brt_model/checkpoints/model_epoch_150000.pth
+index af35b7e..46b92b4 100644
+Binary files a/brt_model/checkpoints/model_epoch_150000.pth and b/brt_model/checkpoints/model_epoch_150000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_155000.pth b/brt_model/checkpoints/model_epoch_155000.pth
+index 371022a..e9cfb97 100644
+Binary files a/brt_model/checkpoints/model_epoch_155000.pth and b/brt_model/checkpoints/model_epoch_155000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_160000.pth b/brt_model/checkpoints/model_epoch_160000.pth
+index b54dc5d..b952907 100644
+Binary files a/brt_model/checkpoints/model_epoch_160000.pth and b/brt_model/checkpoints/model_epoch_160000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_165000.pth b/brt_model/checkpoints/model_epoch_165000.pth
+index 0d555fa..722e31c 100644
+Binary files a/brt_model/checkpoints/model_epoch_165000.pth and b/brt_model/checkpoints/model_epoch_165000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_170000.pth b/brt_model/checkpoints/model_epoch_170000.pth
+index fe41645..19b3cfe 100644
+Binary files a/brt_model/checkpoints/model_epoch_170000.pth and b/brt_model/checkpoints/model_epoch_170000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_175000.pth b/brt_model/checkpoints/model_epoch_175000.pth
+index 950be7e..9bd493c 100644
+Binary files a/brt_model/checkpoints/model_epoch_175000.pth and b/brt_model/checkpoints/model_epoch_175000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_180000.pth b/brt_model/checkpoints/model_epoch_180000.pth
+index 184ed0d..9e8a2fe 100644
+Binary files a/brt_model/checkpoints/model_epoch_180000.pth and b/brt_model/checkpoints/model_epoch_180000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_185000.pth b/brt_model/checkpoints/model_epoch_185000.pth
+index 3589b9b..2669dc9 100644
+Binary files a/brt_model/checkpoints/model_epoch_185000.pth and b/brt_model/checkpoints/model_epoch_185000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_190000.pth b/brt_model/checkpoints/model_epoch_190000.pth
+index 0aafae2..a85b185 100644
+Binary files a/brt_model/checkpoints/model_epoch_190000.pth and b/brt_model/checkpoints/model_epoch_190000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_195000.pth b/brt_model/checkpoints/model_epoch_195000.pth
+index 3d65713..b7a13e7 100644
+Binary files a/brt_model/checkpoints/model_epoch_195000.pth and b/brt_model/checkpoints/model_epoch_195000.pth differ
+diff --git a/brt_model/checkpoints/model_epoch_200000.pth b/brt_model/checkpoints/model_epoch_200000.pth
+index 3cc2e77..a5e3014 100644
+Binary files a/brt_model/checkpoints/model_epoch_200000.pth and b/brt_model/checkpoints/model_epoch_200000.pth differ
+diff --git a/checkpoints/baseline/ppo_baseline_1000000_steps.zip b/checkpoints/baseline/ppo_baseline_1000000_steps.zip
+index bd4fe74..c933e81 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1000000_steps.zip and b/checkpoints/baseline/ppo_baseline_1000000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_100000_steps.zip b/checkpoints/baseline/ppo_baseline_100000_steps.zip
+index 8138596..8355866 100644
+Binary files a/checkpoints/baseline/ppo_baseline_100000_steps.zip and b/checkpoints/baseline/ppo_baseline_100000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1050000_steps.zip b/checkpoints/baseline/ppo_baseline_1050000_steps.zip
+index 1d4e313..f8ba150 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1050000_steps.zip and b/checkpoints/baseline/ppo_baseline_1050000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1100000_steps.zip b/checkpoints/baseline/ppo_baseline_1100000_steps.zip
+index 972f1fb..6d90474 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1100000_steps.zip and b/checkpoints/baseline/ppo_baseline_1100000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1150000_steps.zip b/checkpoints/baseline/ppo_baseline_1150000_steps.zip
+index 5eb5af3..8c2867c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1150000_steps.zip and b/checkpoints/baseline/ppo_baseline_1150000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1200000_steps.zip b/checkpoints/baseline/ppo_baseline_1200000_steps.zip
+index 3ab0149..56681ef 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1200000_steps.zip and b/checkpoints/baseline/ppo_baseline_1200000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1250000_steps.zip b/checkpoints/baseline/ppo_baseline_1250000_steps.zip
+index b7113c3..0c0a5ca 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1250000_steps.zip and b/checkpoints/baseline/ppo_baseline_1250000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1300000_steps.zip b/checkpoints/baseline/ppo_baseline_1300000_steps.zip
+index c903845..97529c6 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1300000_steps.zip and b/checkpoints/baseline/ppo_baseline_1300000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1350000_steps.zip b/checkpoints/baseline/ppo_baseline_1350000_steps.zip
+index d27b5a9..6f4a73e 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1350000_steps.zip and b/checkpoints/baseline/ppo_baseline_1350000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1400000_steps.zip b/checkpoints/baseline/ppo_baseline_1400000_steps.zip
+index f038613..5b530b3 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1400000_steps.zip and b/checkpoints/baseline/ppo_baseline_1400000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1450000_steps.zip b/checkpoints/baseline/ppo_baseline_1450000_steps.zip
+index 00c973d..940c77c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1450000_steps.zip and b/checkpoints/baseline/ppo_baseline_1450000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1500000_steps.zip b/checkpoints/baseline/ppo_baseline_1500000_steps.zip
+index e8e45d5..d4715e2 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1500000_steps.zip and b/checkpoints/baseline/ppo_baseline_1500000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_150000_steps.zip b/checkpoints/baseline/ppo_baseline_150000_steps.zip
+index eae3cd4..6d107a4 100644
+Binary files a/checkpoints/baseline/ppo_baseline_150000_steps.zip and b/checkpoints/baseline/ppo_baseline_150000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1550000_steps.zip b/checkpoints/baseline/ppo_baseline_1550000_steps.zip
+index f3f1236..b1beaf5 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1550000_steps.zip and b/checkpoints/baseline/ppo_baseline_1550000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1600000_steps.zip b/checkpoints/baseline/ppo_baseline_1600000_steps.zip
+index ac8b89f..a197cb9 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1600000_steps.zip and b/checkpoints/baseline/ppo_baseline_1600000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1650000_steps.zip b/checkpoints/baseline/ppo_baseline_1650000_steps.zip
+index f371365..ce0846c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1650000_steps.zip and b/checkpoints/baseline/ppo_baseline_1650000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1700000_steps.zip b/checkpoints/baseline/ppo_baseline_1700000_steps.zip
+index 6e397e3..09f4334 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1700000_steps.zip and b/checkpoints/baseline/ppo_baseline_1700000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1750000_steps.zip b/checkpoints/baseline/ppo_baseline_1750000_steps.zip
+index 0477bc5..a45974c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1750000_steps.zip and b/checkpoints/baseline/ppo_baseline_1750000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1800000_steps.zip b/checkpoints/baseline/ppo_baseline_1800000_steps.zip
+index c29c246..b702eb9 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1800000_steps.zip and b/checkpoints/baseline/ppo_baseline_1800000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1850000_steps.zip b/checkpoints/baseline/ppo_baseline_1850000_steps.zip
+index 56c5486..690ec02 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1850000_steps.zip and b/checkpoints/baseline/ppo_baseline_1850000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1900000_steps.zip b/checkpoints/baseline/ppo_baseline_1900000_steps.zip
+index 0802e5c..bbcc79d 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1900000_steps.zip and b/checkpoints/baseline/ppo_baseline_1900000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_1950000_steps.zip b/checkpoints/baseline/ppo_baseline_1950000_steps.zip
+index 4c22a4a..dfc66b3 100644
+Binary files a/checkpoints/baseline/ppo_baseline_1950000_steps.zip and b/checkpoints/baseline/ppo_baseline_1950000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_2000000_steps.zip b/checkpoints/baseline/ppo_baseline_2000000_steps.zip
+index 33d730b..a1ac231 100644
+Binary files a/checkpoints/baseline/ppo_baseline_2000000_steps.zip and b/checkpoints/baseline/ppo_baseline_2000000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_200000_steps.zip b/checkpoints/baseline/ppo_baseline_200000_steps.zip
+index 2326a0c..3b3270c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_200000_steps.zip and b/checkpoints/baseline/ppo_baseline_200000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_250000_steps.zip b/checkpoints/baseline/ppo_baseline_250000_steps.zip
+index 5147d37..f553825 100644
+Binary files a/checkpoints/baseline/ppo_baseline_250000_steps.zip and b/checkpoints/baseline/ppo_baseline_250000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_300000_steps.zip b/checkpoints/baseline/ppo_baseline_300000_steps.zip
+index 4896666..b4c18cc 100644
+Binary files a/checkpoints/baseline/ppo_baseline_300000_steps.zip and b/checkpoints/baseline/ppo_baseline_300000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_350000_steps.zip b/checkpoints/baseline/ppo_baseline_350000_steps.zip
+index 7094aae..7e2228a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_350000_steps.zip and b/checkpoints/baseline/ppo_baseline_350000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_400000_steps.zip b/checkpoints/baseline/ppo_baseline_400000_steps.zip
+index b8b4cfa..3877017 100644
+Binary files a/checkpoints/baseline/ppo_baseline_400000_steps.zip and b/checkpoints/baseline/ppo_baseline_400000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_450000_steps.zip b/checkpoints/baseline/ppo_baseline_450000_steps.zip
+index 8ba4501..1cb9bc1 100644
+Binary files a/checkpoints/baseline/ppo_baseline_450000_steps.zip and b/checkpoints/baseline/ppo_baseline_450000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_500000_steps.zip b/checkpoints/baseline/ppo_baseline_500000_steps.zip
+index dc44e32..ee88332 100644
+Binary files a/checkpoints/baseline/ppo_baseline_500000_steps.zip and b/checkpoints/baseline/ppo_baseline_500000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_50000_steps.zip b/checkpoints/baseline/ppo_baseline_50000_steps.zip
+index 8f833bc..933efae 100644
+Binary files a/checkpoints/baseline/ppo_baseline_50000_steps.zip and b/checkpoints/baseline/ppo_baseline_50000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_550000_steps.zip b/checkpoints/baseline/ppo_baseline_550000_steps.zip
+index e57ae65..fcb6d79 100644
+Binary files a/checkpoints/baseline/ppo_baseline_550000_steps.zip and b/checkpoints/baseline/ppo_baseline_550000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_600000_steps.zip b/checkpoints/baseline/ppo_baseline_600000_steps.zip
+index 52473de..891b458 100644
+Binary files a/checkpoints/baseline/ppo_baseline_600000_steps.zip and b/checkpoints/baseline/ppo_baseline_600000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_650000_steps.zip b/checkpoints/baseline/ppo_baseline_650000_steps.zip
+index f4874ca..8d182ab 100644
+Binary files a/checkpoints/baseline/ppo_baseline_650000_steps.zip and b/checkpoints/baseline/ppo_baseline_650000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_700000_steps.zip b/checkpoints/baseline/ppo_baseline_700000_steps.zip
+index a9e7041..a215adf 100644
+Binary files a/checkpoints/baseline/ppo_baseline_700000_steps.zip and b/checkpoints/baseline/ppo_baseline_700000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_750000_steps.zip b/checkpoints/baseline/ppo_baseline_750000_steps.zip
+index 276e670..019d68d 100644
+Binary files a/checkpoints/baseline/ppo_baseline_750000_steps.zip and b/checkpoints/baseline/ppo_baseline_750000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_800000_steps.zip b/checkpoints/baseline/ppo_baseline_800000_steps.zip
+index b57e72f..f70535c 100644
+Binary files a/checkpoints/baseline/ppo_baseline_800000_steps.zip and b/checkpoints/baseline/ppo_baseline_800000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_850000_steps.zip b/checkpoints/baseline/ppo_baseline_850000_steps.zip
+index 12f7bb6..e835603 100644
+Binary files a/checkpoints/baseline/ppo_baseline_850000_steps.zip and b/checkpoints/baseline/ppo_baseline_850000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_900000_steps.zip b/checkpoints/baseline/ppo_baseline_900000_steps.zip
+index cf59972..0a5d8df 100644
+Binary files a/checkpoints/baseline/ppo_baseline_900000_steps.zip and b/checkpoints/baseline/ppo_baseline_900000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_950000_steps.zip b/checkpoints/baseline/ppo_baseline_950000_steps.zip
+index df1b878..895e114 100644
+Binary files a/checkpoints/baseline/ppo_baseline_950000_steps.zip and b/checkpoints/baseline/ppo_baseline_950000_steps.zip differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1000000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1000000_steps.pkl
+index 5c55e34..f810067 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1000000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1000000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl
+index 8bf7862..05c1890 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_100000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1050000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1050000_steps.pkl
+index c1b72f1..2041980 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1050000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1050000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1100000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1100000_steps.pkl
+index d38f359..6f84858 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1100000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1100000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1150000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1150000_steps.pkl
+index a18f820..eac4c57 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1150000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1150000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1200000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1200000_steps.pkl
+index c8f2a75..425d02d 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1200000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1200000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1250000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1250000_steps.pkl
+index 5196b91..82e383b 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1250000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1250000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1300000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1300000_steps.pkl
+index 7342429..e175df7 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1300000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1300000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1350000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1350000_steps.pkl
+index f0c33d7..21f95c2 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1350000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1350000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1400000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1400000_steps.pkl
+index b3ec05b..b2ab810 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1400000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1400000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1450000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1450000_steps.pkl
+index 5151327..16b5566 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1450000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1450000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1500000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1500000_steps.pkl
+index 876966a..3fcb14d 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1500000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1500000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl
+index a0c416f..36cc384 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_150000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1550000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1550000_steps.pkl
+index 401f040..3a2430a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1550000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1550000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1600000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1600000_steps.pkl
+index 7850d2a..66f84a0 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1600000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1600000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1650000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1650000_steps.pkl
+index 1bd3754..1832268 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1650000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1650000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1700000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1700000_steps.pkl
+index ea08c5c..625e268 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1700000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1700000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1750000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1750000_steps.pkl
+index b7c2d1f..38e4f46 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1750000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1750000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1800000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1800000_steps.pkl
+index a82e16d..196be3a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1800000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1800000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1850000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1850000_steps.pkl
+index ff42c59..206a2fd 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1850000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1850000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1900000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1900000_steps.pkl
+index acd83e1..e2dd6c8 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1900000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1900000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_1950000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_1950000_steps.pkl
+index 3443afe..bc271b9 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_1950000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_1950000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_2000000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_2000000_steps.pkl
+index 8ccdf0c..b39e9be 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_2000000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_2000000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl
+index d143a3c..ace3714 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_200000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl
+index 36bb4c6..8787b19 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_250000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl
+index 7267b4b..57ee653 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_300000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl
+index e48f35d..f6280b3 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_350000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl
+index a501714..1d28197 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_400000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl
+index 3354dec..1676fbe 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_450000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl
+index 231dcb5..1f83828 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_500000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl
+index 4708c85..bfcb46a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_50000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl
+index e3b9b1e..2eb7775 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_550000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl
+index 159a1b2..c497286 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_600000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl
+index cc2704e..804657a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_650000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl
+index cf11948..2f5b33a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_700000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_750000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_750000_steps.pkl
+index 2503b1a..ec79174 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_750000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_750000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_800000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_800000_steps.pkl
+index 1b59607..8b3fa0a 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_800000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_800000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_850000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_850000_steps.pkl
+index d90efe9..0e78b07 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_850000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_850000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_900000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_900000_steps.pkl
+index c3c0ab0..0f040e9 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_900000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_900000_steps.pkl differ
+diff --git a/checkpoints/baseline/ppo_baseline_vecnormalize_950000_steps.pkl b/checkpoints/baseline/ppo_baseline_vecnormalize_950000_steps.pkl
+index 9e5f17f..b7c3e04 100644
+Binary files a/checkpoints/baseline/ppo_baseline_vecnormalize_950000_steps.pkl and b/checkpoints/baseline/ppo_baseline_vecnormalize_950000_steps.pkl differ
+diff --git a/dynamics/__pycache__/__init__.cpython-313.pyc b/dynamics/__pycache__/__init__.cpython-313.pyc
+index 1f915b0..0d9fd8a 100644
+Binary files a/dynamics/__pycache__/__init__.cpython-313.pyc and b/dynamics/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/dynamics/__pycache__/dynamics.cpython-313.pyc b/dynamics/__pycache__/dynamics.cpython-313.pyc
+index 3e9ae71..3af350d 100644
+Binary files a/dynamics/__pycache__/dynamics.cpython-313.pyc and b/dynamics/__pycache__/dynamics.cpython-313.pyc differ
+diff --git a/dynamics/dynamics.py b/dynamics/dynamics.py
+index cacd756..fa2c491 100644
+--- a/dynamics/dynamics.py
++++ b/dynamics/dynamics.py
+@@ -451,12 +451,16 @@ class CoffeeArmDynamics:
+         # satisfy dV/dt ≈ −600 at slosh-boundary states while keeping V(rest)>0
+         # at safe states far away. It compromises by outputting −1.705 everywhere.
+         #
++        # The same collapse occurs for large NEGATIVE H (states with rapidly
++        # outward-moving slosh): H ≈ −600 drives dV/dt = 600, creating massive
++        # PDE residuals that overwhelm the larger 256-feature network over 200k
++        # epochs and corrupt the obstacle/joint-space representation (isolated
++        # red dots instead of smooth contours).  Symmetric clipping prevents both.
++        #
+         # The correct BRT gives V(rest, T) = l(rest) = +0.35 for all T because
+         # the optimal controller u=0 keeps the arm stationary (H=0 at rest).
+-        # Clipping H at H_MAX prevents the high-gradient slosh states from
+-        # contaminating V at safe states, while leaving H≈0 at rest unchanged.
+         H_MAX = 25.0
+-        H = H.clamp(max=H_MAX)
++        H = H.clamp(min=-H_MAX, max=H_MAX)
+ 
+         return H.reshape(shape)
+ 
+diff --git a/ppo_baseline_final.zip b/ppo_baseline_final.zip
+index e4c7396..83a9aec 100644
+Binary files a/ppo_baseline_final.zip and b/ppo_baseline_final.zip differ
+diff --git a/ppo_baseline_vecnormalize.pkl b/ppo_baseline_vecnormalize.pkl
+index d34efef..1b67b45 100644
+Binary files a/ppo_baseline_vecnormalize.pkl and b/ppo_baseline_vecnormalize.pkl differ
+diff --git a/smoke_test_brt.py b/smoke_test_brt.py
+index f19c8d2..15d5e55 100644
+--- a/smoke_test_brt.py
++++ b/smoke_test_brt.py
+@@ -50,10 +50,11 @@ def test_hamiltonian_scaling():
+     # which then multiplied by scale again → double scaling.
+     # Demonstrate: at a non-zero joint angle, slosh control terms depend on J(q).
+     # With q2=π/6 (normalized), J is different from q2=π/6*scale[1] (double-scaled).
+-    # Use p[8]=1 (vx_slosh gradient) so we activate J-dependent terms.
++    # Use p[8]=0.1 (vx_slosh gradient) — small enough that neither value hits the
++    # H_MAX=25 clamp, so the double-scaling bug remains detectable.
+     z_norm = torch.zeros(1, 10); z_norm[0, 1] = np.pi/6  # q2 = π/6 in normalized space
+     z_norm[0, 6] = 0.5  # xs = 0.5 in normalized space
+-    p_slosh = torch.zeros(1, 10); p_slosh[0, 8] = 1.0
++    p_slosh = torch.zeros(1, 10); p_slosh[0, 8] = 0.1
+ 
+     H_correct = dyn.hamiltonian(z_norm, p_slosh).item()
+ 
+@@ -228,12 +229,63 @@ def test_short_training():
+     return ok_pt and ok_sep and ok
+ 
+ 
++# ── 4. Obstacle boundary function sanity check ────────────────────────────────
++def test_obstacle_boundary():
++    print("\n=== Test 4: Obstacle boundary function ===")
++    from dynamics.dynamics import CoffeeArmDynamics
++    dyn = CoffeeArmDynamics()
++
++    print(f"  Obstacles loaded: {len(dyn.obstacles)}")
++    for i, obs in enumerate(dyn.obstacles):
++        print(f"    [{i}] center={obs['center']}  radius={obs['radius']}")
++
++    all_ok = True
++
++    # For each obstacle: build a state where the arm's elbow (link 2 endpoint)
++    # sits inside that obstacle sphere, then check boundary_fn < 0.
++    for i, obs in enumerate(dyn.obstacles):
++        cx, cy, cz = obs['center']
++        r = float(obs['radius'])
++
++        # q1 points the arm toward the obstacle in XY
++        q1 = float(np.arctan2(cy, cx))
++        # q2 tilts the arm to put the elbow near the obstacle height
++        l1 = float(dyn.L[0])
++        l2 = float(dyn.L[1])
++        elev = np.clip((cz - l1) / l2, -0.98, 0.98)
++        q2 = float(np.arcsin(elev))
++        q3 = 0.0
++        state_inside = np.array([q1, q2, q3, 0, 0, 0, 0, 0, 0, 0], dtype=np.float32)
++
++        lx = float(dyn.boundary_fn(state_inside))
++        inside_obs = lx < 0.0
++        print(f"  Obs {i}: state aimed at center → l(x)={lx:+.4f}  (expect < 0)  [{PASS if inside_obs else FAIL}]")
++        all_ok = all_ok and inside_obs
++
++    # A clearly safe state: q1=π/2 points the arm in +y, clearing all obstacles.
++    # (q=[0,0,0] sends link 2 through obstacle 2 at [0.39,0,0.30] — not safe.)
++    safe_state = np.array([np.pi/2, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=np.float32)
++    lx_safe = float(dyn.boundary_fn(safe_state))
++    ok_safe = lx_safe > 0.0
++    print(f"  Safe state (q1=π/2, arm in +y, zero slosh) → l(x)={lx_safe:+.4f}  (expect > 0)  [{PASS if ok_safe else FAIL}]")
++
++    # A slosh-violated state must be < 0
++    spill_state = np.zeros(10, dtype=np.float32)
++    spill_state[6] = dyn.slosh_rad_max * 1.5
++    lx_spill = float(dyn.boundary_fn(spill_state))
++    ok_spill = lx_spill < 0.0
++    print(f"  Spill state (slosh 1.5× max)  → l(x)={lx_spill:+.4f}  (expect < 0)  [{PASS if ok_spill else FAIL}]")
++
++    return all_ok and ok_safe and ok_spill
++
++
+ # ── main ───────────────────────────────────────────────────────────────────────
+ if __name__ == '__main__':
+     results = []
+     results.append(test_hamiltonian_scaling())
+     results.append(test_safety_filter_gradient())
+     results.append(test_short_training())
++    results.append(test_obstacle_boundary())
+ 
+     passed  = [r for r in results if r is True]
+     failed  = [r for r in results if r is False]
+diff --git a/src/__pycache__/__init__.cpython-313.pyc b/src/__pycache__/__init__.cpython-313.pyc
+index 30f0fd0..3906f1d 100644
+Binary files a/src/__pycache__/__init__.cpython-313.pyc and b/src/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/config/__pycache__/constants.cpython-313.pyc b/src/config/__pycache__/constants.cpython-313.pyc
+index fcf8d5d..25897d8 100644
+Binary files a/src/config/__pycache__/constants.cpython-313.pyc and b/src/config/__pycache__/constants.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/__init__.cpython-313.pyc b/src/core/__pycache__/__init__.cpython-313.pyc
+index c59ef78..20c83f8 100644
+Binary files a/src/core/__pycache__/__init__.cpython-313.pyc and b/src/core/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/arm_dynamics.cpython-313.pyc b/src/core/__pycache__/arm_dynamics.cpython-313.pyc
+index 80e8843..1d96f37 100644
+Binary files a/src/core/__pycache__/arm_dynamics.cpython-313.pyc and b/src/core/__pycache__/arm_dynamics.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/obstacles.cpython-313.pyc b/src/core/__pycache__/obstacles.cpython-313.pyc
+index d3eecde..ae7fc68 100644
+Binary files a/src/core/__pycache__/obstacles.cpython-313.pyc and b/src/core/__pycache__/obstacles.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/simulation.cpython-313.pyc b/src/core/__pycache__/simulation.cpython-313.pyc
+index f2c1f2f..07e1d89 100644
+Binary files a/src/core/__pycache__/simulation.cpython-313.pyc and b/src/core/__pycache__/simulation.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/slosh_dynamics.cpython-313.pyc b/src/core/__pycache__/slosh_dynamics.cpython-313.pyc
+index 7277863..659c2ea 100644
+Binary files a/src/core/__pycache__/slosh_dynamics.cpython-313.pyc and b/src/core/__pycache__/slosh_dynamics.cpython-313.pyc differ
+diff --git a/src/core/__pycache__/state.cpython-313.pyc b/src/core/__pycache__/state.cpython-313.pyc
+index 9a5f319..3de40a4 100644
+Binary files a/src/core/__pycache__/state.cpython-313.pyc and b/src/core/__pycache__/state.cpython-313.pyc differ
+diff --git a/src/core/arm_dynamics.py b/src/core/arm_dynamics.py
+index 35db175..34f2ee6 100644
+--- a/src/core/arm_dynamics.py
++++ b/src/core/arm_dynamics.py
+@@ -85,10 +85,11 @@ def jacobian_dot(phi, L):
+     return Jd
+ 
+ 
+-def A_matrix():
+-    """Pure decoupled double integrator."""
++def A_matrix(damping=1.0):
++    """Damped double integrator: dq_dot = -damping*dq + K*u."""
+     A = np.zeros((6, 6), dtype=np.float64)
+     A[0:3, 3:6] = np.eye(3)
++    A[3:6, 3:6] = -damping * np.eye(3)
+     return A
+ 
+ 
+@@ -98,12 +99,12 @@ def B_matrix(K):
+     return B
+ 
+ 
+-def arm_dynamics(phi_flat, u_flat, K, dt):
+-    """Forward Euler step for the linearized 3-DoF arm model."""
++def arm_dynamics(phi_flat, u_flat, K, dt, damping=1.0):
++    """Forward Euler step for the damped 3-DoF arm model."""
+     phi = np.asarray(phi_flat, dtype=np.float64).reshape(6, 1)
+     u = np.asarray(u_flat, dtype=np.float64).reshape(3, 1)
+-    phi_dot = A_matrix() @ phi + B_matrix(K) @ u
+-    
++    phi_dot = A_matrix(damping) @ phi + B_matrix(K) @ u
++
+     return (phi.reshape(-1) + dt * phi_dot.reshape(-1)).astype(np.float64)
+ 
+ 
+diff --git a/src/envs/__init__.py b/src/envs/__init__.py
+index 7b4346c..410013a 100644
+--- a/src/envs/__init__.py
++++ b/src/envs/__init__.py
+@@ -1,7 +1,6 @@
+ # src/envs/__init__.py
+ """Gymnasium-compatible environments for training and testing."""
+ 
+-from src.envs.obstacle_env import CoffeeArmEnv
+-from src.envs.base_env import CoffeePouringEnv
++from src.envs.base_env import CoffeePouringEnv, CoffeeArmEnv
+ 
+-__all__ = ["CoffeeArmEnv", "CoffeePouringEnv"]
+\ No newline at end of file
++__all__ = ["CoffeePouringEnv", "CoffeeArmEnv"]
+diff --git a/src/envs/__pycache__/__init__.cpython-313.pyc b/src/envs/__pycache__/__init__.cpython-313.pyc
+index 8ab6be7..174ba32 100644
+Binary files a/src/envs/__pycache__/__init__.cpython-313.pyc and b/src/envs/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/base_env.cpython-313.pyc b/src/envs/__pycache__/base_env.cpython-313.pyc
+index 60a05d8..9a9f5fd 100644
+Binary files a/src/envs/__pycache__/base_env.cpython-313.pyc and b/src/envs/__pycache__/base_env.cpython-313.pyc differ
+diff --git a/src/envs/__pycache__/obstacle_env.cpython-313.pyc b/src/envs/__pycache__/obstacle_env.cpython-313.pyc
+index 2c60d39..20ae832 100644
+Binary files a/src/envs/__pycache__/obstacle_env.cpython-313.pyc and b/src/envs/__pycache__/obstacle_env.cpython-313.pyc differ
+diff --git a/src/envs/base_env.py b/src/envs/base_env.py
+index e8a570f..7e10d96 100644
+--- a/src/envs/base_env.py
++++ b/src/envs/base_env.py
+@@ -1,9 +1,14 @@
+-"""Gym environment for safe RL coffee pouring.
++"""Coffee-arm gym environment.
+ 
+-This is the simpler non-obstacle variant. It uses the shared physics core and
+-keeps the 10D state ordering:
++10D state: [q1, q2, q3, dq1, dq2, dq3, x_slosh, y_slosh, vx_slosh, vy_slosh]
+ 
+-x = [q1, q2, q3, dq1, dq2, dq3, x_slosh, y_slosh, vx_slosh, vy_slosh]
++Failure set:
++  - cup below ground  (cup_z < 0)
++  - slosh radius > slosh_rad_max  (spill)
++  - any arm link hits an obstacle
++  - joint angle exceeds joint_limits
++
++CoffeeArmEnv is an alias for CoffeePouringEnv (same class).
+ """
+ 
+ from __future__ import annotations
+@@ -22,53 +27,54 @@ if PROJECT_ROOT not in sys.path:
+ from src.config.constants import (
+     DEFAULT_L, DEFAULT_K, DEFAULT_U_MAX,
+     DEFAULT_SLOSH_RAD_MAX, DEFAULT_L_EFF,
+-    STATE_DIM, OBS_DIM
++    DEFAULT_OBSTACLES, DEFAULT_JOINT_LIMITS,
++    STATE_DIM, OBS_DIM,
+ )
+ from src.core.arm_dynamics import position_cup
+ from src.core.simulation import coupled_dynamics
+-from src.core.obstacles import check_ground_contact
++from src.core.obstacles import (
++    check_ground_contact,
++    check_arm_obstacle_collision,
++    check_joint_limits,
++)
++
+ 
+ def safety_filter(env, state, u_policy, n_samples=100):
+-    """Backward-compatible random-sampling safety filter."""
++    """Random-sampling safety filter (backward-compatible helper)."""
+     if env.is_safe(state, u_policy):
+         return np.asarray(u_policy, dtype=np.float32), False
+-
+     for _ in range(n_samples):
+         candidate = env.action_space.sample()
+         if env.is_safe(state, candidate):
+             return np.asarray(candidate, dtype=np.float32), True
+-
+     return np.zeros(3, dtype=np.float32), True
+ 
++
+ def inverse_kinematics(x, y, z, L, elbow="up"):
+     l1, l2, l3 = float(L[0]), float(L[1]), float(L[2])
+-
+     theta1 = np.arctan2(y, x)
+-
+     rho = np.sqrt(x**2 + y**2)
+     z_rel = z - l1
+-
+     D = (rho**2 + z_rel**2 - l2**2 - l3**2) / (2.0 * l2 * l3)
+-
+     if D < -1.000001 or D > 1.000001:
+         raise ValueError("Target is unreachable")
+-
+     D = np.clip(D, -1.0, 1.0)
+-
+     if elbow == "up":
+         theta3 = np.arctan2(np.sqrt(1.0 - D**2), D)
+     else:
+         theta3 = np.arctan2(-np.sqrt(1.0 - D**2), D)
+-
+     theta2 = np.arctan2(z_rel, rho) - np.arctan2(
+-        l3 * np.sin(theta3),
+-        l2 + l3 * np.cos(theta3),
++        l3 * np.sin(theta3), l2 + l3 * np.cos(theta3)
+     )
+-
+     return np.array([theta1, theta2, theta3], dtype=np.float32)
+ 
++
+ class CoffeePouringEnv(gym.Env):
+-    """Observation: (13,) [state(10), goal-relative cup vector(3)]"""
++    """Coffee-arm environment.
++
++    Observation: (13,) = [state(10), goal-relative cup vector(3)]
++    Action:      (3,)  = joint acceleration commands, clipped to ±u_max
++    """
+ 
+     metadata = {"render_modes": []}
+ 
+@@ -83,31 +89,39 @@ class CoffeePouringEnv(gym.Env):
+         goal_pos=None,
+         randomize_goal=False,
+         l_eff=DEFAULT_L_EFF,
++        obstacles=None,
++        joint_limits=None,
+     ):
+         super().__init__()
+-        self.L = np.asarray(L if L is not None else DEFAULT_L, dtype=np.float32)
+-        self.K = np.asarray(K if K is not None else DEFAULT_K, dtype=np.float32)
+-        self.dt = float(dt)
+-        self.T = float(T)
+-        self.max_steps = int(T / dt)
+-        self.u_max = float(u_max)
++        self.L             = np.asarray(L if L is not None else DEFAULT_L, dtype=np.float32)
++        self.K             = np.asarray(K if K is not None else DEFAULT_K, dtype=np.float32)
++        self.dt            = float(dt)
++        self.T             = float(T)
++        self.max_steps     = int(T / dt)
++        self.u_max         = float(u_max)
+         self.slosh_rad_max = float(slosh_rad_max)
+-        self.l_eff = float(l_eff)
+-        self.goal_pos = np.asarray(goal_pos if goal_pos is not None else [0.4, -0.5, 0.15], dtype=np.float32)
++        self.l_eff         = float(l_eff)
++        self.goal_pos      = np.asarray(
++            goal_pos if goal_pos is not None else [0.55, 0.10, 0.10], dtype=np.float32
++        )
+         self.randomize_goal = bool(randomize_goal)
++        self.obstacles      = list(obstacles if obstacles is not None else DEFAULT_OBSTACLES)
++        self.joint_limits   = np.asarray(
++            joint_limits if joint_limits is not None else DEFAULT_JOINT_LIMITS, dtype=np.float32
++        )
+ 
+-        # Updated bounds for Cartesian slosh (bounded by l_eff)
+         obs_high = np.array(
+             [np.pi]*3 + [10.0]*3 + [self.l_eff, self.l_eff, 10.0, 10.0] + [6.0]*3,
+             dtype=np.float32,
+         )
+         self.observation_space = spaces.Box(-obs_high, obs_high, dtype=np.float32)
+-        
+-        # Bounded joint actuation commands |u_i| <= u_max
+-        self.action_space = spaces.Box(low=-self.u_max, high=self.u_max, shape=(3,), dtype=np.float32)
++        self.action_space      = spaces.Box(
++            low=-self.u_max, high=self.u_max, shape=(3,), dtype=np.float32
++        )
+ 
+-        self.state = None
++        self.state      = None
+         self.step_count = 0
++        self._prev_dist = None
+ 
+     def _goal_vec(self):
+         cup_pos = position_cup(self.state[:6], self.L)
+@@ -119,41 +133,28 @@ class CoffeePouringEnv(gym.Env):
+     def reset(self, seed=None, options=None):
+         super().reset(seed=seed)
+ 
+-        # Sample random Cartesian start location
+         while True:
+-            r = self.np_random.uniform(0.5, 0.7)
+-
+-            az = np.deg2rad(
+-                self.np_random.uniform(60, 90)
+-            )
+-
+-            el = np.deg2rad(
+-                self.np_random.uniform(0, 30)
+-            )
+-
+-            x = r * np.cos(el) * np.cos(az)
+-            y = r * np.cos(el) * np.sin(az)
+-            z = r * np.sin(el)
+-
++            r  = self.np_random.uniform(0.5, 0.65)
++            az = np.deg2rad(self.np_random.uniform(70, 90))
++            el = np.deg2rad(self.np_random.uniform(0, 30))
++            x  = r * np.cos(el) * np.cos(az)
++            y  = r * np.cos(el) * np.sin(az)
++            z  = r * np.sin(el)
+             try:
+-                theta_init = inverse_kinematics(
+-                    x, y, z,
+-                    self.L,
+-                    elbow="up"
+-                )
++                theta_init = inverse_kinematics(x, y, z, self.L, elbow="up")
+                 break
+-
+             except ValueError:
+                 pass
+ 
+-        self.state = np.concatenate([
+-            theta_init,
+-            np.zeros(7)
+-        ]).astype(np.float32)
+-
++        self.state = np.concatenate([theta_init, np.zeros(7)]).astype(np.float32)
+         self.step_count = 0
+         if self.randomize_goal:
+-            self.goal_pos = self.np_random.uniform(low=[-1.5, -1.5, 0.5], high=[1.5, 1.5, 2.5]).astype(np.float32)
++            self.goal_pos = self.np_random.uniform(
++                low=[-1.5, -1.5, 0.5], high=[1.5, 1.5, 2.5]
++            ).astype(np.float32)
++        self._prev_dist = float(
++            np.linalg.norm(position_cup(self.state[:6], self.L) - self.goal_pos)
++        )
+         return self._make_obs(), {}
+ 
+     def step(self, action):
+@@ -163,65 +164,74 @@ class CoffeePouringEnv(gym.Env):
+             self.state, action, self.K, self.L, self.dt, l_eff=self.l_eff
+         ).astype(np.float32)
+ 
+-        # Cartesian Math for slosh
+         x_slosh, y_slosh = float(next_state[6]), float(next_state[7])
+-        slosh_rad = np.sqrt(x_slosh**2 + y_slosh**2)
+-        
+-        cup_pos = position_cup(next_state[:6], self.L)
++        slosh_rad    = np.sqrt(x_slosh**2 + y_slosh**2)
++        cup_pos      = position_cup(next_state[:6], self.L)
+         dist_to_goal = float(np.linalg.norm(cup_pos - self.goal_pos))
+ 
+-        # Failure set conditions
+-        spill_slosh = bool(slosh_rad > self.slosh_rad_max)
+-        below_ground = bool(cup_pos[2] < 0.0)
+-        terminated = spill_slosh or below_ground
++        spill_slosh     = bool(slosh_rad > self.slosh_rad_max)
++        below_ground    = bool(cup_pos[2] < 0.0)
++        obstacle_hit    = bool(check_arm_obstacle_collision(next_state[:6], self.L, self.obstacles))
++        joint_violation = bool(check_joint_limits(next_state[:3], self.joint_limits))
++        at_goal         = bool(dist_to_goal < 0.1)
+ 
++        terminated = spill_slosh or below_ground or obstacle_hit or joint_violation or at_goal
+         self.step_count += 1
+         truncated = bool(self.step_count >= self.max_steps)
+ 
+-        reward = -0.1 * dist_to_goal - 0.01 * float(np.linalg.norm(action) ** 2)
+-        if dist_to_goal < 0.1:
+-            reward += 10.0
++        progress = self._prev_dist - dist_to_goal
++        reward   = 10.0 * progress - 0.01 * float(np.linalg.norm(action) ** 2)
+         if spill_slosh:
+             reward -= 50.0
+         if below_ground:
+             reward -= 50.0
++        if obstacle_hit or joint_violation:
++            reward -= 50.0
++        if at_goal:
++            reward += 100.0
+ 
+-        self.state = next_state
++        self._prev_dist = dist_to_goal
++        self.state      = next_state
+ 
+         info = {
+-            "cup_pos": cup_pos.astype(np.float32),
+-            "slosh_rad": slosh_rad,
+-            "dist_to_goal": dist_to_goal,
+-            "spill_slosh": spill_slosh,
+-            "below_ground": below_ground,
+-            "step_count_ep": self.step_count,
++            "cup_pos":         cup_pos.astype(np.float32),
++            "slosh_rad":       slosh_rad,
++            "dist_to_goal":    dist_to_goal,
++            "spill_slosh":     spill_slosh,
++            "below_ground":    below_ground,
++            "obstacle_hit":    obstacle_hit,
++            "joint_violation": joint_violation,
++            "step_count_ep":   self.step_count,
+         }
+         return self._make_obs(), reward, terminated, truncated, info
+ 
+     def is_safe(self, state, action):
+-        state = np.asarray(state, dtype=np.float32).reshape(-1)
++        state  = np.asarray(state,  dtype=np.float32).reshape(-1)
+         action = np.asarray(action, dtype=np.float32).reshape(-1)
+-        
+         next_state = coupled_dynamics(
+             state, action, self.K, self.L, self.dt, l_eff=self.l_eff
+         )
+-        
+         slosh_rad = np.sqrt(next_state[6]**2 + next_state[7]**2)
+-        
+         return (
+             slosh_rad <= self.slosh_rad_max
+             and not check_ground_contact(next_state[:6], self.L)
++            and not check_arm_obstacle_collision(next_state[:6], self.L, self.obstacles)
++            and not check_joint_limits(next_state[:3], self.joint_limits)
+         )
+ 
+     def render(self):
+         pass
+ 
++
++# Alias — CoffeeArmEnv and CoffeePouringEnv are the same class.
++CoffeeArmEnv = CoffeePouringEnv
++
++
+ if __name__ == "__main__":
+-    print("=== CoffeePouringEnv sanity check ===")
++    print("=== CoffeePouringEnv / CoffeeArmEnv sanity check ===")
+     env = CoffeePouringEnv()
+     obs, _ = env.reset(seed=0)
+     print(f"Obs shape: {obs.shape}  (expected {OBS_DIM})")
+-    
+     total_reward = 0.0
+     for i in range(env.max_steps + 5):
+         action = env.action_space.sample()
+@@ -229,6 +239,7 @@ if __name__ == "__main__":
+         total_reward += reward
+         if terminated or truncated:
+             print(f"Episode ended at step {i+1} | terminated={terminated} truncated={truncated}")
+-            print(f"cup_pos={info['cup_pos'].round(3)}, slosh_rad={info['slosh_rad']:.3f}")
++            print(f"cup_pos={info['cup_pos'].round(3)}, slosh_rad={info['slosh_rad']:.4f}")
++            print(f"obstacle_hit={info['obstacle_hit']}, joint_violation={info['joint_violation']}")
+             print(f"Total reward: {total_reward:.2f}")
+-            break
+\ No newline at end of file
++            break
+diff --git a/src/envs/obstacle_env.py b/src/envs/obstacle_env.py
+deleted file mode 100644
+index d93af61..0000000
+--- a/src/envs/obstacle_env.py
++++ /dev/null
+@@ -1,115 +0,0 @@
+-"""CoffeeArmEnv extends the base pouring environment with obstacle collisions."""
+-
+-from __future__ import annotations
+-
+-import numpy as np
+-import gymnasium as gym
+-
+-import os
+-import sys
+-
+-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+-if PROJECT_ROOT not in sys.path:
+-    sys.path.insert(0, PROJECT_ROOT)
+-
+-from src.config.constants import DEFAULT_OBSTACLES, DEFAULT_JOINT_LIMITS
+-from src.core.arm_dynamics import position_cup
+-from src.core.obstacles import (
+-    check_joint_limits, 
+-    check_arm_obstacle_collision,
+-    check_ground_contact
+-)
+-from src.core.simulation import coupled_dynamics
+-from src.envs.base_env import CoffeePouringEnv
+-
+-class CoffeeArmEnv(CoffeePouringEnv):
+-    """Obstacle-aware version of the task environment."""
+-
+-    DEFAULT_OBSTACLES = DEFAULT_OBSTACLES
+-
+-    def __init__(self, *args, obstacles=None, joint_limits=None, **kwargs):
+-        super().__init__(*args, **kwargs)
+-        self.obstacles = list(obstacles) if obstacles is not None else list(self.DEFAULT_OBSTACLES)
+-        self.joint_limits = np.asarray(joint_limits if joint_limits is not None else DEFAULT_JOINT_LIMITS, dtype=np.float32)
+-
+-    def step(self, action):
+-        action = np.clip(np.asarray(action, dtype=np.float32), -self.u_max, self.u_max)
+-
+-        next_state = coupled_dynamics(
+-            self.state, action, self.K, self.L, self.dt, l_eff=self.l_eff
+-        ).astype(np.float32)
+-
+-        cup_pos = position_cup(next_state[:6], self.L)
+-        dist_to_goal = float(np.linalg.norm(cup_pos - self.goal_pos))
+-        
+-        # Cartesian Math for slosh
+-        x_slosh, y_slosh = float(next_state[6]), float(next_state[7])
+-        slosh_rad = np.sqrt(x_slosh**2 + y_slosh**2)
+-
+-        # Full failure set F
+-        spill_slosh = bool(slosh_rad > self.slosh_rad_max)
+-        below_ground = bool(cup_pos[2] < 0.0)
+-        obstacle_hit = bool(check_arm_obstacle_collision(next_state[:6], self.L, self.obstacles))
+-        joint_violation = bool(check_joint_limits(next_state[:3], self.joint_limits))
+-
+-        terminated = spill_slosh or below_ground or obstacle_hit or joint_violation
+-
+-        self.step_count += 1
+-        truncated = bool(self.step_count >= self.max_steps)
+-
+-        reward = -0.1 * dist_to_goal - 0.01 * float(np.linalg.norm(action) ** 2)
+-        if dist_to_goal < 0.1:
+-            reward += 10.0
+-        if spill_slosh:
+-            reward -= 50.0
+-        if below_ground:
+-            reward -= 50.0
+-        if obstacle_hit or joint_violation:
+-            reward -= 50.0
+-
+-        self.state = next_state
+-
+-        info = {
+-            "cup_pos": cup_pos.astype(np.float32),
+-            "slosh_rad": slosh_rad,
+-            "dist_to_goal": dist_to_goal,
+-            "spill_slosh": spill_slosh,
+-            "below_ground": below_ground,
+-            "obstacle_hit": obstacle_hit,
+-            "joint_violation": joint_violation,
+-            "step_count_ep": self.step_count,
+-        }
+-        return self._make_obs(), reward, terminated, truncated, info
+-
+-    def is_safe(self, state, action):
+-        state = np.asarray(state, dtype=np.float32).reshape(-1)
+-        action = np.asarray(action, dtype=np.float32).reshape(-1)
+-
+-        next_state = coupled_dynamics(
+-            state, action, self.K, self.L, self.dt, l_eff=self.l_eff
+-        )
+-
+-        slosh_rad = np.sqrt(next_state[6]**2 + next_state[7]**2)
+-
+-        return (
+-            slosh_rad <= self.slosh_rad_max
+-            and not check_ground_contact(next_state[:6], self.L)
+-            and not check_arm_obstacle_collision(next_state[:6], self.L, self.obstacles)
+-            and not check_joint_limits(next_state[:3], self.joint_limits)
+-        )
+-
+-if __name__ == "__main__":
+-    print("=== CoffeeArmEnv sanity check ===")
+-    env = CoffeeArmEnv()
+-    obs, _ = env.reset(seed=0)
+-    
+-    total_reward = 0.0
+-    for i in range(env.max_steps + 5):
+-        action = env.action_space.sample()
+-        obs, reward, terminated, truncated, info = env.step(action)
+-        total_reward += reward
+-        if terminated or truncated:
+-            print(f"Episode ended at step {i+1} | terminated={terminated} truncated={truncated}")
+-            print(f"cup_pos={info['cup_pos'].round(3)}, slosh_rad={info['slosh_rad']:.3f}")
+-            print(f"spill_slosh={info['spill_slosh']}, obstacle_hit={info['obstacle_hit']}, joint_violation={info['joint_violation']}")
+-            break
+\ No newline at end of file
+diff --git a/src/reachability/__pycache__/__init__.cpython-313.pyc b/src/reachability/__pycache__/__init__.cpython-313.pyc
+index 6a2fadd..a69be66 100644
+Binary files a/src/reachability/__pycache__/__init__.cpython-313.pyc and b/src/reachability/__pycache__/__init__.cpython-313.pyc differ
+diff --git a/src/reachability/__pycache__/compute_brt.cpython-313.pyc b/src/reachability/__pycache__/compute_brt.cpython-313.pyc
+index 8340ebb..e1b4bd9 100644
+Binary files a/src/reachability/__pycache__/compute_brt.cpython-313.pyc and b/src/reachability/__pycache__/compute_brt.cpython-313.pyc differ
+diff --git a/src/reachability/__pycache__/safety_filter.cpython-313.pyc b/src/reachability/__pycache__/safety_filter.cpython-313.pyc
+index dc13286..6dc7216 100644
+Binary files a/src/reachability/__pycache__/safety_filter.cpython-313.pyc and b/src/reachability/__pycache__/safety_filter.cpython-313.pyc differ
+diff --git a/src/scripts/ab_scenario.py b/src/scripts/ab_scenario.py
+index 74e6c25..873fc2f 100644
+--- a/src/scripts/ab_scenario.py
++++ b/src/scripts/ab_scenario.py
+@@ -28,7 +28,7 @@ if DEEPREACH_PATH not in sys.path:
+     sys.path.insert(0, DEEPREACH_PATH)
+ 
+ import torch
+-from src.envs.obstacle_env import CoffeeArmEnv
++from src.envs.base_env import CoffeeArmEnv
+ from src.core.arm_dynamics import get_link_positions, position_cup
+ from src.config.constants import (
+     DEFAULT_OBSTACLES, DEFAULT_SLOSH_RAD_MAX, DEFAULT_L_EFF, DEFAULT_L,
+diff --git a/src/scripts/evaluate_safety_filter.py b/src/scripts/evaluate_safety_filter.py
+index 0df37a7..1887ecb 100644
+--- a/src/scripts/evaluate_safety_filter.py
++++ b/src/scripts/evaluate_safety_filter.py
+@@ -26,7 +26,7 @@ import torch
+ from stable_baselines3 import PPO
+ from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
+ 
+-from src.envs.obstacle_env import CoffeeArmEnv
++from src.envs.base_env import CoffeeArmEnv
+ from src.reachability.safety_filter import safety_filter as brt_safety_filter
+ from src.reachability.compute_brt import CFG as BRT_CFG
+ 
+diff --git a/src/scripts/train_ppo.py b/src/scripts/train_ppo.py
+index f7385cd..a2cc8fa 100644
+--- a/src/scripts/train_ppo.py
++++ b/src/scripts/train_ppo.py
+@@ -22,12 +22,14 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(_
+ if PROJECT_ROOT not in sys.path:
+     sys.path.insert(0, PROJECT_ROOT)
+ 
+-from src.envs.obstacle_env import CoffeeArmEnv
+-
+-TOTAL_TIMESTEPS = 2_000_000
+-LOG_INTERVAL = 5_000
+-SAVE_INTERVAL = 50_000
+-RUN_NAME = "baseline"
++from src.envs.base_env import CoffeeArmEnv
++
++N_ENVS = 8
++TOTAL_TIMESTEPS = 5_000_000
++# LOG_INTERVAL must be a multiple of (N_ENVS * n_steps) = 8192
++LOG_INTERVAL = 8_192
++SAVE_INTERVAL = 100_000
++RUN_NAME = "same_sector_v1"
+ CKPT_DIR = f"checkpoints/{RUN_NAME}"
+ 
+ # Environment parameters (Cleaned up old a_max and alpha_max variables)
+@@ -62,29 +64,35 @@ class SafetyMetricsCallback(BaseCallback):
+         self._reset_buffers()
+ 
+     def _reset_buffers(self):
+-        self.ep_spills = []
++        self.ep_spills  = []
++        self.ep_ground  = []
++        self.ep_obs     = []
+         self.ep_completions = []
+         self.ep_lengths = []
+ 
+     def _on_step(self):
+         for info, done in zip(self.locals["infos"], self.locals["dones"]):
+             if done:
+-                # FIXED: Removed non-existent spill_accel metric
+-                spill = float(
+-                    info.get("spill_slosh", False)
+-                    or info.get("obstacle_hit", False)
++                spill   = float(info.get("spill_slosh", False))
++                ground  = float(info.get("below_ground", False))
++                obs_hit = float(
++                    info.get("obstacle_hit", False)
+                     or info.get("joint_violation", False)
+                 )
+-                dist = info.get("dist_to_goal", float("inf"))
++                dist    = info.get("dist_to_goal", float("inf"))
+                 n_steps = info.get("step_count_ep", info.get("episode", {}).get("l", 1))
+ 
+                 self.ep_spills.append(spill)
++                self.ep_ground.append(ground)
++                self.ep_obs.append(obs_hit)
+                 self.ep_completions.append(float(dist < 0.1))
+                 self.ep_lengths.append(n_steps)
+ 
+         if self.num_timesteps % self.log_interval == 0 and self.ep_spills:
+             wandb.log({
+-                "safety/spill_rate": np.mean(self.ep_spills),
++                "safety/spill_rate":      np.mean(self.ep_spills),
++                "safety/ground_rate":     np.mean(self.ep_ground),
++                "safety/obstacle_rate":   np.mean(self.ep_obs),
+                 "safety/completion_rate": np.mean(self.ep_completions),
+                 "safety/steps_per_episode": np.mean(self.ep_lengths),
+             }, step=self.num_timesteps)
+@@ -100,9 +108,10 @@ def make_env(seed=0):
+             env,
+             info_keywords=(
+                 "spill_slosh",
+-                "dist_to_goal",
++                "below_ground",
+                 "obstacle_hit",
+                 "joint_violation",
++                "dist_to_goal",
+             ),
+         )
+         return env
+@@ -117,16 +126,23 @@ if __name__ == "__main__":
+         name=RUN_NAME,
+         config={
+             "algorithm": "PPO",
++            "env": "CoffeeArmEnv",
+             "use_safety_filter": False,
++            "norm_reward": False,
+             "total_timesteps": TOTAL_TIMESTEPS,
+             **ENV_KWARGS,
+-            "learning_rate": 1e-4,
+-            "n_steps": 2048,
+-            "batch_size": 64,
++            "learning_rate": 3e-4,
++            "n_steps": 1024,
++            "n_envs": N_ENVS,
++            "batch_size": 2048,
+             "n_epochs": 10,
+             "gamma": 0.99,
+             "gae_lambda": 0.95,
+             "clip_range": 0.2,
++            "ent_coef": 0.05,
++            "goal": "[0.55, 0.10, 0.10]",
++            "start_az_deg": "[70, 90]",
++            "at_goal_bonus": 100.0,
+         },
+         sync_tensorboard=False,
+         save_code=True,
+@@ -136,21 +152,21 @@ if __name__ == "__main__":
+     print("Filter: False")
+     print(f"Steps: {TOTAL_TIMESTEPS:,}\n")
+ 
+-    vec_env = DummyVecEnv([make_env(seed=0)])
++    vec_env = DummyVecEnv([make_env(seed=i) for i in range(N_ENVS)])
+     vec_env = VecNormalize(vec_env, norm_obs=True, norm_reward=False, clip_obs=10.0)
+ 
+     model = PPO(
+         "MlpPolicy",
+         vec_env,
+-        learning_rate=1e-4,
+-        n_steps=2048,
+-        batch_size=64,
+-        n_epochs=5,
++        learning_rate=3e-4,
++        n_steps=1024,
++        batch_size=2048,
++        n_epochs=10,
+         gamma=0.99,
+         gae_lambda=0.95,
+         clip_range=0.2,
+-        ent_coef=0.01,
+-        device="cpu",
++        ent_coef=0.05,
++        device="cuda",
+         verbose=1,
+         tensorboard_log=None,
+     )
+diff --git a/src/scripts/visualize_brt.py b/src/scripts/visualize_brt.py
+index 0dd01e7..36eb6ad 100644
+--- a/src/scripts/visualize_brt.py
++++ b/src/scripts/visualize_brt.py
+@@ -62,9 +62,13 @@ def query_grid(model, dyn, states_np: np.ndarray, t: float) -> np.ndarray:
+ 
+ 
+ def make_base_state():
+-    """Return a nominal 10D state (arm at home, slosh at rest)."""
++    """Return a nominal 10D state (arm at home, slosh at rest).
++    q1=1.2 (az~69deg), q2=0.3 (el~17deg) — mid-range of the safe reset distribution,
++    clear of all obstacles.
++    """
+     s = np.zeros(10, dtype=np.float32)
+-    s[0] = 0.1   # slight azimuth offset so arm isn't in a degenerate config
++    s[0] = 1.2   # azimuth ~69 deg (reset range is 60-90 deg)
++    s[1] = 0.3   # elevation ~17 deg
+     return s
+ 
+ 
+diff --git a/src/scripts/visualize_rollout.py b/src/scripts/visualize_rollout.py
+index e70a806..a4cf66f 100644
+--- a/src/scripts/visualize_rollout.py
++++ b/src/scripts/visualize_rollout.py
+@@ -36,7 +36,7 @@ import torch
+ from stable_baselines3 import PPO
+ from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
+ 
+-from src.envs.obstacle_env import CoffeeArmEnv
++from src.envs.base_env import CoffeeArmEnv
+ from src.core.arm_dynamics import get_link_positions
+ from src.config.constants import DEFAULT_OBSTACLES, DEFAULT_SLOSH_RAD_MAX, DEFAULT_L_EFF
+ from src.reachability.safety_filter import safety_filter as brt_safety_filter
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 55da260..b67ab43 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20260602_144056-nusi9t6x/logs/debug-internal.log
+\ No newline at end of file
++run-20260606_195241-7nn9ua3y/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 94b40d7..fb263af 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20260602_144056-nusi9t6x/logs/debug.log
+\ No newline at end of file
++run-20260606_195241-7nn9ua3y/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index 8c4670a..9bdef93 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20260602_144056-nusi9t6x
+\ No newline at end of file
++run-20260606_195241-7nn9ua3y
+\ No newline at end of file

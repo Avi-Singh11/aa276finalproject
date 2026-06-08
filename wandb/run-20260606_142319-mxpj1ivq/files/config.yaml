@@ -1,0 +1,80 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        e:
+            b1vo9oj7kj3seps0lom6qv7fugoqnj37:
+                cpu_count: 20
+                cpu_count_logical: 20
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "4031871553536"
+                        used: "185892130816"
+                email: avisingh0718@gmail.com
+                executable: /home/avisingh/miniconda3/bin/python
+                git:
+                    commit: 8422650b7700f1d4e285446824e5fb7abac1885d
+                    remote: https://github.com/Avi-Singh11/aa276finalproject.git
+                gpu: NVIDIA GB10
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      cudaCores: 6144
+                      name: NVIDIA GB10
+                      uuid: GPU-21da9ed3-1c8a-6777-34fc-4eb8eba5c651
+                host: spark-7020
+                memory:
+                    total: "128495648768"
+                os: Linux-6.17.0-1014-nvidia-aarch64-with-glibc2.39
+                program: -m src.scripts.train_ppo
+                python: CPython 3.13.12
+                root: /home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject
+                startedAt: "2026-06-06T21:23:19.158577Z"
+                writerId: b1vo9oj7kj3seps0lom6qv7fugoqnj37
+        m: []
+        python_version: 3.13.12
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 3
+                - 13
+                - 16
+                - 61
+            "4": 3.13.12
+            "5": 0.26.1
+            "12": 0.26.1
+            "13": linux-aarch64
+T:
+    value: 10
+algorithm:
+    value: PPO
+batch_size:
+    value: 256
+clip_range:
+    value: 0.2
+dt:
+    value: 0.01
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0001
+n_envs:
+    value: 8
+n_epochs:
+    value: 10
+n_steps:
+    value: 256
+norm_reward:
+    value: false
+total_timesteps:
+    value: 2000000
+u_max:
+    value: 15
+use_safety_filter:
+    value: false

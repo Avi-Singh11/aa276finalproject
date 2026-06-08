@@ -1,0 +1,18 @@
+{"time":"2026-06-01T21:42:38.586779-07:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-06-01T21:42:38.58681-07:00","level":"INFO","msg":"stream: starting","core version":"0.27.0"}
+{"time":"2026-06-01T21:42:39.099707-07:00","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2026-06-01T21:42:39.099728-07:00","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2026-06-01T21:42:39.099783-07:00","level":"INFO","msg":"stream: created new stream","id":"clqhuh2q"}
+{"time":"2026-06-01T21:42:39.099951-07:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-06-01T21:42:39.100021-07:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-06-01T21:42:39.100032-07:00","level":"INFO","msg":"writer: started","stream_id":"clqhuh2q"}
+{"time":"2026-06-01T21:42:39.100072-07:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-06-01T21:42:39.327357-07:00","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2026-06-01T21:42:39.327372-07:00","level":"WARN","msg":"runupserter: server does not expand metric globs but the x_server_side_expand_glob_metrics setting is set; ignoring"}
+{"time":"2026-06-01T21:42:49.863376-07:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2026-06-01T21:42:49.863795-07:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"/Users/max/Documents/aa276finalproject/logs/baseline/PPO_1\")","namespace":""}
+{"time":"2026-06-01T21:42:49.865493-07:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"/Users/max/Documents/aa276finalproject/logs/baseline/PPO_1/events.out.tfevents.1780375359.DNa80a750.SUNet.1846.0","runPath":"logs/baseline/PPO_1/events.out.tfevents.1780375359.DNa80a750.SUNet.1846.0"}
+{"time":"2026-06-01T21:42:49.867688-07:00","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-06-01T21:42:49.867726-07:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-06-01T21:42:49.868031-07:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-06-01T21:42:49.868047-07:00","level":"INFO","msg":"stream: all finished"}

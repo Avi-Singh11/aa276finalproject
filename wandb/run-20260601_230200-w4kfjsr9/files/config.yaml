@@ -1,0 +1,80 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        code_path: code/src/scripts/train_ppo.py
+        e:
+            nhsq9rc2t63m9n947ibkz5ig4ui0j78c:
+                codePath: src/scripts/train_ppo.py
+                codePathLocal: src/scripts/train_ppo.py
+                cpu_count: 20
+                cpu_count_logical: 20
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "4031871553536"
+                        used: "180799762432"
+                email: avisingh0718@gmail.com
+                executable: /home/avisingh/miniconda3/bin/python
+                git:
+                    commit: 3a9cad8993f77cdb13c868af373b2facaade666f
+                    remote: https://github.com/Avi-Singh11/aa276finalproject.git
+                gpu: NVIDIA GB10
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      cudaCores: 6144
+                      name: NVIDIA GB10
+                      uuid: GPU-21da9ed3-1c8a-6777-34fc-4eb8eba5c651
+                host: spark-7020
+                memory:
+                    total: "128495648768"
+                os: Linux-6.17.0-1014-nvidia-aarch64-with-glibc2.39
+                program: /home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/src/scripts/train_ppo.py
+                python: CPython 3.13.12
+                root: /home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject
+                startedAt: "2026-06-02T06:02:00.798405Z"
+                writerId: nhsq9rc2t63m9n947ibkz5ig4ui0j78c
+        m: []
+        python_version: 3.13.12
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 3
+                - 13
+                - 16
+                - 35
+                - 41
+            "4": 3.13.12
+            "5": 0.26.1
+            "12": 0.26.1
+            "13": linux-aarch64
+T:
+    value: 10
+algorithm:
+    value: PPO
+batch_size:
+    value: 64
+clip_range:
+    value: 0.2
+dt:
+    value: 0.01
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0001
+n_epochs:
+    value: 10
+n_steps:
+    value: 2048
+total_timesteps:
+    value: 2000000
+u_max:
+    value: 15
+use_safety_filter:
+    value: false

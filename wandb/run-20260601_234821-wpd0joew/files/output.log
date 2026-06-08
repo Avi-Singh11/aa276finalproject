@@ -1,0 +1,93 @@
+Run: baseline  (https://wandb.ai/avisingh-stanford-university/aa276-coffee-pouring/runs/wpd0joew)
+Filter: False
+Steps: 2,000,000
+
+Using cpu device
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1,531/2,000,000 [0m [ [33m0:00:00[0m < [36m0:06:38[0m , [31m5,032 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 409      |
+|    ep_rew_mean     | -117     |
+| time/              |          |
+|    fps             | 4988     |
+|    iterations      | 1        |
+|    time_elapsed    | 0        |
+|    total_timesteps | 2048     |
+---------------------------------
+[2K[wandb] step=2048 keys=['time/iterations', 'rollout/ep_rew_mean', 'rollout/ep_len_mean', 'time/fps', 'time/time_elapsed', 'time/total_timesteps']0,000 [0m [ [33m0:00:00[0m < [36m0:06:38[0m , [31m5,032 it/s[0m ]
+[2K-----------------------------------------━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3,564/2,000,000 [0m [ [33m0:00:01[0m < [36m0:17:45[0m , [31m1,876 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 581         |
+|    ep_rew_mean          | -132        |
+| time/                   |             |
+|    fps                  | 2221        |
+|    iterations           | 2           |
+|    time_elapsed         | 1           |
+|    total_timesteps      | 4096        |
+| train/                  |             |
+|    approx_kl            | 0.002719668 |
+|    clip_fraction        | 0.00508     |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -4.26       |
+|    explained_variance   | -0.0073     |
+|    learning_rate        | 0.0001      |
+|    loss                 | 12.6        |
+|    n_updates            | 5           |
+|    policy_gradient_loss | -0.00339    |
+|    std                  | 1           |
+|    value_loss           | 28.9        |
+-----------------------------------------
+[2K[wandb] step=4096 keys=['train/learning_rate', 'train/entropy_loss', 'train/policy_gradient_loss', 'train/value_loss', 'train/clip_fraction', 'train/loss', [ [33m0:00:01[0m < [36m0:17:45[0m , [31m1,876 it/s[0m ]
+'train/explained_variance', 'train/std', 'train/n_updates', 'train/clip_range', 'time/iterations', 'rollout/ep_rew_mean', 'rollout/ep_len_mean', 'time/fps',
+'time/time_elapsed', 'time/total_timesteps']
+[2KTraceback (most recent call last):━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+[2K  File "/home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/src/scripts/train_ppo.py", line 169, in <module>[0m [32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    model.learn(total_timesteps=TOTAL_TIMESTEPS, callback=callbacks, progress_bar=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/ppo/ppo.py", line 311, in learn━━━━━━━━━━━━━[0m [32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 324, in learn[32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 218, in collect_rollouts,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+                                     ~~~~~~~~^^^^^^^^^^^^^^^^^
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/vec_env/base_vec_env.py", line 222, in step[32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    return self.step_wait()
+           ~~~~~~~~~~~~~~^^
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/vec_env/vec_normalize.py", line 181, in step_wait004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    obs, rewards, dones, infos = self.venv.step_wait()
+                                 ~~~~~~~~~~~~~~~~~~~^^
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 59, in step_wait,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.actions[env_idx]
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+[2K  File "/home/avisingh/miniconda3/lib/python3.13/site-packages/stable_baselines3/common/monitor.py", line 94, in step━━━━━━━━[0m [32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    observation, reward, terminated, truncated, info = self.env.step(action)
+                                                       ~~~~~~~~~~~~~^^^^^^^^
+[2K  File "/home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/src/envs/obstacle_env.py", line 38, in step━━━━━[0m [32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    next_state = coupled_dynamics(
+                 ~~~~~~~~~~~~~~~~^
+        self.state, action, self.K, self.L, self.dt, l_eff=self.l_eff
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).astype(np.float32)
+    ^
+[2K  File "/home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/src/core/simulation.py", line 34, in coupled_dynamics[32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    next_slosh = slosh_dynamics(
+        state[6:],
+    ...<6 lines>...
+        theta_eps=theta_eps,
+    )
+[2K  File "/home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/src/core/slosh_dynamics.py", line 56, in slosh_dynamics32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+    pos_len = np.sqrt(nx**2 + ny**2 + nz**2)
+[2KKeyboardInterrupt;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]
+[35m   0%[0m [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5,004/2,000,000 [0m [ [33m0:00:03[0m < [36m0:21:40[0m , [31m1,535 it/s[0m ]

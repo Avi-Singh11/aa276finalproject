@@ -1,0 +1,24 @@
+2026-06-06 18:31:25,089 INFO    MainThread:2962151 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-06-06 18:31:25,089 INFO    MainThread:2962151 [wandb_setup.py:_flush():81] Configure stats pid to 2962151
+2026-06-06 18:31:25,089 INFO    MainThread:2962151 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-06-06 18:31:25,089 INFO    MainThread:2962151 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/wandb/run-20260606_183125-y61i9sox/logs/debug.log
+2026-06-06 18:31:25,089 INFO    MainThread:2962151 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /home/avisingh/Documents/Stanford/Spring2026/AA276/aa276finalproject/wandb/run-20260606_183125-y61i9sox/logs/debug-internal.log
+2026-06-06 18:31:25,089 INFO    MainThread:2962151 [wandb_init.py:init():850] calling init triggers
+2026-06-06 18:31:25,089 INFO    MainThread:2962151 [wandb_init.py:init():855] wandb.init called with sweep_config: {}
+config: {'algorithm': 'PPO', 'env': 'CoffeeArmEnv', 'use_safety_filter': False, 'norm_reward': False, 'total_timesteps': 5000000, 'u_max': 15.0, 'T': 10.0, 'dt': 0.01, 'learning_rate': 0.0003, 'n_steps': 1024, 'n_envs': 8, 'batch_size': 2048, 'n_epochs': 10, 'gamma': 0.99, 'gae_lambda': 0.95, 'clip_range': 0.2, 'ent_coef': 0.05, 'goal': '[-0.3, -0.4, 0.3]', 'at_goal_bonus': 100.0, '_wandb': {}}
+2026-06-06 18:31:25,089 INFO    MainThread:2962151 [wandb_init.py:init():898] starting backend
+2026-06-06 18:31:25,313 INFO    MainThread:2962151 [wandb_init.py:init():913] sending inform_init request
+2026-06-06 18:31:25,542 INFO    MainThread:2962151 [wandb_init.py:init():918] backend started and connected
+2026-06-06 18:31:25,554 INFO    MainThread:2962151 [wandb_init.py:init():988] updated telemetry
+2026-06-06 18:31:25,557 INFO    MainThread:2962151 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-06-06 18:31:25,815 INFO    MainThread:2962151 [wandb_init.py:init():1056] starting run threads in backend
+2026-06-06 18:31:26,380 INFO    MainThread:2962151 [wandb_run.py:_console_start():2554] atexit reg
+2026-06-06 18:31:26,380 INFO    MainThread:2962151 [wandb_run.py:_redirect():2403] redirect: wrap_raw
+2026-06-06 18:31:26,380 INFO    MainThread:2962151 [wandb_run.py:_redirect():2472] Wrapping output streams.
+2026-06-06 18:31:26,380 INFO    MainThread:2962151 [wandb_run.py:_redirect():2495] Redirects installed.
+2026-06-06 18:31:26,381 INFO    MainThread:2962151 [wandb_init.py:init():1094] run started, returning control to user process
+2026-06-06 19:25:07,396 INFO    MainThread:2962151 [wandb_run.py:_finish():2321] finishing run avisingh-stanford-university/aa276-coffee-pouring/y61i9sox
+2026-06-06 19:25:07,396 INFO    MainThread:2962151 [wandb_run.py:_atexit_cleanup():2520] got exitcode: 0
+2026-06-06 19:25:07,396 INFO    MainThread:2962151 [wandb_run.py:_restore():2502] restore
+2026-06-06 19:25:07,396 INFO    MainThread:2962151 [wandb_run.py:_restore():2508] restore done
+2026-06-06 19:25:08,465 INFO    MainThread:2962151 [wandb_run.py:_footer_sync_info():3889] logging synced files
